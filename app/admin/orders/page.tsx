@@ -78,7 +78,7 @@ export default function AdminOrdersPage() {
                   <td className="px-5 py-3 font-medium text-primary-700">{o.orderNumber || o.id}</td>
                   <td className="px-5 py-3">{(o.customerInfo && o.customerInfo.fullName) || "—"}</td>
                   <td className="px-5 py-3 text-muted-foreground">{formatDate(o.createdAt)}</td>
-                  <td className="px-5 py-3 font-medium">{formatCurrency(o.total)}</td>
+                  <td className="px-5 py-3 font-medium">{formatCurrency(o.total, { forceShow: true })}</td>
                   <td className="px-5 py-3 text-muted-foreground">
                     {o.paymentMethod === "cash_on_delivery"
                       ? "عند الاستلام"

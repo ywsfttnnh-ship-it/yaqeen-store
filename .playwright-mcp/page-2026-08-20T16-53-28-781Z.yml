@@ -1,0 +1,248 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e3]:
+    - generic [ref=f1e4]: التوصيل لجميع مناطق الضفة الغربية
+    - generic [ref=f1e5]: "|"
+    - link "+972 59-742-6988" [ref=f1e6] [cursor=pointer]:
+      - /url: tel:+972597426988
+    - generic [ref=f1e7]: "|"
+    - generic [ref=f1e8]: ضمان 25 سنة على أرضيات SPC
+  - banner [ref=f1e9]:
+    - generic [ref=f1e11]:
+      - link "Yaqeen Store" [ref=f1e12] [cursor=pointer]:
+        - /url: /
+        - img "Yaqeen Store" [ref=f1e14]
+        - generic [ref=f1e15]: يقين ستور
+      - navigation "التنقل الرئيسي" [ref=f1e16]:
+        - link "الرئيسية" [ref=f1e17] [cursor=pointer]:
+          - /url: /
+        - link "المتجر" [ref=f1e18] [cursor=pointer]:
+          - /url: /store
+        - link "التصنيفات" [ref=f1e19] [cursor=pointer]:
+          - /url: /categories
+        - link "من نحن" [ref=f1e20] [cursor=pointer]:
+          - /url: /about
+        - link "تواصل معنا" [ref=f1e21] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=f1e22]:
+        - generic [ref=f1e25]:
+          - searchbox "بحث عن منتجات" [ref=f1e26]
+          - button [ref=f1e27] [cursor=pointer]
+        - button "تبديل المظهر" [ref=f1e30] [cursor=pointer]
+        - link "المفضلة" [ref=f1e33] [cursor=pointer]:
+          - /url: /wishlist
+          - button [ref=f1e34]
+        - button "السلة" [ref=f1e37] [cursor=pointer]
+        - link "تسجيل الدخول" [ref=f1e43] [cursor=pointer]:
+          - /url: /account/login
+          - button "تسجيل الدخول" [ref=f1e44]
+  - main [ref=f1e49]:
+    - generic [ref=f1e50]:
+      - navigation "مسار التنقل" [ref=f1e51]:
+        - list [ref=f1e52]:
+          - listitem [ref=f1e53]:
+            - link "الرئيسية" [ref=f1e54] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f1e55]: /
+          - listitem [ref=f1e56]:
+            - link "المتجر" [ref=f1e57] [cursor=pointer]:
+              - /url: /store
+          - listitem [ref=f1e58]: /
+          - listitem [ref=f1e59]: SPC وود - بلوط طبيعي - 1220×180
+      - generic [ref=f1e60]:
+        - generic [ref=f1e61]:
+          - generic [ref=f1e62]:
+            - generic [ref=f1e63]:
+              - img "أرضية SPC بلوط طبيعي" [ref=f1e64]
+              - generic [ref=f1e65]: الأكثر مبيعاً
+            - generic [ref=f1e67]:
+              - button "صورة 1" [ref=f1e68] [cursor=pointer]:
+                - img "أرضية SPC بلوط طبيعي" [ref=f1e69]
+              - button "صورة 2" [ref=f1e70] [cursor=pointer]:
+                - img "تفاصيل نسيج SPC بلوط طبيعي" [ref=f1e71]
+              - button "صورة 3" [ref=f1e72] [cursor=pointer]:
+                - img "أرضية SPC بلوط طبيعي في المطبخ" [ref=f1e73]
+          - generic [ref=f1e74]:
+            - generic [ref=f1e75]:
+              - img "4.9 of 5 stars" [ref=f1e76]
+              - generic [ref=f1e88]: 4.9 (89 تقييم)
+            - heading "SPC وود - بلوط طبيعي - 1220×180" [level=1] [ref=f1e89]
+            - paragraph [ref=f1e90]: أرضية SPC بلوط طبيعي بنقشة مدحوتة يدوياً ومتانة متميزة.
+            - generic [ref=f1e91]:
+              - generic [ref=f1e92]: "الكمية: 1 متر مربع"
+              - generic [ref=f1e93]: "الضمان: ضمان 25 سنة سكني"
+            - generic [ref=f1e94]:
+              - generic [ref=f1e95]: التوصيل لجميع مناطق الضفة الغربية خلال 3-5 أيام عمل
+              - generic [ref=f1e102]: ضمان ضمان 25 سنة سكني على الجودة
+              - generic [ref=f1e107]: إرجاع سهل خلال 14 يوم
+            - generic [ref=f1e114]:
+              - generic [ref=f1e115]:
+                - button "تقليل الكمية" [ref=f1e116] [cursor=pointer]
+                - generic [ref=f1e118]: "1"
+                - button "زيادة الكمية" [ref=f1e119] [cursor=pointer]
+              - button "أضف إلى السلة" [ref=f1e121] [cursor=pointer]
+              - link "اطلب الآن" [ref=f1e126] [cursor=pointer]:
+                - /url: tel:+972597426988
+              - button "المفضلة" [ref=f1e129] [cursor=pointer]
+            - paragraph [ref=f1e132]: 35 قطعة متوفرة في المخزون
+            - generic [ref=f1e133]:
+              - generic [ref=f1e134]: "#أرضية"
+              - generic [ref=f1e135]: "#SPC"
+              - generic [ref=f1e136]: "#بلوط"
+              - generic [ref=f1e137]: "#طبيعي"
+              - generic [ref=f1e138]: "#مقاومة ماء"
+        - generic [ref=f1e139]:
+          - tablist [ref=f1e140]:
+            - tab "الوصف" [selected] [ref=f1e141] [cursor=pointer]
+            - tab "المواصفات" [ref=f1e142] [cursor=pointer]
+            - tab "التقييمات (0)" [ref=f1e143] [cursor=pointer]
+          - generic [ref=f1e145]:
+            - paragraph [ref=f1e146]: أرضية SPC بلوط طبيعي بنقشة خشب أصيل وخشكة يدوية. هذا المنتج المتميز يجلب دفء الخشب الطبيعي إلى أي مساحة بأقصى متانة وأقل صيانة.
+            - generic [ref=f1e147]:
+              - generic [ref=f1e148]:
+                - paragraph [ref=f1e149]: الخامة
+                - paragraph [ref=f1e150]: نواة SPC + طبقة ارتداء WPC
+              - generic [ref=f1e151]:
+                - paragraph [ref=f1e152]: اللمسة النهائية
+                - paragraph [ref=f1e153]: مات مدحوت يدوياً
+              - generic [ref=f1e154]:
+                - paragraph [ref=f1e155]: الضمان
+                - paragraph [ref=f1e156]: ضمان 25 سنة سكني
+      - generic [ref=f1e157]:
+        - generic [ref=f1e158]:
+          - heading "منتجات مشابهة" [level=2] [ref=f1e159]
+          - link "عرض الكل" [ref=f1e160] [cursor=pointer]:
+            - /url: /store?category=cat-spc
+        - generic [ref=f1e161]:
+          - generic [ref=f1e162]:
+            - generic [ref=f1e163]:
+              - generic [ref=f1e164]: الأكثر مبيعاً
+              - generic [ref=f1e166]:
+                - button "إضافة إلى المفضلة" [ref=f1e167] [cursor=pointer]
+                - link "عرض سريع" [ref=f1e170] [cursor=pointer]:
+                  - /url: /product/spc-wood-ash-gray-1220
+            - link [ref=f1e175] [cursor=pointer]:
+              - /url: /product/spc-wood-ash-gray-1220
+              - img "تركيب أرضية SPC رمادية" [ref=f1e176]
+              - img "تفاصيل نسيج SPC رمادية" [ref=f1e177]
+            - generic [ref=f1e178]:
+              - link [ref=f1e179] [cursor=pointer]:
+                - /url: /product/spc-wood-ash-gray-1220
+                - heading "SPC وود - رمادي أشق - 1220×180" [level=3] [ref=f1e180]
+              - paragraph [ref=f1e181]: أرضية SPC رمادية متميزة بنواة مقاومة للماء وتركيب قفل ونقر.
+              - generic [ref=f1e182]: 4.8 (124)
+              - paragraph [ref=f1e195]: باركيه SPC
+              - button "أضف إلى السلة" [ref=f1e196] [cursor=pointer]
+          - generic [ref=f1e201]:
+            - generic [ref=f1e202]:
+              - generic [ref=f1e203]: جديد
+              - generic [ref=f1e205]:
+                - button "إضافة إلى المفضلة" [ref=f1e206] [cursor=pointer]
+                - link "عرض سريع" [ref=f1e209] [cursor=pointer]:
+                  - /url: /product/spc-charcoal-slate-1220
+            - link [ref=f1e214] [cursor=pointer]:
+              - /url: /product/spc-charcoal-slate-1220
+              - img "أرضية SPC رملية فحمية" [ref=f1e215]
+              - img "أرضية SPC رملية فحمية في غرفة معيشة" [ref=f1e216]
+            - generic [ref=f1e217]:
+              - link [ref=f1e218] [cursor=pointer]:
+                - /url: /product/spc-charcoal-slate-1220
+                - heading "SPC ستون - رملي فحمي - 1220×180" [level=3] [ref=f1e219]
+              - paragraph [ref=f1e220]: أرضية SPC رملية فحمية بمظهر حجري ومقاومة للانزلاق.
+              - generic [ref=f1e221]: 4.7 (63)
+              - paragraph [ref=f1e234]: باركيه SPC
+              - button "أضف إلى السلة" [ref=f1e235] [cursor=pointer]
+          - generic [ref=f1e240]:
+            - generic [ref=f1e241]:
+              - generic [ref=f1e242]: جديد
+              - generic [ref=f1e244]:
+                - button "إضافة إلى المفضلة" [ref=f1e245] [cursor=pointer]
+                - link "عرض سريع" [ref=f1e248] [cursor=pointer]:
+                  - /url: /product/spc-honey-wood-620x180
+            - link [ref=f1e253] [cursor=pointer]:
+              - /url: /product/spc-honey-wood-620x180
+              - img "تفاصيل أرضية SPC بلوط أسود" [ref=f1e254]
+              - img "تفاصيل أرضية SPC بلوط أسود" [ref=f1e255]
+            - generic [ref=f1e256]:
+              - link [ref=f1e257] [cursor=pointer]:
+                - /url: /product/spc-honey-wood-620x180
+                - heading "SPC وود - بلوط أسود - 620×180" [level=3] [ref=f1e258]
+              - paragraph [ref=f1e259]: لوحة أرضية SPC بلوط أسود ذهبي للمساحات الصغيرة وجدران المؤثرات.
+              - generic [ref=f1e260]: 4.5 (37)
+              - paragraph [ref=f1e273]: باركيه SPC
+              - button "أضف إلى السلة" [ref=f1e274] [cursor=pointer]
+  - contentinfo [ref=f1e279]:
+    - generic [ref=f1e280]:
+      - generic [ref=f1e281]:
+        - generic [ref=f1e282]:
+          - link "Yaqeen Store" [ref=f1e283] [cursor=pointer]:
+            - /url: /
+            - img "Yaqeen Store" [ref=f1e285]
+            - generic [ref=f1e286]: يقين ستور
+          - paragraph [ref=f1e287]: يقين ستور - متخصص في أرضيات SPC وبدائل الحجر وسوفت ستون عالية الجودة.
+          - paragraph [ref=f1e288]: © 2026 يقين ستور. جميع الحقوق محفوظة.
+        - generic [ref=f1e289]:
+          - heading "الأقساط" [level=3] [ref=f1e290]
+          - list [ref=f1e291]:
+            - listitem [ref=f1e292]:
+              - link "باركيه SPC" [ref=f1e293] [cursor=pointer]:
+                - /url: /categories/باركيه-spc
+            - listitem [ref=f1e294]:
+              - link "بديل حجر" [ref=f1e295] [cursor=pointer]:
+                - /url: /categories/بديل-حجر
+            - listitem [ref=f1e296]:
+              - link "سوفت ستون" [ref=f1e297] [cursor=pointer]:
+                - /url: /categories/سوفت-ستون
+        - generic [ref=f1e298]:
+          - heading "شركة" [level=3] [ref=f1e299]
+          - list [ref=f1e300]:
+            - listitem [ref=f1e301]:
+              - link "من نحن" [ref=f1e302] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f1e303]:
+              - link "تواصل معنا" [ref=f1e304] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=f1e305]:
+              - link "الأسئلة الشائعة" [ref=f1e306] [cursor=pointer]:
+                - /url: /faq
+        - generic [ref=f1e307]:
+          - heading "الخدمات" [level=3] [ref=f1e308]
+          - list [ref=f1e309]:
+            - listitem [ref=f1e310]:
+              - link "الشحن والتوصيل" [ref=f1e311] [cursor=pointer]:
+                - /url: /shipping
+            - listitem [ref=f1e312]:
+              - link "سياسة الإرجاع" [ref=f1e313] [cursor=pointer]:
+                - /url: /returns
+            - listitem [ref=f1e314]:
+              - link "الضمان" [ref=f1e315] [cursor=pointer]:
+                - /url: /warranty
+            - listitem [ref=f1e316]:
+              - link "الدفع الآمن" [ref=f1e317] [cursor=pointer]:
+                - /url: /payment
+        - generic [ref=f1e318]:
+          - heading "تواصل معنا" [level=3] [ref=f1e319]
+          - generic [ref=f1e320]:
+            - generic [ref=f1e321]:
+              - term [ref=f1e322]: الهاتف
+              - definition [ref=f1e323]:
+                - link "+972 59-742-6988" [ref=f1e324] [cursor=pointer]:
+                  - /url: tel:+972597426988
+            - generic [ref=f1e327]:
+              - term [ref=f1e328]: العنوان
+              - definition [ref=f1e329]: الخليل، فلسطين
+            - generic [ref=f1e330]:
+              - term [ref=f1e331]: التوصيل
+              - definition [ref=f1e332]: لجميع مناطق الضفة الغربية
+            - generic [ref=f1e333]:
+              - term [ref=f1e334]: تابعنا
+              - definition [ref=f1e335]:
+                - link "فيسبوك" [ref=f1e336] [cursor=pointer]:
+                  - /url: https://www.facebook.com/profile.php?id=61590887216809
+                - link "انستغرام" [ref=f1e339] [cursor=pointer]:
+                  - /url: https://www.instagram.com/yaqeen_1_store/
+      - generic [ref=f1e344]:
+        - generic [ref=f1e345]: "خيارات الدفع:"
+        - generic [ref=f1e346]:
+          - generic [ref=f1e347]: Visa
+          - generic [ref=f1e348]: Mastercard
+          - generic [ref=f1e349]: نقداً عند الاستلام

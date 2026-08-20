@@ -9,8 +9,8 @@ export default function AdminSettingsPage() {
   const [settings, setSettings] = React.useState({
     storeName: "يقين ستور",
     email: "info@yaqeenstore.ps",
-    phone: "+970 59 123 4567",
-    address: "رام الله - شارع الإرسال، عمارة النور",
+    phone: "+972 59-742-6988",
+    address: "الخليل، فلسطين - التوصيل لجميع مناطق الضفة الغربية",
     currency: "ILS",
     vatRate: "17",
     freeShippingThreshold: "500",
@@ -78,10 +78,10 @@ export default function AdminSettingsPage() {
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-100 text-primary-700">
             <BadgePercent className="h-5 w-5" />
           </div>
-          <h2 className="font-bold">الخصومات</h2>
+          <h2 className="font-bold">الأسعار</h2>
         </div>
         <div className="rounded-lg border border-dashed border-border p-4 text-sm text-muted-foreground">
-          أضف أكواد الخصم من صفحة المنتجات أو عبر نظام إدارة الخصومات.
+          الأسعار المعروضة هي الأسعار النهائية، دون أي خصومات أو تخفيضات.
         </div>
       </div>
 

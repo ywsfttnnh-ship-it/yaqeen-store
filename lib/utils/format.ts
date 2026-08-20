@@ -7,6 +7,7 @@ export const formatCurrency = (
     locale?: string;
     minimumFractionDigits?: number;
     maximumFractionDigits?: number;
+    forceShow?: boolean;
   },
 ): string => {
   const {
@@ -14,7 +15,10 @@ export const formatCurrency = (
     locale = config.currency.locale,
     minimumFractionDigits = 0,
     maximumFractionDigits = 2,
+    forceShow = false,
   } = options ?? {};
+
+  if (!forceShow && config.app.hidePrices) return "";
 
   const formatted = new Intl.NumberFormat(locale, {
     style: showSymbol ? "currency" : "decimal",

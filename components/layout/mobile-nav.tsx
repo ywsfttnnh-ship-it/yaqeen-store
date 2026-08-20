@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { X, ShoppingCart, Heart, User, Home, Store, Grid, Gift, Info, Phone, LogIn, LogOut } from "lucide-react";
+import { X, ShoppingCart, Heart, User, Home, Store, Grid, Info, Phone, LogIn, LogOut } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
 import { Logo } from "@/components/common/logo";
@@ -19,7 +19,6 @@ const mobileNavItems = [
   { labelAr: "الرئيسية", href: "/", icon: Home },
   { labelAr: "المتجر", href: "/store", icon: Store },
   { labelAr: "التصنيفات", href: "/categories", icon: Grid },
-  { labelAr: "العروض", href: "/offers", icon: Gift },
   { labelAr: "من نحن", href: "/about", icon: Info },
   { labelAr: "تواصل معنا", href: "/contact", icon: Phone },
 ];

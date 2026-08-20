@@ -22,7 +22,7 @@ export default function AdminDashboardPage() {
   const totalOrders = mockOrders.length;
 
   const stats = [
-    { label: "إجمالي الإيرادات", value: formatCurrency(totalRevenue), icon: Wallet, trend: "+12.5%", up: true },
+    { label: "إجمالي الإيرادات", value: formatCurrency(totalRevenue, { forceShow: true }), icon: Wallet, trend: "+12.5%", up: true },
     { label: "الطلبات", value: String(totalOrders), icon: ShoppingCart, trend: "+4.2%", up: true },
     { label: "المنتجات", value: String(products.length), icon: Package, trend: "+2", up: true },
     { label: "العملاء", value: "1,248", icon: Users, trend: "+8.1%", up: true },
@@ -110,7 +110,7 @@ export default function AdminDashboardPage() {
                   <span className={`rounded-full px-3 py-1 text-xs font-medium ${statusColors[order.status]}`}>
                     {statusLabels[order.status]}
                   </span>
-                  <span className="text-sm font-bold">{formatCurrency(order.total)}</span>
+                  <span className="text-sm font-bold">{formatCurrency(order.total, { forceShow: true })}</span>
                 </div>
               </li>
             ))}

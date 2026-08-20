@@ -26,7 +26,6 @@ const navItems: NavItem[] = [
   { label: "Home", labelAr: "الرئيسية", href: "/" },
   { label: "Store", labelAr: "المتجر", href: "/store" },
   { label: "Categories", labelAr: "التصنيفات", href: "/categories" },
-  { label: "Offers", labelAr: "العروض", href: "/offers" },
   { label: "About", labelAr: "من نحن", href: "/about" },
   { label: "Contact", labelAr: "تواصل معنا", href: "/contact" },
 ];
@@ -47,8 +46,18 @@ export const Header: React.FC = () => {
     <>
       {/* Top Announcement Bar */}
       <div className="bg-primary-800 text-neutral-50">
-        <div className="container mx-auto px-4 text-center">
-          <span className="text-sm">شحن مجاني للطلبات فوق 500₪ | دعم 24/7 | ضمان 25 سنة على أرضيات SPC</span>
+        <div className="container mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4 py-1.5 text-center">
+          <span className="text-xs sm:text-sm">التوصيل لجميع مناطق الضفة الغربية</span>
+          <span className="hidden sm:inline text-neutral-500">|</span>
+          <a
+            href="tel:+972597426988"
+            className="text-xs sm:text-sm font-medium text-gold-300 hover:text-gold-200 transition-colors"
+            dir="ltr"
+          >
+            +972 59-742-6988
+          </a>
+          <span className="hidden sm:inline text-neutral-500">|</span>
+          <span className="hidden sm:inline text-xs sm:text-sm">ضمان 25 سنة على أرضيات SPC</span>
         </div>
       </div>
 

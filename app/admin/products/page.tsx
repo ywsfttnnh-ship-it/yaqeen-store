@@ -65,7 +65,7 @@ export default function AdminProductsPage() {
                     </div>
                   </td>
                   <td className="px-5 py-3 text-muted-foreground">{p.tags[0] || "—"}</td>
-                  <td className="px-5 py-3 font-medium">{formatCurrency(p.price)}</td>
+                  <td className="px-5 py-3 font-medium">{formatCurrency(p.price, { forceShow: true })}</td>
                   <td className="px-5 py-3">
                     <span className={`rounded-full px-2.5 py-1 text-xs font-medium ${p.stock < 30 ? "bg-red-100 text-red-700" : p.stock < 100 ? "bg-amber-100 text-amber-700" : "bg-green-100 text-green-700"}`}>
                       {p.stock}

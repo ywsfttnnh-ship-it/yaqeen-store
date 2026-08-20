@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import * as React from "react";
 import Image from "next/image";
@@ -7,6 +7,7 @@ import { Package, ChevronLeft } from "lucide-react";
 import { useAuth } from "@/lib/context/auth-context";
 import { getUserOrders } from "@/lib/data";
 import { formatCurrency, formatDate } from "@/lib/utils";
+import { config } from "@/lib/config";
 
 const statusLabels: Record<string, string> = {
   new: "جديد",
@@ -78,7 +79,7 @@ export default function OrdersPage() {
                   <span className={`rounded-full px-3 py-1 text-xs font-medium ${statusColors[order.status] || statusColors.new}`}>
                     {statusLabels[order.status] || "جديد"}
                   </span>
-                  <p className="font-bold">{formatCurrency(order.total)}</p>
+                  {!config.app.hidePrices && <p className="font-bold">{formatCurrency(order.total)}</p>}
                 </div>
               </div>
               <div className="mt-4">

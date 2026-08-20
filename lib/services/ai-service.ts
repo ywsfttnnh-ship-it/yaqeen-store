@@ -37,7 +37,7 @@ class AIService {
     const productInfo = products
       .map(
         (p) =>
-          `${p.nameAr} - ${p.shortDescriptionAr} - السعر: ${p.price}₪ - التقييم: ${p.rating} - المنتج: ${p.id}`,
+          `${p.nameAr} - ${p.shortDescriptionAr} - التقييم: ${p.rating} - المنتج: ${p.id}`,
       )
       .join("\n");
 
@@ -50,8 +50,6 @@ class AIService {
 - الإجابة على أسئلة المنتجات
 - توجيه العملاء للأقساط المناسبة
 - مساعدة في اختيار المنتج
-
-العملة المستخدمة في المتجر: الشيكل الإسرائيلي (₪)
 
 الأقساط المتاحة:
 ${categoryInfo}
@@ -67,7 +65,6 @@ ${productInfo}
     const productContext = products
       .map((p) => {
         return `المنتج: ${p.nameAr} (ID: ${p.id})
-السعر: ${p.price}₪${p.comparePrice ? ` (السعر الأصلي: ${p.comparePrice}₪، خصم ${p.discount}%)` : ""}
 القسم: ${categoryData.find((c) => c.id === p.categoryId)?.nameAr || "غير محدد"}
 الوصف: ${p.shortDescriptionAr}
 التقييم: ${p.rating}/5 من ${p.reviewCount} تقييم
@@ -84,25 +81,12 @@ ${productInfo}
   private generateMockResponse(query: string, _messages: AIChatMessage[]): string {
     const lowerQuery = query.toLowerCase();
 
-    // Price range queries
-    if (lowerQuery.includes("أرخص") || lowerQuery.includes("سعر") || lowerQuery.includes("كم")) {
-      const cheapest = products
-        .slice()
-        .sort((a, b) => a.price - b.price)
-        .slice(0, 3);
-      let response = "أرخص المنتجات المتاحة:\n";
-      cheapest.forEach((p, i) => {
-        response += `${i + 1}. ${p.nameAr} - ${p.price}₪\n`;
-      });
-      return response;
-    }
-
-    // Product recommendation queries
-    if (lowerQuery.includes("أقترح") || lowerQuery.includes("مناسب") || lowerQuery.includes("يقترح")) {
+    // Recommendation queries
+    if (lowerQuery.includes("أقترح") || lowerQuery.includes("مناسب") || lowerQuery.includes("كم") || lowerQuery.includes("أنصح")) {
       const featured = products.filter((p) => p.featured).slice(0, 3);
       let response = "منتجات مقترحة لك:\n";
       featured.forEach((p, i) => {
-        response += `${i + 1}. ${p.nameAr} - ${p.price}₪\n`;
+        response += `${i + 1}. ${p.nameAr} - ${p.shortDescriptionAr}\n`;
       });
       return response;
     }
@@ -291,7 +275,7 @@ ${productInfo}
     );
     productMatches.slice(0, 3).forEach((p) => suggestions.push(`عرض ${p.nameAr}`));
 
-    const common = ["ما هي أفضل العروض؟", "أريد شيء لغرفة معيشة", "ما الفرق بين SPC وبديل الحجر؟", "الأسعار بالتفصيل"];
+    const common = ["أريد شيء لغرفة معيشة", "ما الفرق بين SPC وبديل الحجر؟", "كيف أختار الأرضية المناسبة؟", "كيف أطلب منتجاً؟"];
     common.forEach((s) => {
       if (!suggestions.some((sug) => sug === s)) suggestions.push(s);
     });

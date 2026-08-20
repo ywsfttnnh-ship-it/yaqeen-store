@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Send, X, Bot, User, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
-import { formatCurrency } from "@/lib/utils";
 import Image from "next/image";
 import type { Product } from "@/types";
 import { getProductById } from "@/lib/data";
@@ -216,7 +215,6 @@ export const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose }) => {
                       </div>
                       <div>
                         <span className="block font-medium">{p.nameAr}</span>
-                        <span className="text-gold-600">{formatCurrency(p.price)}</span>
                       </div>
                     </a>
                   ))}

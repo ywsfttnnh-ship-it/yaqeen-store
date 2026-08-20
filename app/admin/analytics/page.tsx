@@ -20,7 +20,7 @@ export default function AdminAnalyticsPage() {
   const products = getAllProducts();
 
   const stats = [
-    { label: "الإيرادات الشهرية", value: formatCurrency(20400), icon: Wallet, change: "-14.3%" },
+    { label: "الإيرادات الشهرية", value: formatCurrency(20400, { forceShow: true }), icon: Wallet, change: "-14.3%" },
     { label: "الطلبات الشهرية", value: "143", icon: ShoppingCart, change: "-8.3%" },
     { label: "زوار الموقع", value: "18,420", icon: MousePointerClick, change: "+22.1%" },
     { label: "عملاء جدد", value: "96", icon: Users, change: "+11.4%" },
@@ -65,12 +65,12 @@ export default function AdminAnalyticsPage() {
             {monthlyData.map((d) => (
               <div key={d.month} className="flex flex-1 flex-col items-center gap-2">
                 <span className="text-xs font-medium text-muted-foreground">
-                  {formatCurrency(d.revenue, { maximumFractionDigits: 0 }).replace(/[٠-٩]/g, "")}
+                  {formatCurrency(d.revenue, { maximumFractionDigits: 0, forceShow: true }).replace(/[٠-٩]/g, "")}
                 </span>
                 <div
                   className="w-full rounded-t-lg bg-gradient-to-t from-primary-700 to-primary-500 transition-all hover:from-primary-800"
                   style={{ height: `${(d.revenue / maxRevenue) * 100}%` }}
-                  title={`${d.month}: ${formatCurrency(d.revenue)}`}
+                  title={`${d.month}: ${formatCurrency(d.revenue, { forceShow: true })}`}
                 />
                 <span className="text-xs text-muted-foreground">{d.month}</span>
               </div>
@@ -100,7 +100,7 @@ export default function AdminAnalyticsPage() {
             ))}
           </ul>
           <p className="mt-6 text-sm text-muted-foreground">
-            إجمالي مبيعات الشهر: <span className="font-bold text-foreground">{formatCurrency(totalSales)}</span>
+            إجمالي مبيعات الشهر: <span className="font-bold text-foreground">{formatCurrency(totalSales, { forceShow: true })}</span>
           </p>
         </div>
       </div>

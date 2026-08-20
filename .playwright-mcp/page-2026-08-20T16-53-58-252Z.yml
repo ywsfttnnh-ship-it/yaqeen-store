@@ -1,0 +1,95 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e3]:
+    - generic [ref=f3e4]: التوصيل لجميع مناطق الضفة الغربية
+    - link "+972 59-742-6988" [ref=f3e5] [cursor=pointer]:
+      - /url: tel:+972597426988
+  - banner [ref=f3e6]:
+    - generic [ref=f3e8]:
+      - link "Yaqeen Store" [ref=f3e9] [cursor=pointer]:
+        - /url: /
+        - img "Yaqeen Store" [ref=f3e11]
+        - generic [ref=f3e12]: يقين ستور
+      - generic [ref=f3e13]:
+        - button "تبديل المظهر" [ref=f3e14] [cursor=pointer]
+        - link "المفضلة" [ref=f3e17] [cursor=pointer]:
+          - /url: /wishlist
+          - button [ref=f3e18]
+        - button "السلة" [ref=f3e21] [cursor=pointer]
+        - button "فتح القائمة" [ref=f3e26] [cursor=pointer]
+  - main [ref=f3e28]
+  - contentinfo [ref=f3e29]:
+    - generic [ref=f3e30]:
+      - generic [ref=f3e31]:
+        - generic [ref=f3e32]:
+          - link "Yaqeen Store" [ref=f3e33] [cursor=pointer]:
+            - /url: /
+            - img "Yaqeen Store" [ref=f3e35]
+            - generic [ref=f3e36]: يقين ستور
+          - paragraph [ref=f3e37]: يقين ستور - متخصص في أرضيات SPC وبدائل الحجر وسوفت ستون عالية الجودة.
+          - paragraph [ref=f3e38]: © 2026 يقين ستور. جميع الحقوق محفوظة.
+        - generic [ref=f3e39]:
+          - heading "الأقساط" [level=3] [ref=f3e40]
+          - list [ref=f3e41]:
+            - listitem [ref=f3e42]:
+              - link "باركيه SPC" [ref=f3e43] [cursor=pointer]:
+                - /url: /categories/باركيه-spc
+            - listitem [ref=f3e44]:
+              - link "بديل حجر" [ref=f3e45] [cursor=pointer]:
+                - /url: /categories/بديل-حجر
+            - listitem [ref=f3e46]:
+              - link "سوفت ستون" [ref=f3e47] [cursor=pointer]:
+                - /url: /categories/سوفت-ستون
+        - generic [ref=f3e48]:
+          - heading "شركة" [level=3] [ref=f3e49]
+          - list [ref=f3e50]:
+            - listitem [ref=f3e51]:
+              - link "من نحن" [ref=f3e52] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f3e53]:
+              - link "تواصل معنا" [ref=f3e54] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=f3e55]:
+              - link "الأسئلة الشائعة" [ref=f3e56] [cursor=pointer]:
+                - /url: /faq
+        - generic [ref=f3e57]:
+          - heading "الخدمات" [level=3] [ref=f3e58]
+          - list [ref=f3e59]:
+            - listitem [ref=f3e60]:
+              - link "الشحن والتوصيل" [ref=f3e61] [cursor=pointer]:
+                - /url: /shipping
+            - listitem [ref=f3e62]:
+              - link "سياسة الإرجاع" [ref=f3e63] [cursor=pointer]:
+                - /url: /returns
+            - listitem [ref=f3e64]:
+              - link "الضمان" [ref=f3e65] [cursor=pointer]:
+                - /url: /warranty
+            - listitem [ref=f3e66]:
+              - link "الدفع الآمن" [ref=f3e67] [cursor=pointer]:
+                - /url: /payment
+        - generic [ref=f3e68]:
+          - heading "تواصل معنا" [level=3] [ref=f3e69]
+          - generic [ref=f3e70]:
+            - generic [ref=f3e71]:
+              - term [ref=f3e72]: الهاتف
+              - definition [ref=f3e73]:
+                - link "+972 59-742-6988" [ref=f3e74] [cursor=pointer]:
+                  - /url: tel:+972597426988
+            - generic [ref=f3e77]:
+              - term [ref=f3e78]: العنوان
+              - definition [ref=f3e79]: الخليل، فلسطين
+            - generic [ref=f3e80]:
+              - term [ref=f3e81]: التوصيل
+              - definition [ref=f3e82]: لجميع مناطق الضفة الغربية
+            - generic [ref=f3e83]:
+              - term [ref=f3e84]: تابعنا
+              - definition [ref=f3e85]:
+                - link "فيسبوك" [ref=f3e86] [cursor=pointer]:
+                  - /url: https://www.facebook.com/profile.php?id=61590887216809
+                - link "انستغرام" [ref=f3e89] [cursor=pointer]:
+                  - /url: https://www.instagram.com/yaqeen_1_store/
+      - generic [ref=f3e94]:
+        - generic [ref=f3e95]: "خيارات الدفع:"
+        - generic [ref=f3e96]:
+          - generic [ref=f3e97]: Visa
+          - generic [ref=f3e98]: Mastercard
+          - generic [ref=f3e99]: نقداً عند الاستلام

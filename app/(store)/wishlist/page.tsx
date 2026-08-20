@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import * as React from "react";
 import Image from "next/image";
@@ -6,9 +6,9 @@ import Link from "next/link";
 import { Heart, ShoppingCart, Trash2, ArrowLeft } from "lucide-react";
 import { useWishlist } from "@/lib/context/wishlist-context";
 import { useCart } from "@/lib/context/cart-context";
-import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+import { formatCurrency } from "@/lib/utils";
+import { config } from "@/lib/config";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 export default function WishlistPage() {
   const { products, removeItem, clearWishlist, itemCount } = useWishlist();
@@ -66,7 +66,6 @@ export default function WishlistPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {products.map((product) => {
           const image = product.images.find((i) => i.isPrimary) || product.images[0];
-          const discount = product.comparePrice ? calculateDiscountPercentage(product.comparePrice, product.price) : 0;
           const isAdded = addedIds.has(product.id);
           return (
             <div key={product.id} className="group relative flex flex-col rounded-2xl border border-border bg-card overflow-hidden transition-all duration-300 hover:shadow-luxury-lg">
@@ -80,11 +79,6 @@ export default function WishlistPage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </Link>
-                {discount > 0 && (
-                  <div className="absolute top-3 start-3 z-10">
-                    <Badge variant="danger">-{discount}%</Badge>
-                  </div>
-                )}
                 <button
                   onClick={() => removeItem(product.id)}
                   className="absolute top-3 end-3 z-10 rounded-full bg-[#F6F1E5]/90 p-2 text-accent-600 hover:bg-accent-500 hover:text-white shadow-luxury transition-all"
@@ -100,9 +94,8 @@ export default function WishlistPage() {
                   </h3>
                 </Link>
                 <div className="mt-2 flex items-center gap-2">
-                  <span className="font-bold text-primary-700">{formatCurrency(product.price)}</span>
-                  {product.comparePrice && (
-                    <span className="text-sm text-muted-foreground line-through">{formatCurrency(product.comparePrice)}</span>
+                  {!config.app.hidePrices && (
+                    <span className="font-bold text-primary-700">{formatCurrency(product.price)}</span>
                   )}
                 </div>
                 <Button

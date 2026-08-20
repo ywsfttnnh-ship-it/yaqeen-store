@@ -15,7 +15,7 @@ import { CategoryBanner } from "@/components/home/category-banner";
 export const metadata: Metadata = {
   title: "يقين ستور | Yaqeen Store - أرضيات SPC وبدائل الحجر وسوفت ستون",
   description:
-    "متجر يقين ستور - اكتشف أرضيات SPC وبدائل الحجر وسوفت ستون عالية الجودة. ضمان 25 سنة. مقاومة ماء 100%. شحن مجاني فوق 500₪.",
+    "متجر يقين ستور - اكتشف أرضيات SPC وبدائل الحجر وسوفت ستون عالية الجودة. ضمان 25 سنة. مقاومة ماء 100%. التوصيل لجميع مناطق الضفة الغربية.",
 };
 
 export default function HomePage() {
@@ -71,7 +71,7 @@ export default function HomePage() {
       <ProductSection
         products={stoneProducts}
         sectionTitle="بديل الحجر"
-        sectionDescription="سطوح بديل الحجر ذات اللمعة الطبيعية وسعر منافس"
+        sectionDescription="سطوح بديل الحجر ذات اللمعة الطبيعية وجودة متميزة"
         viewAllHref="/categories/بديل-حجر"
         badge="أفضل جودة"
         badgeVariant="secondary"

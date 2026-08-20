@@ -15,6 +15,9 @@ export const config = {
       ar: "اكتشف أناقة منزلك بتفاصيل استثنائية",
     },
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://yaqeen-store.com",
+    // عند التفعيل تُخفى جميع الأسعار من واجهة المتجر (تُحتفظ بالبيانات في الكود).
+    // غيّر القيمة إلى false لإعادة إظهار الأسعار مستقبلاً.
+    hidePrices: true,
   },
   currency: {
     code: process.env.NEXT_PUBLIC_CURRENCY_CODE || "ILS",

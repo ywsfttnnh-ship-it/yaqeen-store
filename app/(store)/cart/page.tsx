@@ -52,7 +52,7 @@ export default function CartPage() {
               <span>المنتج</span>
               <div className="flex items-center gap-8">
                 <span className="w-24 text-center">الكمية</span>
-                <span className="w-24 text-center">السعر</span>
+                {!config.app.hidePrices && <span className="w-24 text-center">السعر</span>}
                 <span className="w-8" />
               </div>
             </div>
@@ -117,7 +117,9 @@ export default function CartPage() {
                         </button>
                       </div>
                       <div className="w-20 text-start sm:text-center">
-                        <p className="font-bold text-primary-700">{formatCurrency(item.price * item.quantity)}</p>
+                        {!config.app.hidePrices && (
+                          <p className="font-bold text-primary-700">{formatCurrency(item.price * item.quantity)}</p>
+                        )}
                       </div>
                       <button
                         onClick={() => removeItem(item.productId)}
@@ -147,7 +149,7 @@ export default function CartPage() {
         {/* Summary */}
         <div className="lg:col-span-1">
           <div className="sticky top-24 space-y-4">
-            {freeShippingRemaining > 0 && (
+            {!config.app.hidePrices && freeShippingRemaining > 0 && (
               <div className="rounded-xl border border-primary-100 bg-primary-50 p-4">
                 <p className="text-sm text-primary-800">
                   أضف منتجات بقيمة <strong>{formatCurrency(freeShippingRemaining)}</strong> للحصول على شحن مجاني!
@@ -157,26 +159,28 @@ export default function CartPage() {
 
             <div className="rounded-2xl border border-border bg-card p-6">
               <h2 className="text-lg font-bold text-foreground">ملخص الطلب</h2>
-              <dl className="mt-4 space-y-3 text-sm">
-                <div className="flex items-center justify-between">
-                  <dt className="text-muted-foreground">المجموع الفرعي</dt>
-                  <dd className="font-medium">{formatCurrency(subtotal)}</dd>
-                </div>
-                <div className="flex items-center justify-between">
-                  <dt className="text-muted-foreground">الشحن</dt>
-                  <dd className="font-medium">
-                    {shipping === 0 ? <span className="text-green-600">مجاني</span> : formatCurrency(shipping)}
-                  </dd>
-                </div>
-                <div className="flex items-center justify-between">
-                  <dt className="text-muted-foreground">الضريبة (17%)</dt>
-                  <dd className="font-medium">{formatCurrency(tax)}</dd>
-                </div>
-                <div className="flex items-center justify-between border-t border-border pt-3 text-base">
-                  <dt className="font-bold text-foreground">الإجمالي</dt>
-                  <dd className="font-bold text-primary-700">{formatCurrency(total)}</dd>
-                </div>
-              </dl>
+              {!config.app.hidePrices && (
+                <dl className="mt-4 space-y-3 text-sm">
+                  <div className="flex items-center justify-between">
+                    <dt className="text-muted-foreground">المجموع الفرعي</dt>
+                    <dd className="font-medium">{formatCurrency(subtotal)}</dd>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <dt className="text-muted-foreground">الشحن</dt>
+                    <dd className="font-medium">
+                      {shipping === 0 ? <span className="text-green-600">مجاني</span> : formatCurrency(shipping)}
+                    </dd>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <dt className="text-muted-foreground">الضريبة (17%)</dt>
+                    <dd className="font-medium">{formatCurrency(tax)}</dd>
+                  </div>
+                  <div className="flex items-center justify-between border-t border-border pt-3 text-base">
+                    <dt className="font-bold text-foreground">الإجمالي</dt>
+                    <dd className="font-bold text-primary-700">{formatCurrency(total)}</dd>
+                  </div>
+                </dl>
+              )}
               <Link href="/checkout" className="mt-6 block">
                 <Button className="w-full" size="lg">
                   إتمام الشراء

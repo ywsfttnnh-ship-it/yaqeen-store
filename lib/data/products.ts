@@ -1,4 +1,4 @@
-import type { Product, Review } from "@/types";
+﻿import type { Product, Review } from "@/types";
 
 export const products: Product[] = [
   {
@@ -15,8 +15,6 @@ export const products: Product[] = [
     shortDescriptionAr:
       "أرضية SPC رمادية متميزة بنواة مقاومة للماء وتركيب قفل ونقر.",
     price: 149,
-    comparePrice: 199,
-    discount: 25,
     categoryId: "cat-spc",
     images: [
       { id: "img-001", url: "/assets/products/SPC/img-001.png", alt: "SPC Ash Gray flooring installation", altAr: "تركيب أرضية SPC رمادية", isPrimary: true },
@@ -64,8 +62,6 @@ export const products: Product[] = [
     shortDescriptionAr:
       "أرضية SPC بلوط طبيعي بنقشة مدحوتة يدوياً ومتانة متميزة.",
     price: 179,
-    comparePrice: 229,
-    discount: 22,
     categoryId: "cat-spc",
     images: [
       { id: "img-004", url: "/assets/products/SPC/img-004.png", alt: "SPC Oak Naturel flooring", altAr: "أرضية SPC بلوط طبيعي", isPrimary: true },
@@ -113,8 +109,6 @@ export const products: Product[] = [
     shortDescriptionAr:
       "أرضية SPC رملية فحمية بمظهر حجري ومقاومة للانزلاق.",
     price: 169,
-    comparePrice: 209,
-    discount: 19,
     categoryId: "cat-spc",
     images: [
       { id: "img-007", url: "/assets/products/SPC/img-007.png", alt: "SPC Charcoal Slate flooring", altAr: "أرضية SPC رملية فحمية", isPrimary: true },
@@ -162,8 +156,6 @@ export const products: Product[] = [
     shortDescriptionAr:
       "لوحة أرضية SPC بلوط أسود ذهبي للمساحات الصغيرة وجدران المؤثرات.",
     price: 129,
-    comparePrice: 159,
-    discount: 19,
     categoryId: "cat-spc",
     images: [
       { id: "img-010", url: "/assets/products/SPC/img-010.png", alt: "SPC Honey Oak flooring detail", altAr: "تفاصيل أرضية SPC بلوط أسود", isPrimary: true },
@@ -209,8 +201,6 @@ export const products: Product[] = [
     shortDescriptionAr:
       "لوحة حجر مصطنع أبيض متميز للعدادات وتغطية الجدران.",
     price: 299,
-    comparePrice: 379,
-    discount: 21,
     categoryId: "cat-stone-alt",
     images: [
       { id: "img-011", url: "/assets/products/بديل حجر/img-011.png", alt: "White marble stone alternative panel", altAr: "لوحة مرمر أبيض بديل الحجر", isPrimary: true },
@@ -258,8 +248,6 @@ export const products: Product[] = [
     shortDescriptionAr:
       "لوحات بديل جرانيت داكن بخطوط معدنية أصيلة لجدران المؤثرات.",
     price: 319,
-    comparePrice: 399,
-    discount: 20,
     categoryId: "cat-stone-alt",
     images: [
       { id: "img-014", url: "/assets/products/بديل حجر/img-014.png", alt: "Dark granite stone alternative panel", altAr: "لوحة جرانيت داكن بديل الحجر", isPrimary: true },
@@ -306,8 +294,6 @@ export const products: Product[] = [
     shortDescriptionAr:
       "بديل ترافيرتين بيج أنيق بلمعة مطحونة طبيعية.",
     price: 269,
-    comparePrice: 329,
-    discount: 18,
     categoryId: "cat-stone-alt",
     images: [
       { id: "img-015", url: "/assets/products/بديل حجر/img-015.png", alt: "Beige travertine stone alternative", altAr: "بديل ترافيرتين بيج", isPrimary: true },
@@ -354,8 +340,6 @@ export const products: Product[] = [
     shortDescriptionAr:
       "لوحات سوفت ستون جير أبيض متميزة للجدران الداخلية.",
     price: 219,
-    comparePrice: 269,
-    discount: 19,
     categoryId: "cat-soft-stone",
     images: [
       { id: "img-016", url: "/assets/products/سوفت ستون/img-016.png", alt: "Cream limestone soft stone panels", altAr: "لوحات سوفت ستون جير أبيض", isPrimary: true },
@@ -404,8 +388,6 @@ export const products: Product[] = [
     shortDescriptionAr:
       "لوحات سوفت ستون بني بيتشي دافئة بنمط حبوب طبيعي.",
     price: 199,
-    comparePrice: 249,
-    discount: 20,
     categoryId: "cat-soft-stone",
     images: [
       { id: "img-020", url: "/assets/products/سوفت ستون/img-020.png", alt: "Beechwood brown soft stone panels", altAr: "لوحات سوفت ستون بيتشي بني", isPrimary: true },
@@ -453,8 +435,6 @@ export const products: Product[] = [
     shortDescriptionAr:
       "لوحات سوفت ستون طوبي أحمر نابض بالحياة بأسلوب أطلسي.",
     price: 239,
-    comparePrice: 289,
-    discount: 17,
     categoryId: "cat-soft-stone",
     images: [
       { id: "img-023", url: "/assets/products/سوفت ستون/img-023.png", alt: "Terracotta red soft stone panels", altAr: "لوحات سوفت ستون طوبي أحمر", isPrimary: true },
@@ -502,8 +482,6 @@ export const products: Product[] = [
     shortDescriptionAr:
       "لوحات سوفت ستون بيج ليموني ناعمة بمظهر عضوي متهالك.",
     price: 209,
-    comparePrice: 259,
-    discount: 19,
     categoryId: "cat-soft-stone",
     images: [
       { id: "img-016", url: "/assets/products/سوفت ستون/img-016.png", alt: "Limewash beige soft stone panels", altAr: "لوحات سوفت ستون بيج ليموني", isPrimary: true },
@@ -569,8 +547,7 @@ export const searchProducts = (query: string): Product[] => {
       p.nameAr.includes(searchTerm) ||
       p.shortDescription.toLowerCase().includes(searchTerm) ||
       p.shortDescriptionAr.includes(searchTerm) ||
-      p.tags.some((tag) => tag.toLowerCase().includes(searchTerm)) ||
-      (p.comparePrice !== undefined && p.comparePrice.toString().includes(searchTerm))
+      p.tags.some((tag) => tag.toLowerCase().includes(searchTerm))
     );
   });
 };

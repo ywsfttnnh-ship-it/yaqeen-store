@@ -5,12 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Heart, ShoppingCart, Eye, Star } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
-import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+import { formatCurrency } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useCart } from "@/lib/context/cart-context";
 import { useWishlist } from "@/lib/context/wishlist-context";
 import type { Product } from "@/types";
+import { config } from "@/lib/config";
 
 interface ProductCardProps {
   product: Product;
@@ -25,9 +26,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, showQuickView
 
   const primaryImage = product.images.find((img) => img.isPrimary) || product.images[0];
   const secondaryImage = product.images.length > 1 ? product.images[1] : primaryImage;
-  const discount = product.comparePrice
-    ? calculateDiscountPercentage(product.comparePrice, product.price)
-    : 0;
 
   const handleAddToCart = () => {
     setIsAdding(true);
@@ -63,11 +61,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, showQuickView
           {product.bestSeller && (
             <Badge variant="gold" className="text-xs">
               الأكثر مبيعاً
-            </Badge>
-          )}
-          {discount > 0 && (
-            <Badge variant="danger" className="text-xs">
-              -{discount}%
             </Badge>
           )}
           {product.stock === 0 && (
@@ -142,19 +135,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, showQuickView
         </p>
 
         {/* Price */}
-        <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="font-bold text-lg text-primary-700">{formatCurrency(product.price)}</span>
-          {product.comparePrice && (
-            <>
-              <span className="text-sm text-muted-foreground line-through">
-                {formatCurrency(product.comparePrice)}
-              </span>
-              <Badge variant="danger" size="sm" className="text-xs">
-                {discount}%
-              </Badge>
-            </>
-          )}
-        </div>
+        {!config.app.hidePrices && (
+          <div className="flex flex-wrap items-center gap-2 mb-3">
+            <span className="font-bold text-lg text-primary-700">{formatCurrency(product.price)}</span>
+          </div>
+        )}
 
         {/* Rating */}
         <div className="flex items-center gap-2 mb-3">

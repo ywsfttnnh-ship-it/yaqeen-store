@@ -1,9 +1,10 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import { X, ShoppingCart } from "lucide-react";
 import { useCart } from "@/lib/context/cart-context";
 import { formatCurrency } from "@/lib/utils";
+import { config } from "@/lib/config";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -93,7 +94,9 @@ export const CartDrawer = () => {
                   {/* Product Details */}
                   <div className="flex-1">
                     <h3 className="font-medium text-foreground">{item.product.nameAr}</h3>
-                    <p className="text-sm text-muted-foreground">{formatCurrency(item.price)}</p>
+                    {!config.app.hidePrices && (
+                      <p className="text-sm text-muted-foreground">{formatCurrency(item.price)}</p>
+                    )}
 
                     {/* Quantity Selector */}
                     <div className="mt-2 flex items-center gap-2">
@@ -153,35 +156,37 @@ export const CartDrawer = () => {
         {cart.items.length > 0 && (
           <div className="border-t border-border p-4">
             {/* Summary */}
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">المجموع الفرعي:</span>
-                <span>{formatCurrency(cart.subtotal)}</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">الضرائب:</span>
-                <span>{formatCurrency(cart.tax)}</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">الشحن:</span>
-                <span>
-                  {cart.shipping === 0 ? "مجاني" : formatCurrency(cart.shipping)}
-                </span>
-              </div>
-              {cart.discount > 0 && (
-                <div className="flex justify-between text-sm text-accent-500">
-                  <span>الخصم:</span>
-                  <span>-{formatCurrency(cart.discount)}</span>
+            {!config.app.hidePrices && (
+              <div className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span className="text-muted-foreground">المجموع الفرعي:</span>
+                  <span>{formatCurrency(cart.subtotal)}</span>
                 </div>
-              )}
-              <div className="flex justify-between border-t border-border pt-2 text-lg font-bold">
-                <span>الإجمالي:</span>
-                <span className="text-primary-700">{formatCurrency(cart.total)}</span>
+                <div className="flex justify-between text-sm">
+                  <span className="text-muted-foreground">الضرائب:</span>
+                  <span>{formatCurrency(cart.tax)}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-muted-foreground">الشحن:</span>
+                  <span>
+                    {cart.shipping === 0 ? "مجاني" : formatCurrency(cart.shipping)}
+                  </span>
+                </div>
+                {cart.discount > 0 && (
+                  <div className="flex justify-between text-sm text-accent-500">
+                    <span>الخصم:</span>
+                    <span>-{formatCurrency(cart.discount)}</span>
+                  </div>
+                )}
+                <div className="flex justify-between border-t border-border pt-2 text-lg font-bold">
+                  <span>الإجمالي:</span>
+                  <span className="text-primary-700">{formatCurrency(cart.total)}</span>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Actions */}
-            <div className="mt-4 space-y-2">
+            <div className={cn("space-y-2", !config.app.hidePrices && "mt-4")}>
               <Link href="/checkout" onClick={closeCart}>
                 <Button variant="primary" className="w-full" size="lg">
                   إتمام الشراء
@@ -196,7 +201,7 @@ export const CartDrawer = () => {
             </div>
 
             {/* Free shipping note */}
-            {cart.subtotal > 0 && cart.subtotal < 500 && (
+            {!config.app.hidePrices && cart.subtotal > 0 && cart.subtotal < 500 && (
               <div className="mt-3 rounded-lg bg-primary-50 p-2 text-center text-xs text-primary-800">
                 أنهِ {formatCurrency(500 - cart.subtotal)} للحصول على شحن مجاني
               </div>

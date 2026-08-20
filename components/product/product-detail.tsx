@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 
 import * as React from "react";
 import Image from "next/image";
-import { Minus, Plus, ShoppingCart, Heart, Truck, ShieldCheck, RefreshCcw } from "lucide-react";
+import { Minus, Plus, ShoppingCart, Heart, Truck, ShieldCheck, RefreshCcw, Phone } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
-import { formatCurrency, calculateDiscountPercentage, formatDate } from "@/lib/utils";
+import { formatCurrency, formatDate } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Rating } from "@/components/ui/rating";
@@ -28,7 +28,6 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, reviews, 
 
   const images = product.images;
   const primaryImage = images.find((i) => i.isPrimary) || images[0];
-  const discount = product.comparePrice ? calculateDiscountPercentage(product.comparePrice, product.price) : 0;
   const inWishlist = hasItem(product.id);
 
   const handleAddToCart = () => {
@@ -53,7 +52,6 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, reviews, 
             <div className="absolute top-4 z-10 flex gap-2" dir="ltr">
               {product.newArrival && <Badge variant="accent">جديد</Badge>}
               {product.bestSeller && <Badge variant="gold">الأكثر مبيعاً</Badge>}
-              {discount > 0 && <Badge variant="danger">خصم {discount}%</Badge>}
             </div>
           </div>
           {images.length > 1 && (
@@ -93,13 +91,11 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, reviews, 
           <h1 className="text-3xl font-bold text-foreground">{product.nameAr}</h1>
           <p className="mt-2 text-muted-foreground leading-relaxed">{product.shortDescriptionAr}</p>
 
-          <div className="mt-4 flex items-center gap-3">
-            <span className="text-3xl font-bold text-primary-700">{formatCurrency(product.price)}</span>
-            {product.comparePrice && (
-              <span className="text-lg text-muted-foreground line-through">{formatCurrency(product.comparePrice)}</span>
-            )}
-            {discount > 0 && <Badge variant="success">وفّر {discount}%</Badge>}
-          </div>
+          {!config.app.hidePrices && (
+            <div className="mt-4 flex items-center gap-3">
+              <span className="text-3xl font-bold text-primary-700">{formatCurrency(product.price)}</span>
+            </div>
+          )}
 
           <div className="mt-2 flex items-center gap-4 text-sm text-muted-foreground">
             <span>الكمية: 1 متر مربع</span>
@@ -109,10 +105,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, reviews, 
           <div className="mt-6 space-y-3 border-t border-border pt-6">
             <div className="flex items-center gap-3 text-sm text-muted-foreground">
               <Truck className="h-5 w-5 text-primary-600" />
-              <span>
-                شحن مجاني للطلبات فوق {formatCurrency(config.delivery.freeThreshold)} — التوصيل خلال{" "}
-                {config.delivery.estimatedDays.standard}
-              </span>
+              <span>التوصيل لجميع مناطق الضفة الغربية خلال {config.delivery.estimatedDays.standard}</span>
             </div>
             <div className="flex items-center gap-3 text-sm text-muted-foreground">
               <ShieldCheck className="h-5 w-5 text-primary-600" />
@@ -152,6 +145,13 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, reviews, 
             >
               <ShoppingCart className="h-5 w-5 me-1" />
               {product.stock === 0 ? "نفد المخزون" : "أضف إلى السلة"}
+            </Button>
+
+            <Button asChild variant="gold" size="lg" className="flex-1 min-w-[200px]">
+              <a href="tel:+972597426988">
+                <Phone className="h-5 w-5 me-1" />
+                اطلب الآن
+              </a>
             </Button>
 
             <Button

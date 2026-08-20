@@ -8,17 +8,14 @@ import { ProductCard } from "@/components/product/product-card";
 import { Select } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Modal } from "@/components/ui/modal";
-import { formatCurrency } from "@/lib/utils";
 import { categories } from "@/lib/data/categories";
-import { getProducts, getPriceRange } from "@/lib/data";
+import { getProducts } from "@/lib/data";
 import type { PagedResult, ProductFilters } from "@/lib/data";
 import type { Product } from "@/types";
 import { config } from "@/lib/config";
 
 const sortOptions = [
   { value: "newest", label: "Newest", labelAr: "الأحدث" },
-  { value: "price-asc", label: "Price: Low to High", labelAr: "السعر من الأقل للأكثر" },
-  { value: "price-desc", label: "Price: High to Low", labelAr: "السعر من الأكثر للأقل" },
   { value: "rating", label: "Top Rated", labelAr: "الأعلى تقييماً" },
   { value: "popularity", label: "Most Popular", labelAr: "الأكثر شعبية" },
   { value: "name-asc", label: "Name A-Z", labelAr: "الاسم أ-ي" },
@@ -104,7 +101,6 @@ export default function StorePage() {
 
   if (!mounted) return null;
 
-  const priceRange = getPriceRange();
   const activeFilterCount = Object.values(filters).filter((v) => v !== undefined && v !== null && v !== false).length;
 
   return (
@@ -225,7 +221,6 @@ export default function StorePage() {
           resetFilters();
           setIsFilterOpen(false);
         }}
-        priceRange={priceRange}
       />
     </div>
   );
@@ -237,10 +232,9 @@ interface FilterModalProps {
   filters: ProductFilters;
   onApply: (filters: ProductFilters) => void;
   onReset: () => void;
-  priceRange: { min: number; max: number };
 }
 
-function FilterModal({ isOpen, onClose, filters, onApply, onReset, priceRange }: FilterModalProps) {
+function FilterModal({ isOpen, onClose, filters, onApply, onReset }: FilterModalProps) {
   const [localFilters, setLocalFilters] = React.useState<ProductFilters>(filters);
 
   React.useEffect(() => {
@@ -292,36 +286,6 @@ function FilterModal({ isOpen, onClose, filters, onApply, onReset, priceRange }:
                 }}
               />
             ))}
-          </div>
-        </div>
-
-        <div>
-          <h3 className="mb-3 text-sm font-medium">السعر (₪)</h3>
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="text-xs text-muted-foreground">الحد الأدنى</label>
-              <input
-                type="number"
-                min={priceRange.min}
-                max={priceRange.max}
-                value={localFilters.minPrice ?? ""}
-                onChange={(e) => updateFilter("minPrice", e.target.value ? Number(e.target.value) : undefined)}
-                className="mt-1 w-full rounded-lg border border-border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary-500"
-                placeholder={formatCurrency(priceRange.min)}
-              />
-            </div>
-            <div>
-              <label className="text-xs text-muted-foreground">الحد الأقصى</label>
-              <input
-                type="number"
-                min={priceRange.min}
-                max={priceRange.max}
-                value={localFilters.maxPrice ?? ""}
-                onChange={(e) => updateFilter("maxPrice", e.target.value ? Number(e.target.value) : undefined)}
-                className="mt-1 w-full rounded-lg border border-border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary-500"
-                placeholder={formatCurrency(priceRange.max)}
-              />
-            </div>
           </div>
         </div>
 

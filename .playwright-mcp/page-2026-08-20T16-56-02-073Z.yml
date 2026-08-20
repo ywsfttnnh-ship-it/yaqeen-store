@@ -1,0 +1,749 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e3]:
+    - generic [ref=f3e4]: التوصيل لجميع مناطق الضفة الغربية
+    - generic [ref=f3e5]: "|"
+    - link "+972 59-742-6988" [ref=f3e6] [cursor=pointer]:
+      - /url: tel:+972597426988
+    - generic [ref=f3e7]: "|"
+    - generic [ref=f3e8]: ضمان 25 سنة على أرضيات SPC
+  - banner [ref=f3e9]:
+    - generic [ref=f3e11]:
+      - link "Yaqeen Store" [ref=f3e12] [cursor=pointer]:
+        - /url: /
+        - img "Yaqeen Store" [ref=f3e14]
+        - generic [ref=f3e15]: يقين ستور
+      - navigation "التنقل الرئيسي" [ref=f3e16]:
+        - link "الرئيسية" [ref=f3e17] [cursor=pointer]:
+          - /url: /
+        - link "المتجر" [ref=f3e19] [cursor=pointer]:
+          - /url: /store
+        - link "التصنيفات" [ref=f3e20] [cursor=pointer]:
+          - /url: /categories
+        - link "من نحن" [ref=f3e21] [cursor=pointer]:
+          - /url: /about
+        - link "تواصل معنا" [ref=f3e22] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=f3e23]:
+        - generic [ref=f3e26]:
+          - searchbox "بحث عن منتجات" [ref=f3e27]
+          - button [ref=f3e28] [cursor=pointer]
+        - button "تبديل المظهر" [ref=f3e31] [cursor=pointer]
+        - link "المفضلة" [ref=f3e34] [cursor=pointer]:
+          - /url: /wishlist
+          - button [ref=f3e35]
+        - button "السلة" [ref=f3e38] [cursor=pointer]
+        - link "تسجيل الدخول" [ref=f3e44] [cursor=pointer]:
+          - /url: /account/login
+          - button "تسجيل الدخول" [ref=f3e45]
+  - main [ref=f3e50]:
+    - generic [ref=f3e51]:
+      - img "يقين ستور - متجر متميز" [ref=f3e53]
+      - generic [ref=f3e57]:
+        - generic [ref=f3e58]: جودة متميزة | ضمان 25 سنة | مقاومة ماء 100%
+        - heading "اكتشف أناقة منزلك بتفاصيل استثنائية" [level=1] [ref=f3e63]:
+          - generic [ref=f3e64]: اكتشف أناقة منزلك
+          - generic [ref=f3e65]: بتفاصيل استثنائية
+        - paragraph [ref=f3e66]: نقدم لك أرضيات SPC وبدائل الحجر وسوفت ستون ذات جودة عالمية، نضمن لك الراحة، المتانة، وجمال المنزل.
+        - generic [ref=f3e67]:
+          - link [ref=f3e68] [cursor=pointer]:
+            - /url: /store
+            - button "تسوق الآن" [ref=f3e69]
+          - link [ref=f3e72] [cursor=pointer]:
+            - /url: /categories
+            - button "استكشف المنتجات" [ref=f3e73]
+      - generic [ref=f3e74]:
+        - button "انتقل إلى الصورة 1" [ref=f3e75] [cursor=pointer]
+        - button "انتقل إلى الصورة 2" [ref=f3e76] [cursor=pointer]
+        - button "انتقل إلى الصورة 3" [ref=f3e77] [cursor=pointer]
+    - generic [ref=f3e82]:
+      - generic [ref=f3e83]:
+        - generic [ref=f3e84]: تسوق حسب القسم
+        - heading "تصفح منتجاتنا حسب الفئة" [level=2] [ref=f3e85]
+        - paragraph [ref=f3e87]: نقدم مجموعة واسعة من الحلول المنزلية المتميزة لكل مساحة في منزلك
+      - generic [ref=f3e88]:
+        - link "أرضية SPC في غرفة معيشة حديثة باركيه SPC أرضيات SPC (سون كابل بلاستيك) توفر متانة عالية ومقاومة للماء والراحة تحت القدم. مثالية للمنازل الحديثة والمساحات التجارية. 4 منتجات" [ref=f3e89] [cursor=pointer]:
+          - /url: /categories/باركيه-spc
+          - generic [ref=f3e90]:
+            - img "أرضية SPC في غرفة معيشة حديثة" [ref=f3e92]
+            - generic [ref=f3e95]:
+              - heading "باركيه SPC" [level=3] [ref=f3e96]
+              - paragraph [ref=f3e97]: أرضيات SPC (سون كابل بلاستيك) توفر متانة عالية ومقاومة للماء والراحة تحت القدم. مثالية للمنازل الحديثة والمساحات التجارية.
+              - generic [ref=f3e98]: 4 منتجات
+        - link "ألواح زخرفية بديل الحجر بديل حجر سطوح بديل الحجر عالية الجودة التي تحاكي الحجر الطبيعي بتكلفة وصيانة منخفضة. مثالية للعدادات والجدران والزينة. 3 منتجات" [ref=f3e103] [cursor=pointer]:
+          - /url: /categories/بديل-حجر
+          - generic [ref=f3e104]:
+            - img "ألواح زخرفية بديل الحجر" [ref=f3e106]
+            - generic [ref=f3e109]:
+              - heading "بديل حجر" [level=3] [ref=f3e110]
+              - paragraph [ref=f3e111]: سطوح بديل الحجر عالية الجودة التي تحاكي الحجر الطبيعي بتكلفة وصيانة منخفضة. مثالية للعدادات والجدران والزينة.
+              - generic [ref=f3e112]: 3 منتجات
+        - link "تغطية جدران سوفت ستون داخلية سوفت ستون مجموعات سوفت ستون متميزة تشمل الحجر الجيري والترافيرتين وبدائل المرمر لتطبيقات داخلية وخارجية أنيقة. 4 منتجات" [ref=f3e117] [cursor=pointer]:
+          - /url: /categories/سوفت-ستون
+          - generic [ref=f3e118]:
+            - img "تغطية جدران سوفت ستون داخلية" [ref=f3e120]
+            - generic [ref=f3e123]:
+              - heading "سوفت ستون" [level=3] [ref=f3e124]
+              - paragraph [ref=f3e125]: مجموعات سوفت ستون متميزة تشمل الحجر الجيري والترافيرتين وبدائل المرمر لتطبيقات داخلية وخارجية أنيقة.
+              - generic [ref=f3e126]: 4 منتجات
+    - generic [ref=f3e132]:
+      - generic [ref=f3e133]:
+        - generic [ref=f3e134]:
+          - generic [ref=f3e135]: منتجات مختارة لك
+          - heading "منتجات مختارة لك" [level=2] [ref=f3e136]
+          - paragraph [ref=f3e138]: اقتناصات متميزة مختارة بعناية من أفضل منتجاتنا
+        - link "عرض الكل" [ref=f3e139] [cursor=pointer]:
+          - /url: /store?featured=true
+      - generic [ref=f3e143]:
+        - generic [ref=f3e145]:
+          - generic [ref=f3e146]:
+            - generic [ref=f3e147]: الأكثر مبيعاً
+            - generic [ref=f3e149]:
+              - button "إضافة إلى المفضلة" [ref=f3e150] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e153] [cursor=pointer]:
+                - /url: /product/spc-wood-ash-gray-1220
+          - link [ref=f3e158] [cursor=pointer]:
+            - /url: /product/spc-wood-ash-gray-1220
+            - img "تركيب أرضية SPC رمادية" [ref=f3e159]
+            - img "تفاصيل نسيج SPC رمادية" [ref=f3e160]
+          - generic [ref=f3e161]:
+            - link [ref=f3e162] [cursor=pointer]:
+              - /url: /product/spc-wood-ash-gray-1220
+              - heading "SPC وود - رمادي أشق - 1220×180" [level=3] [ref=f3e163]
+            - paragraph [ref=f3e164]: أرضية SPC رمادية متميزة بنواة مقاومة للماء وتركيب قفل ونقر.
+            - generic [ref=f3e165]: 4.8 (124)
+            - paragraph [ref=f3e178]: باركيه SPC
+            - button "أضف إلى السلة" [ref=f3e179] [cursor=pointer]
+        - generic [ref=f3e185]:
+          - generic [ref=f3e186]:
+            - generic [ref=f3e187]: الأكثر مبيعاً
+            - generic [ref=f3e189]:
+              - button "إضافة إلى المفضلة" [ref=f3e190] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e193] [cursor=pointer]:
+                - /url: /product/spc-oak-naturel-1220
+          - link [ref=f3e198] [cursor=pointer]:
+            - /url: /product/spc-oak-naturel-1220
+            - img "أرضية SPC بلوط طبيعي" [ref=f3e199]
+            - img "تفاصيل نسيج SPC بلوط طبيعي" [ref=f3e200]
+          - generic [ref=f3e201]:
+            - link [ref=f3e202] [cursor=pointer]:
+              - /url: /product/spc-oak-naturel-1220
+              - heading "SPC وود - بلوط طبيعي - 1220×180" [level=3] [ref=f3e203]
+            - paragraph [ref=f3e204]: أرضية SPC بلوط طبيعي بنقشة مدحوتة يدوياً ومتانة متميزة.
+            - generic [ref=f3e205]: 4.9 (89)
+            - paragraph [ref=f3e218]: باركيه SPC
+            - button "أضف إلى السلة" [ref=f3e219] [cursor=pointer]
+        - generic [ref=f3e225]:
+          - generic [ref=f3e226]:
+            - generic [ref=f3e227]: جديد
+            - generic [ref=f3e229]:
+              - button "إضافة إلى المفضلة" [ref=f3e230] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e233] [cursor=pointer]:
+                - /url: /product/spc-charcoal-slate-1220
+          - link [ref=f3e238] [cursor=pointer]:
+            - /url: /product/spc-charcoal-slate-1220
+            - img "أرضية SPC رملية فحمية" [ref=f3e239]
+            - img "أرضية SPC رملية فحمية في غرفة معيشة" [ref=f3e240]
+          - generic [ref=f3e241]:
+            - link [ref=f3e242] [cursor=pointer]:
+              - /url: /product/spc-charcoal-slate-1220
+              - heading "SPC ستون - رملي فحمي - 1220×180" [level=3] [ref=f3e243]
+            - paragraph [ref=f3e244]: أرضية SPC رملية فحمية بمظهر حجري ومقاومة للانزلاق.
+            - generic [ref=f3e245]: 4.7 (63)
+            - paragraph [ref=f3e258]: باركيه SPC
+            - button "أضف إلى السلة" [ref=f3e259] [cursor=pointer]
+        - generic [ref=f3e265]:
+          - generic [ref=f3e266]:
+            - generic [ref=f3e267]: الأكثر مبيعاً
+            - generic [ref=f3e269]:
+              - button "إضافة إلى المفضلة" [ref=f3e270] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e273] [cursor=pointer]:
+                - /url: /product/stone-alt-marble-white-600x600
+          - link [ref=f3e278] [cursor=pointer]:
+            - /url: /product/stone-alt-marble-white-600x600
+            - img "لوحة مرمر أبيض بديل الحجر" [ref=f3e279]
+            - img "تركيب مرمر أبيض بديل الحجر" [ref=f3e280]
+          - generic [ref=f3e281]:
+            - link [ref=f3e282] [cursor=pointer]:
+              - /url: /product/stone-alt-marble-white-600x600
+              - heading "بديل حجر - مرمر أبيض - 600×600" [level=3] [ref=f3e283]
+            - paragraph [ref=f3e284]: لوحة حجر مصطنع أبيض متميز للعدادات وتغطية الجدران.
+            - generic [ref=f3e285]: 4.9 (52)
+            - paragraph [ref=f3e298]: بديل حجر
+            - button "أضف إلى السلة" [ref=f3e299] [cursor=pointer]
+        - generic [ref=f3e305]:
+          - generic [ref=f3e307]:
+            - button "إضافة إلى المفضلة" [ref=f3e308] [cursor=pointer]
+            - link "عرض سريع" [ref=f3e311] [cursor=pointer]:
+              - /url: /product/stone-alt-granite-dark-600x600
+          - link [ref=f3e316] [cursor=pointer]:
+            - /url: /product/stone-alt-granite-dark-600x600
+            - img "لوحة جرانيت داكن بديل الحجر" [ref=f3e317]
+            - img "نسيج جرانيت داكن بديل الحجر" [ref=f3e318]
+          - generic [ref=f3e319]:
+            - link [ref=f3e320] [cursor=pointer]:
+              - /url: /product/stone-alt-granite-dark-600x600
+              - heading "بديل حجر - جرانيت داكن - 600×600" [level=3] [ref=f3e321]
+            - paragraph [ref=f3e322]: لوحات بديل جرانيت داكن بخطوط معدنية أصيلة لجدران المؤثرات.
+            - generic [ref=f3e323]: 4.8 (41)
+            - paragraph [ref=f3e336]: بديل حجر
+            - button "أضف إلى السلة" [ref=f3e337] [cursor=pointer]
+        - generic [ref=f3e343]:
+          - generic [ref=f3e344]:
+            - generic [ref=f3e345]: الأكثر مبيعاً
+            - generic [ref=f3e347]:
+              - button "إضافة إلى المفضلة" [ref=f3e348] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e351] [cursor=pointer]:
+                - /url: /product/soft-stone-limestone-cream-600x600
+          - link [ref=f3e356] [cursor=pointer]:
+            - /url: /product/soft-stone-limestone-cream-600x600
+            - img "لوحات سوفت ستون جير أبيض" [ref=f3e357]
+            - img "نسيج سوفت ستون جير أبيض" [ref=f3e358]
+          - generic [ref=f3e359]:
+            - link [ref=f3e360] [cursor=pointer]:
+              - /url: /product/soft-stone-limestone-cream-600x600
+              - heading "سوفت ستون - جير أبيض - 600×600" [level=3] [ref=f3e361]
+            - paragraph [ref=f3e362]: لوحات سوفت ستون جير أبيض متميزة للجدران الداخلية.
+            - generic [ref=f3e363]: 4.7 (76)
+            - paragraph [ref=f3e376]: سوفت ستون
+            - button "أضف إلى السلة" [ref=f3e377] [cursor=pointer]
+        - generic [ref=f3e383]:
+          - generic [ref=f3e385]:
+            - button "إضافة إلى المفضلة" [ref=f3e386] [cursor=pointer]
+            - link "عرض سريع" [ref=f3e389] [cursor=pointer]:
+              - /url: /product/soft-stone-beechwood-600x300
+          - link [ref=f3e394] [cursor=pointer]:
+            - /url: /product/soft-stone-beechwood-600x300
+            - img "لوحات سوفت ستون بيتشي بني" [ref=f3e395]
+            - img "تفاصيل سوفت ستون بيتشي بني" [ref=f3e396]
+          - generic [ref=f3e397]:
+            - link [ref=f3e398] [cursor=pointer]:
+              - /url: /product/soft-stone-beechwood-600x300
+              - heading "سوفت ستون - بيتشي بني - 600×300" [level=3] [ref=f3e399]
+            - paragraph [ref=f3e400]: لوحات سوفت ستون بني بيتشي دافئة بنمط حبوب طبيعي.
+            - generic [ref=f3e401]: 4.6 (55)
+            - paragraph [ref=f3e414]: سوفت ستون
+            - button "أضف إلى السلة" [ref=f3e415] [cursor=pointer]
+    - generic [ref=f3e420]:
+      - img "أرضية SPC في غرفة معيشة حديثة" [ref=f3e422]
+      - generic [ref=f3e426]:
+        - generic [ref=f3e427]: باركيه SPC
+        - heading "باركيه SPC" [level=2] [ref=f3e428]
+        - paragraph [ref=f3e429]: أرضيات SPC (سون كابل بلاستيك) توفر متانة عالية ومقاومة للماء والراحة تحت القدم. مثالية للمنازل الحديثة والمساحات التجارية.
+        - link [ref=f3e430] [cursor=pointer]:
+          - /url: /categories/باركيه-spc
+          - button "استكشف المنتجات" [ref=f3e431]
+    - generic [ref=f3e435]:
+      - generic [ref=f3e436]:
+        - generic [ref=f3e437]:
+          - generic [ref=f3e438]: الأكثر طلباً
+          - heading "باركيه SPC" [level=2] [ref=f3e439]
+          - paragraph [ref=f3e441]: أرضيات SPC عالية الجودة مقاومة للماء مع ضمان 25 سنة
+        - link "عرض الكل" [ref=f3e442] [cursor=pointer]:
+          - /url: /categories/باركيه-spc
+      - generic [ref=f3e446]:
+        - generic [ref=f3e448]:
+          - generic [ref=f3e449]:
+            - generic [ref=f3e450]: الأكثر مبيعاً
+            - generic [ref=f3e452]:
+              - button "إضافة إلى المفضلة" [ref=f3e453] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e456] [cursor=pointer]:
+                - /url: /product/spc-wood-ash-gray-1220
+          - link [ref=f3e461] [cursor=pointer]:
+            - /url: /product/spc-wood-ash-gray-1220
+            - img "تركيب أرضية SPC رمادية" [ref=f3e462]
+            - img "تفاصيل نسيج SPC رمادية" [ref=f3e463]
+          - generic [ref=f3e464]:
+            - link [ref=f3e465] [cursor=pointer]:
+              - /url: /product/spc-wood-ash-gray-1220
+              - heading "SPC وود - رمادي أشق - 1220×180" [level=3] [ref=f3e466]
+            - paragraph [ref=f3e467]: أرضية SPC رمادية متميزة بنواة مقاومة للماء وتركيب قفل ونقر.
+            - generic [ref=f3e468]: 4.8 (124)
+            - paragraph [ref=f3e481]: باركيه SPC
+            - button "أضف إلى السلة" [ref=f3e482] [cursor=pointer]
+        - generic [ref=f3e488]:
+          - generic [ref=f3e489]:
+            - generic [ref=f3e490]: الأكثر مبيعاً
+            - generic [ref=f3e492]:
+              - button "إضافة إلى المفضلة" [ref=f3e493] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e496] [cursor=pointer]:
+                - /url: /product/spc-oak-naturel-1220
+          - link [ref=f3e501] [cursor=pointer]:
+            - /url: /product/spc-oak-naturel-1220
+            - img "أرضية SPC بلوط طبيعي" [ref=f3e502]
+            - img "تفاصيل نسيج SPC بلوط طبيعي" [ref=f3e503]
+          - generic [ref=f3e504]:
+            - link [ref=f3e505] [cursor=pointer]:
+              - /url: /product/spc-oak-naturel-1220
+              - heading "SPC وود - بلوط طبيعي - 1220×180" [level=3] [ref=f3e506]
+            - paragraph [ref=f3e507]: أرضية SPC بلوط طبيعي بنقشة مدحوتة يدوياً ومتانة متميزة.
+            - generic [ref=f3e508]: 4.9 (89)
+            - paragraph [ref=f3e521]: باركيه SPC
+            - button "أضف إلى السلة" [ref=f3e522] [cursor=pointer]
+        - generic [ref=f3e528]:
+          - generic [ref=f3e529]:
+            - generic [ref=f3e530]: جديد
+            - generic [ref=f3e532]:
+              - button "إضافة إلى المفضلة" [ref=f3e533] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e536] [cursor=pointer]:
+                - /url: /product/spc-charcoal-slate-1220
+          - link [ref=f3e541] [cursor=pointer]:
+            - /url: /product/spc-charcoal-slate-1220
+            - img "أرضية SPC رملية فحمية" [ref=f3e542]
+            - img "أرضية SPC رملية فحمية في غرفة معيشة" [ref=f3e543]
+          - generic [ref=f3e544]:
+            - link [ref=f3e545] [cursor=pointer]:
+              - /url: /product/spc-charcoal-slate-1220
+              - heading "SPC ستون - رملي فحمي - 1220×180" [level=3] [ref=f3e546]
+            - paragraph [ref=f3e547]: أرضية SPC رملية فحمية بمظهر حجري ومقاومة للانزلاق.
+            - generic [ref=f3e548]: 4.7 (63)
+            - paragraph [ref=f3e561]: باركيه SPC
+            - button "أضف إلى السلة" [ref=f3e562] [cursor=pointer]
+        - generic [ref=f3e568]:
+          - generic [ref=f3e569]:
+            - generic [ref=f3e570]: جديد
+            - generic [ref=f3e572]:
+              - button "إضافة إلى المفضلة" [ref=f3e573] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e576] [cursor=pointer]:
+                - /url: /product/spc-honey-wood-620x180
+          - link [ref=f3e581] [cursor=pointer]:
+            - /url: /product/spc-honey-wood-620x180
+            - img "تفاصيل أرضية SPC بلوط أسود" [ref=f3e582]
+            - img "تفاصيل أرضية SPC بلوط أسود" [ref=f3e583]
+          - generic [ref=f3e584]:
+            - link [ref=f3e585] [cursor=pointer]:
+              - /url: /product/spc-honey-wood-620x180
+              - heading "SPC وود - بلوط أسود - 620×180" [level=3] [ref=f3e586]
+            - paragraph [ref=f3e587]: لوحة أرضية SPC بلوط أسود ذهبي للمساحات الصغيرة وجدران المؤثرات.
+            - generic [ref=f3e588]: 4.5 (37)
+            - paragraph [ref=f3e601]: باركيه SPC
+            - button "أضف إلى السلة" [ref=f3e602] [cursor=pointer]
+    - generic [ref=f3e608]:
+      - generic [ref=f3e609]:
+        - generic [ref=f3e610]:
+          - generic [ref=f3e611]: الأكثر مبيعاً
+          - heading "الأكثر مبيعاً" [level=2] [ref=f3e612]
+          - paragraph [ref=f3e614]: المنتجات الأكثر شعبية بين عملائنا
+        - link "عرض الكل" [ref=f3e615] [cursor=pointer]:
+          - /url: /store?best=best-seller
+      - generic [ref=f3e619]:
+        - generic [ref=f3e621]:
+          - generic [ref=f3e622]:
+            - generic [ref=f3e623]: الأكثر مبيعاً
+            - generic [ref=f3e625]:
+              - button "إضافة إلى المفضلة" [ref=f3e626] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e629] [cursor=pointer]:
+                - /url: /product/spc-wood-ash-gray-1220
+          - link [ref=f3e634] [cursor=pointer]:
+            - /url: /product/spc-wood-ash-gray-1220
+            - img "تركيب أرضية SPC رمادية" [ref=f3e635]
+            - img "تفاصيل نسيج SPC رمادية" [ref=f3e636]
+          - generic [ref=f3e637]:
+            - link [ref=f3e638] [cursor=pointer]:
+              - /url: /product/spc-wood-ash-gray-1220
+              - heading "SPC وود - رمادي أشق - 1220×180" [level=3] [ref=f3e639]
+            - paragraph [ref=f3e640]: أرضية SPC رمادية متميزة بنواة مقاومة للماء وتركيب قفل ونقر.
+            - generic [ref=f3e641]: 4.8 (124)
+            - paragraph [ref=f3e654]: باركيه SPC
+            - button "أضف إلى السلة" [ref=f3e655] [cursor=pointer]
+        - generic [ref=f3e661]:
+          - generic [ref=f3e662]:
+            - generic [ref=f3e663]: الأكثر مبيعاً
+            - generic [ref=f3e665]:
+              - button "إضافة إلى المفضلة" [ref=f3e666] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e669] [cursor=pointer]:
+                - /url: /product/spc-oak-naturel-1220
+          - link [ref=f3e674] [cursor=pointer]:
+            - /url: /product/spc-oak-naturel-1220
+            - img "أرضية SPC بلوط طبيعي" [ref=f3e675]
+            - img "تفاصيل نسيج SPC بلوط طبيعي" [ref=f3e676]
+          - generic [ref=f3e677]:
+            - link [ref=f3e678] [cursor=pointer]:
+              - /url: /product/spc-oak-naturel-1220
+              - heading "SPC وود - بلوط طبيعي - 1220×180" [level=3] [ref=f3e679]
+            - paragraph [ref=f3e680]: أرضية SPC بلوط طبيعي بنقشة مدحوتة يدوياً ومتانة متميزة.
+            - generic [ref=f3e681]: 4.9 (89)
+            - paragraph [ref=f3e694]: باركيه SPC
+            - button "أضف إلى السلة" [ref=f3e695] [cursor=pointer]
+        - generic [ref=f3e701]:
+          - generic [ref=f3e702]:
+            - generic [ref=f3e703]: الأكثر مبيعاً
+            - generic [ref=f3e705]:
+              - button "إضافة إلى المفضلة" [ref=f3e706] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e709] [cursor=pointer]:
+                - /url: /product/stone-alt-marble-white-600x600
+          - link [ref=f3e714] [cursor=pointer]:
+            - /url: /product/stone-alt-marble-white-600x600
+            - img "لوحة مرمر أبيض بديل الحجر" [ref=f3e715]
+            - img "تركيب مرمر أبيض بديل الحجر" [ref=f3e716]
+          - generic [ref=f3e717]:
+            - link [ref=f3e718] [cursor=pointer]:
+              - /url: /product/stone-alt-marble-white-600x600
+              - heading "بديل حجر - مرمر أبيض - 600×600" [level=3] [ref=f3e719]
+            - paragraph [ref=f3e720]: لوحة حجر مصطنع أبيض متميز للعدادات وتغطية الجدران.
+            - generic [ref=f3e721]: 4.9 (52)
+            - paragraph [ref=f3e734]: بديل حجر
+            - button "أضف إلى السلة" [ref=f3e735] [cursor=pointer]
+        - generic [ref=f3e741]:
+          - generic [ref=f3e742]:
+            - generic [ref=f3e743]: الأكثر مبيعاً
+            - generic [ref=f3e745]:
+              - button "إضافة إلى المفضلة" [ref=f3e746] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e749] [cursor=pointer]:
+                - /url: /product/soft-stone-limestone-cream-600x600
+          - link [ref=f3e754] [cursor=pointer]:
+            - /url: /product/soft-stone-limestone-cream-600x600
+            - img "لوحات سوفت ستون جير أبيض" [ref=f3e755]
+            - img "نسيج سوفت ستون جير أبيض" [ref=f3e756]
+          - generic [ref=f3e757]:
+            - link [ref=f3e758] [cursor=pointer]:
+              - /url: /product/soft-stone-limestone-cream-600x600
+              - heading "سوفت ستون - جير أبيض - 600×600" [level=3] [ref=f3e759]
+            - paragraph [ref=f3e760]: لوحات سوفت ستون جير أبيض متميزة للجدران الداخلية.
+            - generic [ref=f3e761]: 4.7 (76)
+            - paragraph [ref=f3e774]: سوفت ستون
+            - button "أضف إلى السلة" [ref=f3e775] [cursor=pointer]
+        - generic [ref=f3e781]:
+          - generic [ref=f3e782]:
+            - generic [ref=f3e783]: الأكثر مبيعاً
+            - generic [ref=f3e785]:
+              - button "إضافة إلى المفضلة" [ref=f3e786] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e789] [cursor=pointer]:
+                - /url: /product/soft-stone-terracotta-600x600
+          - link [ref=f3e794] [cursor=pointer]:
+            - /url: /product/soft-stone-terracotta-600x600
+            - img "لوحات سوفت ستون طوبي أحمر" [ref=f3e795]
+            - img "نسيج سوفت ستون طوبي أحمر" [ref=f3e796]
+          - generic [ref=f3e797]:
+            - link [ref=f3e798] [cursor=pointer]:
+              - /url: /product/soft-stone-terracotta-600x600
+              - heading "سوفت ستون - طوبي أحمر - 600×600" [level=3] [ref=f3e799]
+            - paragraph [ref=f3e800]: لوحات سوفت ستون طوبي أحمر نابض بالحياة بأسلوب أطلسي.
+            - generic [ref=f3e801]: 4.8 (48)
+            - paragraph [ref=f3e814]: سوفت ستون
+            - button "أضف إلى السلة" [ref=f3e815] [cursor=pointer]
+    - generic [ref=f3e820]:
+      - img "ألواح زخرفية بديل الحجر" [ref=f3e822]
+      - generic [ref=f3e826]:
+        - generic [ref=f3e827]: بديل حجر
+        - heading "بديل حجر" [level=2] [ref=f3e828]
+        - paragraph [ref=f3e829]: سطوح بديل الحجر عالية الجودة التي تحاكي الحجر الطبيعي بتكلفة وصيانة منخفضة. مثالية للعدادات والجدران والزينة.
+        - link [ref=f3e830] [cursor=pointer]:
+          - /url: /categories/بديل-حجر
+          - button "استكشف المنتجات" [ref=f3e831]
+    - generic [ref=f3e835]:
+      - generic [ref=f3e836]:
+        - generic [ref=f3e837]:
+          - generic [ref=f3e838]: أفضل جودة
+          - heading "بديل الحجر" [level=2] [ref=f3e839]
+          - paragraph [ref=f3e841]: سطوح بديل الحجر ذات اللمعة الطبيعية وجودة متميزة
+        - link "عرض الكل" [ref=f3e842] [cursor=pointer]:
+          - /url: /categories/بديل-حجر
+      - generic [ref=f3e846]:
+        - generic [ref=f3e848]:
+          - generic [ref=f3e849]:
+            - generic [ref=f3e850]: الأكثر مبيعاً
+            - generic [ref=f3e852]:
+              - button "إضافة إلى المفضلة" [ref=f3e853] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e856] [cursor=pointer]:
+                - /url: /product/stone-alt-marble-white-600x600
+          - link [ref=f3e861] [cursor=pointer]:
+            - /url: /product/stone-alt-marble-white-600x600
+            - img "لوحة مرمر أبيض بديل الحجر" [ref=f3e862]
+            - img "تركيب مرمر أبيض بديل الحجر" [ref=f3e863]
+          - generic [ref=f3e864]:
+            - link [ref=f3e865] [cursor=pointer]:
+              - /url: /product/stone-alt-marble-white-600x600
+              - heading "بديل حجر - مرمر أبيض - 600×600" [level=3] [ref=f3e866]
+            - paragraph [ref=f3e867]: لوحة حجر مصطنع أبيض متميز للعدادات وتغطية الجدران.
+            - generic [ref=f3e868]: 4.9 (52)
+            - paragraph [ref=f3e881]: بديل حجر
+            - button "أضف إلى السلة" [ref=f3e882] [cursor=pointer]
+        - generic [ref=f3e888]:
+          - generic [ref=f3e890]:
+            - button "إضافة إلى المفضلة" [ref=f3e891] [cursor=pointer]
+            - link "عرض سريع" [ref=f3e894] [cursor=pointer]:
+              - /url: /product/stone-alt-granite-dark-600x600
+          - link [ref=f3e899] [cursor=pointer]:
+            - /url: /product/stone-alt-granite-dark-600x600
+            - img "لوحة جرانيت داكن بديل الحجر" [ref=f3e900]
+            - img "نسيج جرانيت داكن بديل الحجر" [ref=f3e901]
+          - generic [ref=f3e902]:
+            - link [ref=f3e903] [cursor=pointer]:
+              - /url: /product/stone-alt-granite-dark-600x600
+              - heading "بديل حجر - جرانيت داكن - 600×600" [level=3] [ref=f3e904]
+            - paragraph [ref=f3e905]: لوحات بديل جرانيت داكن بخطوط معدنية أصيلة لجدران المؤثرات.
+            - generic [ref=f3e906]: 4.8 (41)
+            - paragraph [ref=f3e919]: بديل حجر
+            - button "أضف إلى السلة" [ref=f3e920] [cursor=pointer]
+        - generic [ref=f3e926]:
+          - generic [ref=f3e927]:
+            - generic [ref=f3e928]: جديد
+            - generic [ref=f3e930]:
+              - button "إضافة إلى المفضلة" [ref=f3e931] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e934] [cursor=pointer]:
+                - /url: /product/stone-alt-beige-600x300
+          - link [ref=f3e939] [cursor=pointer]:
+            - /url: /product/stone-alt-beige-600x300
+            - img "بديل ترافيرتين بيج" [ref=f3e940]
+            - img "تفاصيل نسيج بديل ترافيرتين بيج" [ref=f3e941]
+          - generic [ref=f3e942]:
+            - link [ref=f3e943] [cursor=pointer]:
+              - /url: /product/stone-alt-beige-600x300
+              - heading "بديل حجر - ترافيرتين بيج - 600×300" [level=3] [ref=f3e944]
+            - paragraph [ref=f3e945]: بديل ترافيرتين بيج أنيق بلمعة مطحونة طبيعية.
+            - generic [ref=f3e946]: 4.6 (29)
+            - paragraph [ref=f3e959]: بديل حجر
+            - button "أضف إلى السلة" [ref=f3e960] [cursor=pointer]
+    - generic [ref=f3e966]:
+      - generic [ref=f3e967]:
+        - generic [ref=f3e968]:
+          - generic [ref=f3e969]: وصل حديثاً
+          - heading "وصل حديثاً" [level=2] [ref=f3e970]
+          - paragraph [ref=f3e972]: أحدث المنتجات المضافة حديثاً إلى متجرنا
+        - link "عرض الكل" [ref=f3e973] [cursor=pointer]:
+          - /url: /store?new=true
+      - generic [ref=f3e977]:
+        - generic [ref=f3e979]:
+          - generic [ref=f3e980]:
+            - generic [ref=f3e981]: جديد
+            - generic [ref=f3e983]:
+              - button "إضافة إلى المفضلة" [ref=f3e984] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e987] [cursor=pointer]:
+                - /url: /product/spc-charcoal-slate-1220
+          - link [ref=f3e992] [cursor=pointer]:
+            - /url: /product/spc-charcoal-slate-1220
+            - img "أرضية SPC رملية فحمية" [ref=f3e993]
+            - img "أرضية SPC رملية فحمية في غرفة معيشة" [ref=f3e994]
+          - generic [ref=f3e995]:
+            - link [ref=f3e996] [cursor=pointer]:
+              - /url: /product/spc-charcoal-slate-1220
+              - heading "SPC ستون - رملي فحمي - 1220×180" [level=3] [ref=f3e997]
+            - paragraph [ref=f3e998]: أرضية SPC رملية فحمية بمظهر حجري ومقاومة للانزلاق.
+            - generic [ref=f3e999]: 4.7 (63)
+            - paragraph [ref=f3e1012]: باركيه SPC
+            - button "أضف إلى السلة" [ref=f3e1013] [cursor=pointer]
+        - generic [ref=f3e1019]:
+          - generic [ref=f3e1020]:
+            - generic [ref=f3e1021]: جديد
+            - generic [ref=f3e1023]:
+              - button "إضافة إلى المفضلة" [ref=f3e1024] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e1027] [cursor=pointer]:
+                - /url: /product/spc-honey-wood-620x180
+          - link [ref=f3e1032] [cursor=pointer]:
+            - /url: /product/spc-honey-wood-620x180
+            - img "تفاصيل أرضية SPC بلوط أسود" [ref=f3e1033]
+            - img "تفاصيل أرضية SPC بلوط أسود" [ref=f3e1034]
+          - generic [ref=f3e1035]:
+            - link [ref=f3e1036] [cursor=pointer]:
+              - /url: /product/spc-honey-wood-620x180
+              - heading "SPC وود - بلوط أسود - 620×180" [level=3] [ref=f3e1037]
+            - paragraph [ref=f3e1038]: لوحة أرضية SPC بلوط أسود ذهبي للمساحات الصغيرة وجدران المؤثرات.
+            - generic [ref=f3e1039]: 4.5 (37)
+            - paragraph [ref=f3e1052]: باركيه SPC
+            - button "أضف إلى السلة" [ref=f3e1053] [cursor=pointer]
+        - generic [ref=f3e1059]:
+          - generic [ref=f3e1060]:
+            - generic [ref=f3e1061]: جديد
+            - generic [ref=f3e1063]:
+              - button "إضافة إلى المفضلة" [ref=f3e1064] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e1067] [cursor=pointer]:
+                - /url: /product/stone-alt-beige-600x300
+          - link [ref=f3e1072] [cursor=pointer]:
+            - /url: /product/stone-alt-beige-600x300
+            - img "بديل ترافيرتين بيج" [ref=f3e1073]
+            - img "تفاصيل نسيج بديل ترافيرتين بيج" [ref=f3e1074]
+          - generic [ref=f3e1075]:
+            - link [ref=f3e1076] [cursor=pointer]:
+              - /url: /product/stone-alt-beige-600x300
+              - heading "بديل حجر - ترافيرتين بيج - 600×300" [level=3] [ref=f3e1077]
+            - paragraph [ref=f3e1078]: بديل ترافيرتين بيج أنيق بلمعة مطحونة طبيعية.
+            - generic [ref=f3e1079]: 4.6 (29)
+            - paragraph [ref=f3e1092]: بديل حجر
+            - button "أضف إلى السلة" [ref=f3e1093] [cursor=pointer]
+        - generic [ref=f3e1099]:
+          - generic [ref=f3e1100]:
+            - generic [ref=f3e1101]: جديد
+            - generic [ref=f3e1103]:
+              - button "إضافة إلى المفضلة" [ref=f3e1104] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e1107] [cursor=pointer]:
+                - /url: /product/soft-stone-limewash-beige-600x300
+          - link [ref=f3e1112] [cursor=pointer]:
+            - /url: /product/soft-stone-limewash-beige-600x300
+            - img "لوحات سوفت ستون بيج ليموني" [ref=f3e1113]
+            - img "سوفت ستون بيج ليموني في غرفة نوم" [ref=f3e1114]
+          - generic [ref=f3e1115]:
+            - link [ref=f3e1116] [cursor=pointer]:
+              - /url: /product/soft-stone-limewash-beige-600x300
+              - heading "سوفت ستون - بيج ليموني - 600×300" [level=3] [ref=f3e1117]
+            - paragraph [ref=f3e1118]: لوحات سوفت ستون بيج ليموني ناعمة بمظهر عضوي متهالك.
+            - generic [ref=f3e1119]: 4.5 (33)
+            - paragraph [ref=f3e1132]: سوفت ستون
+            - button "أضف إلى السلة" [ref=f3e1133] [cursor=pointer]
+    - generic [ref=f3e1138]:
+      - img "تغطية جدران سوفت ستون داخلية" [ref=f3e1140]
+      - generic [ref=f3e1144]:
+        - generic [ref=f3e1145]: سوفت ستون
+        - heading "سوفت ستون" [level=2] [ref=f3e1146]
+        - paragraph [ref=f3e1147]: مجموعات سوفت ستون متميزة تشمل الحجر الجيري والترافيرتين وبدائل المرمر لتطبيقات داخلية وخارجية أنيقة.
+        - link [ref=f3e1148] [cursor=pointer]:
+          - /url: /categories/سوفت-ستون
+          - button "استكشف المنتجات" [ref=f3e1149]
+    - generic [ref=f3e1153]:
+      - generic [ref=f3e1154]:
+        - generic [ref=f3e1155]:
+          - generic [ref=f3e1156]: تصميم مميز
+          - heading "سوفت ستون" [level=2] [ref=f3e1157]
+          - paragraph [ref=f3e1159]: مجموعة سوفت ستون فاخرة للجدران والأسطح
+        - link "عرض الكل" [ref=f3e1160] [cursor=pointer]:
+          - /url: /categories/سوفت-ستون
+      - generic [ref=f3e1164]:
+        - generic [ref=f3e1166]:
+          - generic [ref=f3e1167]:
+            - generic [ref=f3e1168]: الأكثر مبيعاً
+            - generic [ref=f3e1170]:
+              - button "إضافة إلى المفضلة" [ref=f3e1171] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e1174] [cursor=pointer]:
+                - /url: /product/soft-stone-limestone-cream-600x600
+          - link [ref=f3e1179] [cursor=pointer]:
+            - /url: /product/soft-stone-limestone-cream-600x600
+            - img "لوحات سوفت ستون جير أبيض" [ref=f3e1180]
+            - img "نسيج سوفت ستون جير أبيض" [ref=f3e1181]
+          - generic [ref=f3e1182]:
+            - link [ref=f3e1183] [cursor=pointer]:
+              - /url: /product/soft-stone-limestone-cream-600x600
+              - heading "سوفت ستون - جير أبيض - 600×600" [level=3] [ref=f3e1184]
+            - paragraph [ref=f3e1185]: لوحات سوفت ستون جير أبيض متميزة للجدران الداخلية.
+            - generic [ref=f3e1186]: 4.7 (76)
+            - paragraph [ref=f3e1199]: سوفت ستون
+            - button "أضف إلى السلة" [ref=f3e1200] [cursor=pointer]
+        - generic [ref=f3e1206]:
+          - generic [ref=f3e1208]:
+            - button "إضافة إلى المفضلة" [ref=f3e1209] [cursor=pointer]
+            - link "عرض سريع" [ref=f3e1212] [cursor=pointer]:
+              - /url: /product/soft-stone-beechwood-600x300
+          - link [ref=f3e1217] [cursor=pointer]:
+            - /url: /product/soft-stone-beechwood-600x300
+            - img "لوحات سوفت ستون بيتشي بني" [ref=f3e1218]
+            - img "تفاصيل سوفت ستون بيتشي بني" [ref=f3e1219]
+          - generic [ref=f3e1220]:
+            - link [ref=f3e1221] [cursor=pointer]:
+              - /url: /product/soft-stone-beechwood-600x300
+              - heading "سوفت ستون - بيتشي بني - 600×300" [level=3] [ref=f3e1222]
+            - paragraph [ref=f3e1223]: لوحات سوفت ستون بني بيتشي دافئة بنمط حبوب طبيعي.
+            - generic [ref=f3e1224]: 4.6 (55)
+            - paragraph [ref=f3e1237]: سوفت ستون
+            - button "أضف إلى السلة" [ref=f3e1238] [cursor=pointer]
+        - generic [ref=f3e1244]:
+          - generic [ref=f3e1245]:
+            - generic [ref=f3e1246]: الأكثر مبيعاً
+            - generic [ref=f3e1248]:
+              - button "إضافة إلى المفضلة" [ref=f3e1249] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e1252] [cursor=pointer]:
+                - /url: /product/soft-stone-terracotta-600x600
+          - link [ref=f3e1257] [cursor=pointer]:
+            - /url: /product/soft-stone-terracotta-600x600
+            - img "لوحات سوفت ستون طوبي أحمر" [ref=f3e1258]
+            - img "نسيج سوفت ستون طوبي أحمر" [ref=f3e1259]
+          - generic [ref=f3e1260]:
+            - link [ref=f3e1261] [cursor=pointer]:
+              - /url: /product/soft-stone-terracotta-600x600
+              - heading "سوفت ستون - طوبي أحمر - 600×600" [level=3] [ref=f3e1262]
+            - paragraph [ref=f3e1263]: لوحات سوفت ستون طوبي أحمر نابض بالحياة بأسلوب أطلسي.
+            - generic [ref=f3e1264]: 4.8 (48)
+            - paragraph [ref=f3e1277]: سوفت ستون
+            - button "أضف إلى السلة" [ref=f3e1278] [cursor=pointer]
+        - generic [ref=f3e1284]:
+          - generic [ref=f3e1285]:
+            - generic [ref=f3e1286]: جديد
+            - generic [ref=f3e1288]:
+              - button "إضافة إلى المفضلة" [ref=f3e1289] [cursor=pointer]
+              - link "عرض سريع" [ref=f3e1292] [cursor=pointer]:
+                - /url: /product/soft-stone-limewash-beige-600x300
+          - link [ref=f3e1297] [cursor=pointer]:
+            - /url: /product/soft-stone-limewash-beige-600x300
+            - img "لوحات سوفت ستون بيج ليموني" [ref=f3e1298]
+            - img "سوفت ستون بيج ليموني في غرفة نوم" [ref=f3e1299]
+          - generic [ref=f3e1300]:
+            - link [ref=f3e1301] [cursor=pointer]:
+              - /url: /product/soft-stone-limewash-beige-600x300
+              - heading "سوفت ستون - بيج ليموني - 600×300" [level=3] [ref=f3e1302]
+            - paragraph [ref=f3e1303]: لوحات سوفت ستون بيج ليموني ناعمة بمظهر عضوي متهالك.
+            - generic [ref=f3e1304]: 4.5 (33)
+            - paragraph [ref=f3e1317]: سوفت ستون
+            - button "أضف إلى السلة" [ref=f3e1318] [cursor=pointer]
+  - contentinfo [ref=f3e1323]:
+    - generic [ref=f3e1324]:
+      - generic [ref=f3e1325]:
+        - generic [ref=f3e1326]:
+          - link "Yaqeen Store" [ref=f3e1327] [cursor=pointer]:
+            - /url: /
+            - img "Yaqeen Store" [ref=f3e1329]
+            - generic [ref=f3e1330]: يقين ستور
+          - paragraph [ref=f3e1331]: يقين ستور - متخصص في أرضيات SPC وبدائل الحجر وسوفت ستون عالية الجودة.
+          - paragraph [ref=f3e1332]: © 2026 يقين ستور. جميع الحقوق محفوظة.
+        - generic [ref=f3e1333]:
+          - heading "الأقساط" [level=3] [ref=f3e1334]
+          - list [ref=f3e1335]:
+            - listitem [ref=f3e1336]:
+              - link "باركيه SPC" [ref=f3e1337] [cursor=pointer]:
+                - /url: /categories/باركيه-spc
+            - listitem [ref=f3e1338]:
+              - link "بديل حجر" [ref=f3e1339] [cursor=pointer]:
+                - /url: /categories/بديل-حجر
+            - listitem [ref=f3e1340]:
+              - link "سوفت ستون" [ref=f3e1341] [cursor=pointer]:
+                - /url: /categories/سوفت-ستون
+        - generic [ref=f3e1342]:
+          - heading "شركة" [level=3] [ref=f3e1343]
+          - list [ref=f3e1344]:
+            - listitem [ref=f3e1345]:
+              - link "من نحن" [ref=f3e1346] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f3e1347]:
+              - link "تواصل معنا" [ref=f3e1348] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=f3e1349]:
+              - link "الأسئلة الشائعة" [ref=f3e1350] [cursor=pointer]:
+                - /url: /faq
+        - generic [ref=f3e1351]:
+          - heading "الخدمات" [level=3] [ref=f3e1352]
+          - list [ref=f3e1353]:
+            - listitem [ref=f3e1354]:
+              - link "الشحن والتوصيل" [ref=f3e1355] [cursor=pointer]:
+                - /url: /shipping
+            - listitem [ref=f3e1356]:
+              - link "سياسة الإرجاع" [ref=f3e1357] [cursor=pointer]:
+                - /url: /returns
+            - listitem [ref=f3e1358]:
+              - link "الضمان" [ref=f3e1359] [cursor=pointer]:
+                - /url: /warranty
+            - listitem [ref=f3e1360]:
+              - link "الدفع الآمن" [ref=f3e1361] [cursor=pointer]:
+                - /url: /payment
+        - generic [ref=f3e1362]:
+          - heading "تواصل معنا" [level=3] [ref=f3e1363]
+          - generic [ref=f3e1364]:
+            - generic [ref=f3e1365]:
+              - term [ref=f3e1366]: الهاتف
+              - definition [ref=f3e1367]:
+                - link "+972 59-742-6988" [ref=f3e1368] [cursor=pointer]:
+                  - /url: tel:+972597426988
+            - generic [ref=f3e1371]:
+              - term [ref=f3e1372]: العنوان
+              - definition [ref=f3e1373]: الخليل، فلسطين
+            - generic [ref=f3e1374]:
+              - term [ref=f3e1375]: التوصيل
+              - definition [ref=f3e1376]: لجميع مناطق الضفة الغربية
+            - generic [ref=f3e1377]:
+              - term [ref=f3e1378]: تابعنا
+              - definition [ref=f3e1379]:
+                - link "فيسبوك" [ref=f3e1380] [cursor=pointer]:
+                  - /url: https://www.facebook.com/profile.php?id=61590887216809
+                - link "انستغرام" [ref=f3e1383] [cursor=pointer]:
+                  - /url: https://www.instagram.com/yaqeen_1_store/
+      - generic [ref=f3e1388]:
+        - generic [ref=f3e1389]: "خيارات الدفع:"
+        - generic [ref=f3e1390]:
+          - generic [ref=f3e1391]: Visa
+          - generic [ref=f3e1392]: Mastercard
+          - generic [ref=f3e1393]: نقداً عند الاستلام

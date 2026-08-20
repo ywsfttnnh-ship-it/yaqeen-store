@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import * as React from "react";
 import Image from "next/image";
@@ -24,8 +24,8 @@ const paymentMethods = [
 ];
 
 const shippingMethods = [
-  { id: "standard" as const, labelAr: "توصيل قياسي", descAr: `${config.delivery.estimatedDays.standard} — ${formatCurrency(config.delivery.standardFee)}`, free: false },
-  { id: "express" as const, labelAr: "توصيل سريع", descAr: `${config.delivery.estimatedDays.express} — ${formatCurrency(config.delivery.expressFee)}`, free: false },
+  { id: "standard" as const, labelAr: "توصيل قياسي", descAr: `${config.delivery.estimatedDays.standard} — التوصيل لجميع مناطق الضفة الغربية`, free: false },
+  { id: "express" as const, labelAr: "توصيل سريع", descAr: `${config.delivery.estimatedDays.express} — للطلبات المستعجلة`, free: false },
 ];
 
 export default function CheckoutPage() {
@@ -164,9 +164,9 @@ export default function CheckoutPage() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Input label="الاسم الكامل *" value={form.fullName} onChange={(e) => setForm({ ...form, fullName: e.target.value })} error={formErrors.fullName} placeholder="محمد أحمد" />
-                <Input label="رقم الهاتف *" type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} error={formErrors.phone} placeholder="+970 59 123 4567" />
+                <Input label="رقم الهاتف *" type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} error={formErrors.phone} placeholder="+972 59-742-6988" />
                 <Input label="البريد الإلكتروني" type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="example@email.com" />
-                <Input label="المدينة *" value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} error={formErrors.city} placeholder="رام الله" />
+                <Input label="المدينة *" value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} error={formErrors.city} placeholder="الخليل" />
                 <Input label="الشارع / الحي *" value={form.street} onChange={(e) => setForm({ ...form, street: e.target.value })} error={formErrors.street} placeholder="شارع النور، حي السلام" />
                 <Input label="رقم المبنى / الشقة" value={form.building} onChange={(e) => setForm({ ...form, building: e.target.value })} placeholder="مبنى 3، شقة 4" />
               </div>
@@ -311,7 +311,9 @@ export default function CheckoutPage() {
                         <p className="font-medium line-clamp-1">{item.product.nameAr}</p>
                         <p className="text-sm text-muted-foreground">الكمية: {item.quantity}</p>
                       </div>
-                      <span className="font-medium">{formatCurrency(item.price * item.quantity)}</span>
+                      {!config.app.hidePrices && (
+                        <span className="font-medium">{formatCurrency(item.price * item.quantity)}</span>
+                      )}
                     </li>
                   );
                 })}
@@ -348,7 +350,7 @@ export default function CheckoutPage() {
                 رجوع
               </Button>
               <Button size="lg" onClick={handleConfirm}>
-                تأكيد الطلب ({formatCurrency(orderTotal)})
+                تأكيد الطلب
               </Button>
             </div>
           </div>
@@ -407,22 +409,30 @@ function OrderSummary({ items, subtotal, tax, shipping, total }: {
           ))}
         </ul>
         <dl className="space-y-2 border-t border-border pt-4 text-sm">
-          <div className="flex items-center justify-between">
-            <dt className="text-muted-foreground">المجموع الفرعي</dt>
-            <dd className="font-medium">{formatCurrency(subtotal)}</dd>
-          </div>
-          <div className="flex items-center justify-between">
-            <dt className="text-muted-foreground">الشحن</dt>
-            <dd className="font-medium">{shipping === 0 ? <span className="text-green-600">مجاني</span> : formatCurrency(shipping)}</dd>
-          </div>
-          <div className="flex items-center justify-between">
-            <dt className="text-muted-foreground">الضريبة (17%)</dt>
-            <dd className="font-medium">{formatCurrency(tax)}</dd>
-          </div>
-          <div className="flex items-center justify-between border-t border-border pt-3 text-base">
-            <dt className="font-bold">الإجمالي</dt>
-            <dd className="font-bold text-primary-700">{formatCurrency(total)}</dd>
-          </div>
+          {!config.app.hidePrices ? (
+            <>
+              <div className="flex items-center justify-between">
+                <dt className="text-muted-foreground">المجموع الفرعي</dt>
+                <dd className="font-medium">{formatCurrency(subtotal)}</dd>
+              </div>
+              <div className="flex items-center justify-between">
+                <dt className="text-muted-foreground">الشحن</dt>
+                <dd className="font-medium">{shipping === 0 ? <span className="text-green-600">مجاني</span> : formatCurrency(shipping)}</dd>
+              </div>
+              <div className="flex items-center justify-between">
+                <dt className="text-muted-foreground">الضريبة (17%)</dt>
+                <dd className="font-medium">{formatCurrency(tax)}</dd>
+              </div>
+              <div className="flex items-center justify-between border-t border-border pt-3 text-base">
+                <dt className="font-bold">الإجمالي</dt>
+                <dd className="font-bold text-primary-700">{formatCurrency(total)}</dd>
+              </div>
+            </>
+          ) : (
+            <p className="text-sm text-muted-foreground">
+              التوصيل لجميع مناطق الضفة الغربية.
+            </p>
+          )}
         </dl>
       </div>
     </div>

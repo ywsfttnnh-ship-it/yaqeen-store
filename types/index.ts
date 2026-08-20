@@ -28,8 +28,6 @@ export interface Product {
   shortDescription: string;
   shortDescriptionAr: string;
   price: number; // in ILS (₪)
-  comparePrice?: number;
-  discount: number;
   categoryId: string;
   images: ProductImage[];
   rating: number;

@@ -1,5 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
+import { Facebook, Instagram, Phone } from "lucide-react";
 import { Logo } from "@/components/common/logo";
 
 const footerLinks = [
@@ -16,7 +17,6 @@ const footerLinks = [
     links: [
       { labelAr: "من نحن", href: "/about" },
       { labelAr: "تواصل معنا", href: "/contact" },
-      { labelAr: "العروض", href: "/offers" },
       { labelAr: "الأسئلة الشائعة", href: "/faq" },
     ],
   },
@@ -30,6 +30,13 @@ const footerLinks = [
     ],
   },
 ];
+
+const CONTACT = {
+  phoneDisplay: "+972 59-742-6988",
+  phoneTel: "+972597426988",
+  facebook: "https://www.facebook.com/profile.php?id=61590887216809",
+  instagram: "https://www.instagram.com/yaqeen_1_store/",
+};
 
 export const Footer: React.FC = () => {
   const year = new Date().getFullYear();
@@ -77,15 +84,47 @@ export const Footer: React.FC = () => {
             <dl className="space-y-3 text-sm">
               <div>
                 <dt className="text-neutral-500">الهاتف</dt>
-                <dd className="font-medium text-neutral-200">+970 59 123 4567</dd>
-              </div>
-              <div>
-                <dt className="text-neutral-500">البريد الإلكتروني</dt>
-                <dd className="font-medium text-neutral-200">info@yaqeenstore.com</dd>
+                <dd className="font-medium text-neutral-200">
+                  <a
+                    href={`tel:${CONTACT.phoneTel}`}
+                    className="inline-flex items-center gap-2 hover:text-gold-300 transition-colors"
+                    dir="ltr"
+                  >
+                    <Phone className="h-4 w-4 text-gold-400" />
+                    {CONTACT.phoneDisplay}
+                  </a>
+                </dd>
               </div>
               <div>
                 <dt className="text-neutral-500">العنوان</dt>
-                <dd className="font-medium text-neutral-200">رام الله، فلسطين</dd>
+                <dd className="font-medium text-neutral-200">الخليل، فلسطين</dd>
+              </div>
+              <div>
+                <dt className="text-neutral-500">التوصيل</dt>
+                <dd className="font-medium text-neutral-200">لجميع مناطق الضفة الغربية</dd>
+              </div>
+              <div>
+                <dt className="text-neutral-500">تابعنا</dt>
+                <dd className="flex items-center gap-3 pt-1">
+                  <a
+                    href={CONTACT.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="فيسبوك"
+                    className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-800 text-neutral-300 hover:bg-[#1877F2] hover:text-white transition-colors"
+                  >
+                    <Facebook className="h-4 w-4" />
+                  </a>
+                  <a
+                    href={CONTACT.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="انستغرام"
+                    className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-800 text-neutral-300 hover:bg-gradient-to-br hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white transition-colors"
+                  >
+                    <Instagram className="h-4 w-4" />
+                  </a>
+                </dd>
               </div>
             </dl>
           </div>

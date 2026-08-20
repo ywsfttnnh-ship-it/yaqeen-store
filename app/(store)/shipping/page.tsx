@@ -12,22 +12,22 @@ const shippingMethods = [
     icon: Truck,
     name: "شحن قياسي",
     time: "2-5 أيام عمل",
-    cost: "49₪ - مجاني للطلبات فوق 500₪",
-    description: "توصيل موثوق لجميع محافظات الضفة الغربية.",
+    cost: "التوصيل لجميع مناطق الضفة الغربية",
+    description: "التوصيل لجميع مناطق الضفة الغربية.",
   },
   {
     icon: Clock,
     name: "شحن سريع",
     time: "خلال 24-48 ساعة",
-    cost: "99₪",
-    description: "للطلبات المستعجلة داخل رام الله والبيرة والمجاورة.",
+    cost: "للطلبات المستعجلة",
+    description: "للطلبات المستعجلة داخل الخليل والمجاورة.",
   },
   {
     icon: Package,
     name: "استلام من المعرض",
     time: "فوري",
     cost: "مجاني",
-    description: "استلم طلبك مباشرة من معرضنا في رام الله.",
+    description: "استلم طلبك مباشرة من معرضنا في الخليل.",
   },
 ];
 
@@ -39,6 +39,10 @@ export default function ShippingPage() {
         <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
           نحرص على توصيل طلبك بأمان وفي الوقت المحدد. إليك كل ما تحتاج معرفته عن الشحن.
         </p>
+        <div className="mx-auto mt-6 inline-flex items-center gap-2 rounded-full border border-gold-400/50 bg-gold-50 px-5 py-2 text-sm font-bold text-primary-700">
+          <Truck className="h-4 w-4 text-gold-600" />
+          التوصيل لجميع مناطق الضفة الغربية
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -65,9 +69,9 @@ export default function ShippingPage() {
             <h2 className="text-xl font-bold">مناطق التوصيل</h2>
           </div>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            <li>رام الله والبيرة: توصيل خلال 24-48 ساعة</li>
-            <li>نابلس، الخليل، جنين، طولكرم، قلقيلية، سلفيت: خلال 2-4 أيام عمل</li>
-            <li>بيت لحم، أريحا، طوباس: خلال 2-5 أيام عمل</li>
+            <li>الخليل ومحافظاتها: توصيل خلال 24-48 ساعة</li>
+            <li>بيت لحم، نابلس، جنين: خلال 2-3 أيام عمل</li>
+            <li>طولكرم، قلقيلية، سلفيت، أريحا، طوباس: خلال 2-4 أيام عمل</li>
             <li>مدينة القدس: خلال 3-5 أيام عمل</li>
           </ul>
         </div>

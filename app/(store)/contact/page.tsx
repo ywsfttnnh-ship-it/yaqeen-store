@@ -1,9 +1,16 @@
 "use client";
 
 import * as React from "react";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Clock, Send, Facebook, Instagram } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+
+const CONTACT = {
+  phoneDisplay: "+972 59-742-6988",
+  phoneTel: "+972597426988",
+  facebook: "https://www.facebook.com/profile.php?id=61590887216809",
+  instagram: "https://www.instagram.com/yaqeen_1_store/",
+};
 
 export default function ContactPage() {
   const [form, setForm] = React.useState({ name: "", email: "", phone: "", subject: "", message: "" });
@@ -26,10 +33,10 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2 space-y-4">
           {[
-            { icon: MapPin, title: "العنوان", text: "رام الله - شارع الإرسال، عمارة النور" },
-            { icon: Phone, title: "الهاتف", text: "+970 59 123 4567" },
-            { icon: Mail, title: "البريد الإلكتروني", text: "info@yaqeenstore.ps" },
+            { icon: MapPin, title: "العنوان", text: "الخليل، فلسطين" },
+            { icon: Phone, title: "الهاتف", text: CONTACT.phoneDisplay, tel: CONTACT.phoneTel },
             { icon: Clock, title: "ساعات العمل", text: "السبت - الخميس: 9 صباحاً - 8 مساءً" },
+            { icon: MapPin, title: "التوصيل", text: "التوصيل لجميع مناطق الضفة الغربية" },
           ].map((item) => {
             const Icon = item.icon;
             return (
@@ -39,11 +46,50 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold">{item.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground" dir="auto">{item.text}</p>
+                  {item.tel ? (
+                    <a
+                      href={`tel:${item.tel}`}
+                      className="mt-1 block text-sm font-medium text-primary-700 hover:text-primary-600"
+                      dir="ltr"
+                    >
+                      {item.text}
+                    </a>
+                  ) : (
+                    <p className="mt-1 text-sm text-muted-foreground" dir="auto">{item.text}</p>
+                  )}
                 </div>
               </div>
             );
           })}
+
+          <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-100 text-primary-700">
+              <span className="text-sm font-bold">تابع</span>
+            </div>
+            <div>
+              <h3 className="font-bold">تابعنا على</h3>
+              <div className="mt-2 flex items-center gap-3">
+                <a
+                  href={CONTACT.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="فيسبوك"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2]/10 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a
+                  href={CONTACT.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="انستغرام"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#f09433]/20 via-[#dc2743]/20 to-[#bc1888]/20 text-[#dc2743] hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white transition-colors"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="lg:col-span-3 rounded-2xl border border-border bg-card p-6 sm:p-8">

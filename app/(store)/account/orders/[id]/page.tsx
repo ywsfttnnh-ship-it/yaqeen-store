@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import * as React from "react";
 import Image from "next/image";
@@ -7,6 +7,7 @@ import { useParams } from "next/navigation";
 import { ChevronRight, MapPin, CreditCard } from "lucide-react";
 import { getOrderById } from "@/lib/data";
 import { formatCurrency, formatDate } from "@/lib/utils";
+import { config } from "@/lib/config";
 import type { OrderStatus } from "@/types";
 
 const statusLabels: Record<string, string> = {
@@ -100,16 +101,18 @@ export default function OrderDetailPage() {
                 <p className="font-medium line-clamp-1">{item.productNameAr}</p>
                 <p className="text-sm text-muted-foreground">الكمية: {item.quantity}</p>
               </div>
-              <span className="font-medium">{formatCurrency(item.total)}</span>
+              {!config.app.hidePrices && <span className="font-medium">{formatCurrency(item.total)}</span>}
             </li>
           ))}
         </ul>
-        <dl className="mt-4 space-y-2 border-t border-border pt-4 text-sm">
-          <div className="flex justify-between"><dt className="text-muted-foreground">المجموع الفرعي</dt><dd>{formatCurrency(order.subtotal)}</dd></div>
-          <div className="flex justify-between"><dt className="text-muted-foreground">الشحن</dt><dd>{order.shipping === 0 ? <span className="text-green-600">مجاني</span> : formatCurrency(order.shipping)}</dd></div>
-          <div className="flex justify-between"><dt className="text-muted-foreground">الضريبة</dt><dd>{formatCurrency(order.tax)}</dd></div>
-          <div className="flex justify-between text-base font-bold"><dt>الإجمالي</dt><dd className="text-primary-700">{formatCurrency(order.total)}</dd></div>
-        </dl>
+        {!config.app.hidePrices && (
+          <dl className="mt-4 space-y-2 border-t border-border pt-4 text-sm">
+            <div className="flex justify-between"><dt className="text-muted-foreground">المجموع الفرعي</dt><dd>{formatCurrency(order.subtotal)}</dd></div>
+            <div className="flex justify-between"><dt className="text-muted-foreground">الشحن</dt><dd>{order.shipping === 0 ? <span className="text-green-600">مجاني</span> : formatCurrency(order.shipping)}</dd></div>
+            <div className="flex justify-between"><dt className="text-muted-foreground">الضريبة</dt><dd>{formatCurrency(order.tax)}</dd></div>
+            <div className="flex justify-between text-base font-bold"><dt>الإجمالي</dt><dd className="text-primary-700">{formatCurrency(order.total)}</dd></div>
+          </dl>
+        )}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -61,7 +61,7 @@ export default function RegisterPage() {
             <Input
               label="رقم الهاتف"
               type="tel"
-              placeholder="+970 59 123 4567"
+              placeholder="059-742-6988"
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               icon={<Phone className="h-4 w-4" />}
