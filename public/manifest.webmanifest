@@ -1,0 +1,26 @@
+{
+  "name": "يقين ستور | Yaqeen Store",
+  "short_name": "يقين ستور",
+  "description": "متجر متميز لأرضيات SPC وبدائل الحجر وسوفت ستون",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7c5cff",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "/assets/products/لوقو المتجر/img-024.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/products/لوقو المتجر/img-025.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
