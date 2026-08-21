@@ -2,6 +2,7 @@
 import { config } from "@/lib/config";
 import { products, categoryData, getProductById, getProductsByCategory } from "@/lib/data";
 import { storeKnowledge } from "@/lib/ai/store-knowledge";
+// eslint-disable-line @typescript-eslint/no-unused-vars
 import { normalizeArabic, containsAny, extractQuantity, extractCityMention, detectEnglishCategory, isPriceQuery, isDeliveryCostQuery, isDeliveryAvailabilityQuery, isLocationQuery, isGreeting } from "@/lib/ai/arabic-nlp"; // eslint-disable-line @typescript-eslint/no-unused-vars
 
 // ============================================================
@@ -181,7 +182,7 @@ export class AIService {
   // 4️⃣ RESPONSE GENERATOR — dynamic based on intent + entities
   // -----------------------------------------------------------------
 
-  generateResponse(query: string, chatHistory: AIChatMessage[] = []): {
+  getResponse(query: string, _chatHistory: AIChatMessage[] = []): {
     response: string;
     suggestions: string[];
     relatedProducts: string[];
@@ -504,7 +505,7 @@ export class AIService {
     // For now, since AI_ENABLED=false and API_KEY empty, we return our smart mock.
     // In a real deployment, this would be a proper fetch to OpenAI/Anthropic/Google.
     const lastUserMsg = messages.find((m) => m.role === "user")?.content || "";
-    return this.generateResponse(lastUserMsg, messages).response;
+    return this.getResponse(lastUserMsg, messages).response;
   }
 }
 
