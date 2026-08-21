@@ -1,104 +1,98 @@
 import type { Metadata } from "next";
 import { categories } from "@/lib/data/categories";
-import {
-  featuredProducts,
-  bestSellerProducts,
-  newArrivalProducts,
-  getProductsByCategory,
-} from "@/lib/data";
+import { products } from "@/lib/data";
 import { HeroSection } from "@/components/home/hero-section";
-import { CategoriesSection } from "@/components/home/categories-section";
-import { FeaturedProductsSection } from "@/components/home/featured-products-section";
-import { ProductSection } from "@/components/home/product-section";
-import { CategoryBanner } from "@/components/home/category-banner";
+import { BentoCategories } from "@/components/home/bento-categories";
+import { TabbedProductRail } from "@/components/home/tabbed-product-rail";
+import { Button } from "@/components/ui/button";
+import { ShieldCheck, Truck, Phone, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "يقين ستور | Yaqeen Store - أرضيات SPC وبدائل الحجر وسوفت ستون",
   description:
-    "متجر يقين ستور - اكتشف أرضيات SPC وبدائل الحجر وسوفت ستون عالية الجودة. ضمان 25 سنة. مقاومة ماء 100%. التوصيل لجميع مناطق الضفة الغربية.",
+    "متجر يقين ستور - اكتشف أرضيات SPC وبدائل الحجر وسوفت ستون عالية الجودة في الخليل وفلسطين. ضمان 25 سنة. مقاومة ماء 100%. التوصيل لجميع مناطق الضفة الغربية.",
 };
 
 export default function HomePage() {
-  const spcProducts = getProductsByCategory("cat-spc").slice(0, 4);
-  const stoneProducts = getProductsByCategory("cat-stone-alt").slice(0, 4);
-  const softStoneProducts = getProductsByCategory("cat-soft-stone").slice(0, 4);
-
   return (
-    <>
-      {/* Hero */}
+    <div className="flex flex-col min-h-screen">
+      {/* 1. Immersive Hero Section */}
       <HeroSection />
 
-      {/* Categories */}
-      <CategoriesSection categories={categories} />
+      {/* 2. Modern Bento Grid Categories */}
+      <BentoCategories categories={categories} />
 
-      {/* Featured Products */}
-      <FeaturedProductsSection
-        products={featuredProducts}
-        titleAr="منتجات مختارة لك"
-        subtitleAr="اقتناصات متميزة مختارة بعناية من أفضل منتجاتنا"
-        viewAllHref="/store?featured=true"
-        variant="dark"
-      />
+      {/* 3. Interactive Tabbed Product Rail (Prevents long vertical scrolling) */}
+      <TabbedProductRail products={products} categories={categories} />
 
-      {/* SPC Flooring Section */}
-      <CategoryBanner
-        category={categories[0]}
-        className="mb-12"
-      />
-      <ProductSection
-        products={spcProducts}
-        sectionTitle="باركيه SPC"
-        sectionDescription="أرضيات SPC عالية الجودة مقاومة للماء مع ضمان 25 سنة"
-        viewAllHref="/categories/باركيه-spc"
-        badge="الأكثر طلباً"
-        badgeVariant="primary"
-      />
+      {/* 4. Luxury Architectural Spotlight / Craftsmanship */}
+      <section className="py-20 bg-[#14110F] text-white relative overflow-hidden" dir="rtl">
+        <div className="absolute inset-0 bg-radial-[at_center] from-gold-500/10 via-transparent to-transparent pointer-events-none" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full bg-gold-500/15 border border-gold-500/30 px-4 py-1.5 text-xs font-semibold text-gold-300">
+                <Sparkles className="h-3.5 w-3.5" />
+                <span>معايير الجودة العالمية في فلسطين</span>
+              </div>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold leading-tight">
+                لماذا يختار المهندسون وأصحاب المنازل <span className="gold-gradient-text">يقين ستور</span>؟
+              </h2>
+              <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
+                نحن لا نبيع منتجات أرضيات وجدران فحسب، بل نقدم حلولاً معمارية متكاملة تضفي الفخامة والدفء على مساحاتك الخاصة. منتجاتنا مختارة بعناية لتتحمل ظروف الاستخدام اليومي مع ضمان حقيقي يصل إلى 25 سنة.
+              </p>
 
-      {/* Best Sellers */}
-      <FeaturedProductsSection
-        products={bestSellerProducts}
-        titleAr="الأكثر مبيعاً"
-        subtitleAr="المنتجات الأكثر شعبية بين عملائنا"
-        viewAllHref="/store?best=best-seller"
-        variant="dark"
-      />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div className="flex items-start gap-3 p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800">
+                  <ShieldCheck className="h-6 w-6 text-gold-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-bold text-sm text-white">ضمان 25 سنة</h3>
+                    <p className="text-xs text-neutral-400 mt-0.5">ثقة مطلقة بجودة مواد التصنيع والتحمل.</p>
+                  </div>
+                </div>
 
-      {/* Stone Alternative Section */}
-      <CategoryBanner
-        category={categories[1]}
-        className="my-12"
-      />
-      <ProductSection
-        products={stoneProducts}
-        sectionTitle="بديل الحجر"
-        sectionDescription="سطوح بديل الحجر ذات اللمعة الطبيعية وجودة متميزة"
-        viewAllHref="/categories/بديل-حجر"
-        badge="أفضل جودة"
-        badgeVariant="secondary"
-      />
+                <div className="flex items-start gap-3 p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800">
+                  <Truck className="h-6 w-6 text-gold-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-bold text-sm text-white">توصيل للضفة</h3>
+                    <p className="text-xs text-neutral-400 mt-0.5">خدمة توصيل سريعة وموثوقة لجميع المناطق.</p>
+                  </div>
+                </div>
+              </div>
 
-      {/* New Arrivals */}
-      <FeaturedProductsSection
-        products={newArrivalProducts}
-        titleAr="وصل حديثاً"
-        subtitleAr="أحدث المنتجات المضافة حديثاً إلى متجرنا"
-        viewAllHref="/store?new=true"
-        variant="dark"
-      />
+              <div className="pt-4 flex items-center gap-4">
+                <a href="tel:+972597426988">
+                  <Button variant="gold" size="lg" className="rounded-full px-8 shadow-gold">
+                    <Phone className="h-4 w-4 me-2" />
+                    <span>تواصل معنا للاستفسار</span>
+                  </Button>
+                </a>
+              </div>
+            </div>
 
-      {/* Soft Stones Section */}
-      <CategoryBanner
-        category={categories[2]}
-        className="my-12"
-      />
-      <ProductSection
-        products={softStoneProducts}
-        sectionTitle="سوفت ستون"
-        sectionDescription="مجموعة سوفت ستون فاخرة للجدران والأسطح"
-        viewAllHref="/categories/سوفت-ستون"
-        badge="تصميم مميز"
-        badgeVariant="gold"
-      />
-    </>
+            {/* Visual Box */}
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-gold-500/35 shadow-3d bg-neutral-900">
+              <div className="absolute inset-0 bg-gradient-to-tr from-gold-500/20 via-transparent to-transparent z-10 pointer-events-none" />
+              <div className="absolute inset-0 flex items-center justify-center p-8 text-center z-20">
+                <div className="max-w-md space-y-3">
+                  <span className="text-xs font-semibold text-gold-400 tracking-widest uppercase">مقرنا الرئيسي</span>
+                  <h3 className="text-2xl font-bold font-display">الخليل، فلسطين</h3>
+                  <p className="text-xs text-neutral-300">
+                    جاهزون لاستقبال استفساراتكم وتقديم الاستشارات الهندسية لاختيار الأنسب لمنزلكم أو مشروعكم التجاري.
+                  </p>
+                  <a
+                    href="tel:+972597426988"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-gold-400 hover:text-white pt-2"
+                    dir="ltr"
+                  >
+                    <span>+972 59-742-6988</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-}
+};

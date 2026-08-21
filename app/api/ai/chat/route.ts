@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { aiService } from "@/lib/services/ai-service";
-import type { AIChatMessage } from "@/types";
 
 export async function POST(request: NextRequest) {
   try {
@@ -9,7 +8,7 @@ export async function POST(request: NextRequest) {
       history?: { role: string; content: string }[];
     };
 
-    const { message, history = [] } = body;
+    const { message, history } = body;
 
     if (!message || typeof message !== "string") {
       return NextResponse.json({ error: "Message is required" }, { status: 400 });
@@ -19,23 +18,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Message too long" }, { status: 400 });
     }
 
-    // eslint-disable-line @typescript-eslint/no-unused-vars
-const _chatHistory: AIChatMessage[] = history
-      .filter((h) => h && h.content)
-      .map((h, i) => ({
-        // eslint-disable-line
-        id: `msg-${i}`,
-        role: h.role as "user" | "assistant" | "system",
-        content: h.content,
-        timestamp: new Date().toISOString(),
-      }));
-
-    const result = (await aiService.getResponse(message, _chatHistory)) as { response: string; suggestions: string[]; relatedProducts: string[] };
+    // Call the AIService to get the intelligent response
+    const aiResponse = aiService.getResponse(message, history || []);
 
     return NextResponse.json({
-      response: result.response,
-      suggestions: result.suggestions,
-      relatedProducts: result.relatedProducts,
+      response: aiResponse.response,
+      suggestions: aiResponse.suggestions,
+      relatedProducts: aiResponse.relatedProducts,
     });
   } catch (error) {
     console.error("AI chat API error:", error);
@@ -46,7 +35,7 @@ const _chatHistory: AIChatMessage[] = history
         suggestions: [],
         relatedProducts: [],
       },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }
