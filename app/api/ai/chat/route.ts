@@ -21,10 +21,13 @@ export async function POST(request: NextRequest) {
     // Call the AIService to get the intelligent response
     const aiResponse = aiService.getResponse(message, history || []);
 
+    // Clean Markdown stars from response
+    const cleanResponse = aiResponse.response ? aiResponse.response.replace(/\*\*/g, "") : "";
+
     return NextResponse.json({
-      response: aiResponse.response,
-      suggestions: aiResponse.suggestions,
-      relatedProducts: aiResponse.relatedProducts,
+      response: cleanResponse,
+      suggestions: aiResponse.suggestions || [],
+      relatedProducts: [], // Disable automatic product cards
     });
   } catch (error) {
     console.error("AI chat API error:", error);
