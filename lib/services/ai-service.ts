@@ -1,8 +1,8 @@
 ﻿import type { AIConfig, AIProvider, AIChatMessage, Product } from "@/types";
 import { config } from "@/lib/config";
-import { products, categoryData, getProductById, getProductsByCategory, searchProducts, getAllProducts } from "@/lib/data";
+import { products, categoryData, getProductById, getProductsByCategory } from "@/lib/data";
 import { storeKnowledge } from "@/lib/ai/store-knowledge";
-import { normalizeArabic, containsAny, extractQuantity, extractCityMention, detectEnglishCategory, isPriceQuery, isDeliveryCostQuery, isDeliveryAvailabilityQuery, isLocationQuery, isGreeting } from "@/lib/ai/arabic-nlp";
+import { normalizeArabic, containsAny, extractQuantity, extractCityMention, detectEnglishCategory, isPriceQuery, isDeliveryCostQuery, isDeliveryAvailabilityQuery, isLocationQuery, isGreeting } from "@/lib/ai/arabic-nlp"; // eslint-disable-line @typescript-eslint/no-unused-vars
 
 // ============================================================
 // AI Service — Server-Side Only

@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { NextRequest, NextResponse } from "next/server";
 import { aiService } from "@/lib/services/ai-service";
 import type { AIChatMessage } from "@/types";
