@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yaqeen Store | يقين ستور - Mobile Homepage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "ash-charcoal": "#2D2D2D",
+                        "tertiary-fixed": "#e2e2e2",
+                        "primary-container": "#1f1b19",
+                        "primary-fixed-dim": "#cec5c1",
+                        "on-primary-fixed-variant": "#4b4643",
+                        "on-surface": "#1c1b1b",
+                        "secondary-container": "#fed488",
+                        "primary": "#000000",
+                        "oak-warm": "#8D6E52",
+                        "background": "#fdf8f7",
+                        "surface-container-low": "#f7f3f1",
+                        "on-background": "#1c1b1b",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#ddd9d8",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "tertiary-container": "#1a1c1c",
+                        "outline-variant": "#d0c4be",
+                        "surface-bright": "#fdf8f7",
+                        "secondary-fixed-dim": "#e9c176",
+                        "surface": "#fdf8f7",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#635d5a",
+                        "secondary-fixed": "#ffdea5",
+                        "marble-white": "#FDFDFD",
+                        "tertiary": "#000000",
+                        "surface-variant": "#e6e1e0",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "on-secondary-fixed": "#261900",
+                        "on-secondary-container": "#785a1a",
+                        "surface-container-high": "#ece7e6",
+                        "on-primary-container": "#8a827f",
+                        "secondary": "#775a19",
+                        "stone-gray": "#4A4A4A",
+                        "on-surface-variant": "#4d4541",
+                        "linen-beige": "#F5F2ED",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#1f1b19",
+                        "surface-container": "#f1edec",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#838484",
+                        "primary-fixed": "#eae1dd",
+                        "surface-container-highest": "#e6e1e0",
+                        "outline": "#7f7570",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#cec5c1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "component-padding-lg": "24px",
+                        "component-padding-sm": "12px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["IBM Plex Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "section-title": ["Plus Jakarta Sans"],
+                        "price-display": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-xl": ["Plus Jakarta Sans"],
+                        "display-xl-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "section-title": ["24px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "price-display": ["20px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-xl-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(253, 253, 253, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(232, 228, 222, 0.5); }
+        .shadow-ambient { box-shadow: 0 8px 32px -4px rgba(74, 74, 74, 0.04), 0 4px 16px -4px rgba(74, 74, 74, 0.04); }
+        .luxury-gradient { background: linear-gradient(135deg, #1f1b19 0%, #2D2D2D 100%); }
+        
+        /* Mobile Specific Overrides */
+        @media (max-width: 768px) {
+            .section-gap { margin-top: 60px; margin-bottom: 60px; }
+        }
+    </style>
+</head>
+<body class="bg-linen-beige text-ash-charcoal antialiased overflow-x-hidden selection:bg-oak-warm selection:text-marble-white">
+<!-- Mobile Top Navigation (Ghost/Glass) -->
+<header class="fixed top-0 w-full z-50 glass-panel border-b border-outline-variant/30 flex justify-between items-center px-margin-mobile py-4 transition-all duration-300" id="main-nav">
+<div class="flex items-center gap-4">
+<button aria-label="Menu" class="text-ash-charcoal hover:text-oak-warm transition-colors">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+<span class="material-symbols-outlined text-ash-charcoal text-2xl hover:text-oak-warm transition-colors">search</span>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2">
+<h1 class="font-display-xl-mobile text-display-xl-mobile font-bold text-ash-charcoal tracking-tight">
+                Yaqeen
+            </h1>
+</div>
+<div class="flex items-center gap-4">
+<button aria-label="Cart" class="text-ash-charcoal hover:text-oak-warm transition-colors relative">
+<span class="material-symbols-outlined text-2xl">shopping_cart</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-oak-warm text-marble-white rounded-full flex items-center justify-center text-[10px] font-bold">2</span>
+</button>
+</div>
+</header>
+<!-- Mobile Menu Overlay (Hidden by default, structure provided) -->
+<div class="fixed inset-0 bg-ash-charcoal/95 backdrop-blur-xl z-[60] hidden flex-col justify-center items-center rtl:items-start p-margin-mobile" id="mobile-menu">
+<!-- Content would go here via JS -->
+</div>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="relative px-margin-mobile w-full min-h-[70vh] flex flex-col justify-end pb-12 overflow-hidden rounded-b-[2rem]">
+<!-- Dynamic Background placeholder -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A luxurious, minimalist interior room featuring natural sunlight casting soft shadows across high-end SPC wood-look flooring. Warm beige walls, subtle natural textures, light mode aesthetic, evoking a sense of calm and architectural integrity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVyr_ee5-xRwwIyWH7_mRHBgl6JeoZwq0jqZZq7rAamkzOfpftFsS4mcEqDI9lt8WrnZQ4R35OTjPHYt6CbvFoheZrpnWe0J65UCvyaVgahCl8-ytXIdfxhSVPlg4QhsZBAcIBEn5o0b4kV8emWXrqHg1IDQa8DdRyphIWxW_JZBc-0tUobW2GrTtxbdDFwD5umH5exwLczvgi22wewfh2sxwbMLH-W2LWHMvVbGmFJalVFatjZFzJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-primary-container/30 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-2xl">
+<span class="inline-block px-3 py-1 bg-marble-white/20 backdrop-blur-md rounded-full font-label-caps text-label-caps text-marble-white mb-4 border border-marble-white/30 uppercase tracking-widest">مجموعة 2024</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-marble-white leading-tight mb-4 drop-shadow-lg">
+                    اكتشف أناقة منزلك<br/>بتفاصيل استثنائية
+                </h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim mb-8 max-w-sm">
+                    أرضيات وتكسيات جدارية تجمع بين الفخامة المعمارية والمتانة المطلقة.
+                </p>
+<button class="w-full bg-marble-white text-ash-charcoal font-label-caps text-label-caps py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors shadow-ambient">
+                    تصفح التشكيلة
+                    <span class="material-symbols-outlined text-sm rtl:rotate-180">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Categories Carousel -->
+<section class="mt-16 px-margin-mobile overflow-hidden">
+<div class="flex justify-between items-end mb-8">
+<h3 class="font-section-title text-section-title text-ash-charcoal">التصنيفات الفاخرة</h3>
+</div>
+<div class="flex overflow-x-auto gap-4 pb-8 -mx-margin-mobile px-margin-mobile snap-x snap-mandatory hide-scrollbar" style="scrollbar-width: none;">
+<!-- Category 1: SPC -->
+<a class="snap-start shrink-0 w-64 group relative rounded-xl overflow-hidden aspect-[4/5] shadow-ambient bg-surface-container" href="#">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up architectural shot of premium SPC parquet flooring in a warm oak finish, showing realistic wood grain texture, soft natural lighting, high end minimal aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH-q6VT29lSluGrIjV3q8wlfoiXOqhlwG0XqVMGxyL3TWimJ_xP7WVxwmf5_IxrVHQM--ZcpycKDBik6pCnO8AeHa-39pDoTSWk3Fbt-l3RZXE8-M79M5pGssH1eDu9rC6e08mq9S56Msuqei0PnuyWgi-DqQjChe8z1FACnPfc62ekCXBhwacpk_nQGWMK2aCnrKFimFkb6XJHC2XBx2E69UKp6RGvQAJCo8OYC1mQV20zpNqAxm7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-ash-charcoal/80 to-transparent opacity-80"></div>
+</div>
+<div class="relative z-10 h-full p-6 flex flex-col justify-end">
+<span class="font-label-caps text-label-caps text-secondary-fixed mb-1 block">أرضيات</span>
+<h4 class="font-headline-lg-mobile text-[22px] font-bold text-marble-white">SPC Parquet</h4>
+<div class="w-8 h-1 bg-oak-warm mt-3 transform origin-right transition-all duration-300 group-hover:w-16"></div>
+</div>
+</a>
+<!-- Category 2: Stone -->
+<a class="snap-start shrink-0 w-64 group relative rounded-xl overflow-hidden aspect-[4/5] shadow-ambient bg-surface-container" href="#">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up architectural detail of a luxurious stone alternative wall panel, featuring deep charcoal and grey marble veining, soft lighting emphasizing the matte texture, modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXHPM5V896r0MbjXXBHocIb48KP0SnUYjZsj9oxMOcACSWfh0gUMpqDjYAeUwaUc-DI2jkgOtoFZ5JmZWrDnLfXh1TrncHvd4AL4X9qSqqZR5vhGPnPqZMwpoZ5lY3ek-mLHguu4cOPmaUx_hRgw1nX-l0wAlsrvnakeOZVsZXqSPqN61MviGGr5kw74gk3pcNrSVaQ-Pvwt-iMyiCBsk9pGUjArv9v8EbX3WHmO_yIejlJctHBI_0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-ash-charcoal/80 to-transparent opacity-80"></div>
+</div>
+<div class="relative z-10 h-full p-6 flex flex-col justify-end">
+<span class="font-label-caps text-label-caps text-secondary-fixed mb-1 block">تكسيات جدارية</span>
+<h4 class="font-headline-lg-mobile text-[22px] font-bold text-marble-white">بديل الحجر</h4>
+<div class="w-8 h-1 bg-oak-warm mt-3 transform origin-right transition-all duration-300 group-hover:w-16"></div>
+</div>
+</a>
+<!-- Category 3: Soft Stone -->
+<a class="snap-start shrink-0 w-64 group relative rounded-xl overflow-hidden aspect-[4/5] shadow-ambient bg-surface-container" href="#">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Abstract minimal composition of soft stone cladding material in a light linen beige color, showing geometric 3D patterns, subtle shadows, clean bright architectural style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUu96kwOE5HDtB1cFEwGZ18i3qrFCWl8d30e5Xza3jJX0njtv-TFChVH2_SmERAWWLM4UAUi1VF8Qjqhg3oD30oKvwF46U-XyuV6gf2egwsOHg0OGNh3bZzp2XJJvEp6mX_EamRYhir-DQS8L0GqyIZKVrDtHgZODj72FFP303jwU2cqNwejU7dfU7rJQCRMsZaMq6EH4pB8vgYxn5z5C5dnXD9BJqr1GB27CloYTzpjFQj8TT57Lm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-ash-charcoal/80 to-transparent opacity-80"></div>
+</div>
+<div class="relative z-10 h-full p-6 flex flex-col justify-end">
+<span class="font-label-caps text-label-caps text-secondary-fixed mb-1 block">تكسيات جدارية</span>
+<h4 class="font-headline-lg-mobile text-[22px] font-bold text-marble-white">الحجر المرن</h4>
+<div class="w-8 h-1 bg-oak-warm mt-3 transform origin-right transition-all duration-300 group-hover:w-16"></div>
+</div>
+</a>
+</div>
+</section>
+<!-- Featured Products Grid -->
+<section class="mt-12 px-margin-mobile">
+<h3 class="font-section-title text-section-title text-ash-charcoal mb-8">المنتجات المميزة</h3>
+<div class="grid grid-cols-2 gap-4">
+<!-- Product Card 1 -->
+<div class="bg-marble-white rounded-lg p-2 pb-4 shadow-ambient border border-outline-variant/30 flex flex-col relative group">
+<div class="absolute top-4 right-4 z-10">
+<span class="bg-primary-container text-marble-white font-label-caps text-[10px] px-2 py-1 rounded">جديد</span>
+</div>
+<div class="aspect-[4/5] w-full bg-surface-container rounded-md overflow-hidden mb-4">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90 transition-transform duration-500 group-hover:scale-105" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="px-2 flex flex-col flex-grow">
+<span class="font-label-caps text-[10px] text-on-surface-variant mb-1">1220×180mm</span>
+<h4 class="font-body-md text-sm font-semibold text-ash-charcoal leading-tight mb-2">أرضيات خشبية SPC بلوط دافئ</h4>
+<div class="mt-auto flex justify-between items-end">
+<span class="font-price-display text-lg text-primary">₪85 <span class="text-xs text-on-surface-variant font-normal">/م²</span></span>
+<button aria-label="Add to cart" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-ash-charcoal hover:bg-primary-container hover:text-marble-white transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-marble-white rounded-lg p-2 pb-4 shadow-ambient border border-outline-variant/30 flex flex-col relative group">
+<div class="absolute top-4 right-4 z-10">
+<span class="bg-oak-warm text-marble-white font-label-caps text-[10px] px-2 py-1 rounded">الأكثر مبيعاً</span>
+</div>
+<div class="aspect-[4/5] w-full bg-surface-container rounded-md overflow-hidden mb-4">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90 transition-transform duration-500 group-hover:scale-105" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="px-2 flex flex-col flex-grow">
+<span class="font-label-caps text-[10px] text-on-surface-variant mb-1">60/120cm</span>
+<h4 class="font-body-md text-sm font-semibold text-ash-charcoal leading-tight mb-2">تكسية جدارية نمط هندسي</h4>
+<div class="mt-auto flex justify-between items-end">
+<span class="font-price-display text-lg text-primary">₪120 <span class="text-xs text-on-surface-variant font-normal">/للوح</span></span>
+<button aria-label="Add to cart" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-ash-charcoal hover:bg-primary-container hover:text-marble-white transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-marble-white rounded-lg p-2 pb-4 shadow-ambient border border-outline-variant/30 flex flex-col relative group">
+<div class="aspect-[4/5] w-full bg-surface-container rounded-md overflow-hidden mb-4">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90 transition-transform duration-500 group-hover:scale-105" data-alt="Product shot of a soft stone wall panel roll, light grey concrete texture, unrolled slightly showing flexibility, bright studio lighting on white background, premium presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbXgxSIJ2Hf0W6Rf3SuEC54tQDoXB51fCQh-lZfO4JAv8u9seE2-Pwm0dhB63rXEa1__3zKdk_FFUq67PkDBJV7SKOthYJatGp61P_srte04d8JFE0sWIFoCe1IJ83b8f9Bv30QpgSobNKOMCbzC2qlO50ZIsdLocZV3zPLWwhPSsd-sNuTo0EH5JSWBtPUo5DoD_HNeAh3ADSXKZNz4jo5LKqftGqT3oZH-9SX7fCW9dl5wC1il2M"/>
+</div>
+<div class="px-2 flex flex-col flex-grow">
+<span class="font-label-caps text-[10px] text-on-surface-variant mb-1">1200×600mm</span>
+<h4 class="font-body-md text-sm font-semibold text-ash-charcoal leading-tight mb-2">حجر مرن رمادي كلاسيكي</h4>
+<div class="mt-auto flex justify-between items-end">
+<span class="font-price-display text-lg text-primary">₪150 <span class="text-xs text-on-surface-variant font-normal">/للوح</span></span>
+<button aria-label="Add to cart" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-ash-charcoal hover:bg-primary-container hover:text-marble-white transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-marble-white rounded-lg p-2 pb-4 shadow-ambient border border-outline-variant/30 flex flex-col relative group">
+<div class="aspect-[4/5] w-full bg-surface-container rounded-md overflow-hidden mb-4">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90 transition-transform duration-500 group-hover:scale-105" data-alt="Product shot of luxury vinyl tile flooring in a dark walnut wood finish, showing plank edges, warm studio lighting on white background, high quality material focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp21xebdhSQJ8H_UL3wP1KeCM5idXUBE9rbb_TBd_CaS3_1xR_7kEMf586wvGsDw2P-NRtLoqFvA4M47yhkh_GuMyU7NvKOqyja-TkaJUGlsWsCokVKV_2fanD7reIGlxEOgpa7I-G8LUmUL90jprJvc0RlhTAiXfChYNxYoz8D-q_iZr6PG0lgMVL893o20K8bIiuZ0uvsQy4NGH73_Wb0FVEVJaOI8w32zciJ9h_IOpghj0meYV9"/>
+</div>
+<div class="px-2 flex flex-col flex-grow">
+<span class="font-label-caps text-[10px] text-on-surface-variant mb-1">1220×180mm</span>
+<h4 class="font-body-md text-sm font-semibold text-ash-charcoal leading-tight mb-2">أرضيات SPC جوز داكن</h4>
+<div class="mt-auto flex justify-between items-end">
+<span class="font-price-display text-lg text-primary">₪90 <span class="text-xs text-on-surface-variant font-normal">/م²</span></span>
+<button aria-label="Add to cart" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-ash-charcoal hover:bg-primary-container hover:text-marble-white transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<button class="px-8 py-3 border border-ash-charcoal text-ash-charcoal rounded-lg font-label-caps text-label-caps hover:bg-ash-charcoal hover:text-marble-white transition-colors uppercase">
+                    عرض كل المنتجات
+                </button>
+</div>
+</section>
+</main>
+<!-- Floating AI Assistant Button (Contextual) -->
+<div class="fixed bottom-6 left-6 z-40">
+<button class="w-14 h-14 rounded-full luxury-gradient shadow-ambient flex items-center justify-center text-secondary-fixed hover:scale-105 active:scale-95 transition-all duration-300 group relative">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">auto_awesome</span>
+<!-- Ripple Effect -->
+<span class="absolute inset-0 rounded-full border border-secondary-fixed opacity-50 animate-ping" style="animation-duration: 3s;"></span>
+</button>
+</div>
+<!-- Script for Nav Glass Effect -->
+<script>
+        document.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-sm');
+                nav.style.background = 'rgba(253, 253, 253, 0.95)';
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.style.background = 'rgba(253, 253, 253, 0.85)';
+            }
+        });
+    </script>
+</body></html>

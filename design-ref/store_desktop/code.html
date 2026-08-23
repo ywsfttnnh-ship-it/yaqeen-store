@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yaqeen Store | يقين ستور - المتجر</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "ash-charcoal": "#2D2D2D",
+                        "tertiary-fixed": "#e2e2e2",
+                        "primary-container": "#1f1b19",
+                        "primary-fixed-dim": "#cec5c1",
+                        "on-primary-fixed-variant": "#4b4643",
+                        "on-surface": "#1c1b1b",
+                        "secondary-container": "#fed488",
+                        "primary": "#000000",
+                        "oak-warm": "#8D6E52",
+                        "background": "#fdf8f7",
+                        "surface-container-low": "#f7f3f1",
+                        "on-background": "#1c1b1b",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#ddd9d8",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "tertiary-container": "#1a1c1c",
+                        "outline-variant": "#d0c4be",
+                        "surface-bright": "#fdf8f7",
+                        "secondary-fixed-dim": "#e9c176",
+                        "surface": "#fdf8f7",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#635d5a",
+                        "secondary-fixed": "#ffdea5",
+                        "marble-white": "#FDFDFD",
+                        "tertiary": "#000000",
+                        "surface-variant": "#e6e1e0",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "on-secondary-fixed": "#261900",
+                        "on-secondary-container": "#785a1a",
+                        "surface-container-high": "#ece7e6",
+                        "on-primary-container": "#8a827f",
+                        "secondary": "#775a19",
+                        "stone-gray": "#4A4A4A",
+                        "on-surface-variant": "#4d4541",
+                        "linen-beige": "#F5F2ED",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#1f1b19",
+                        "surface-container": "#f1edec",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#838484",
+                        "primary-fixed": "#eae1dd",
+                        "surface-container-highest": "#e6e1e0",
+                        "outline": "#7f7570",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#cec5c1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "component-padding-lg": "24px",
+                        "component-padding-sm": "12px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["IBM Plex Sans", "sans-serif"],
+                        "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "section-title": ["Plus Jakarta Sans", "sans-serif"],
+                        "price-display": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-md": ["Be Vietnam Pro", "sans-serif"],
+                        "body-lg": ["Be Vietnam Pro", "sans-serif"],
+                        "display-xl": ["Plus Jakarta Sans", "sans-serif"],
+                        "display-xl-mobile": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "section-title": ["24px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "price-display": ["20px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-xl-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .glass-panel {
+            background: rgba(253, 253, 253, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(232, 228, 222, 0.5);
+        }
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(45, 45, 45, 0.08);
+            border-color: theme('colors.oak-warm');
+        }
+        /* Custom scrollbar for filters */
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.outline-variant');
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-marble-white/90 dark:bg-primary-container/90 backdrop-blur-md shadow-sm border-b border-outline-variant/30 dark:border-on-primary-fixed-variant/30 transition-all duration-300" id="main-header">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl font-bold text-ash-charcoal dark:text-marble-white whitespace-nowrap" href="#">
+                Yaqeen Store | يقين ستور
+            </a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-ash-charcoal dark:text-tertiary-fixed hover:text-oak-warm transition-colors font-label-caps text-label-caps hover:opacity-80 duration-300" href="#">Home</a>
+<a class="text-oak-warm border-b-2 border-oak-warm pb-1 font-label-caps text-label-caps hover:opacity-80 duration-300" href="#">Store</a>
+<a class="text-ash-charcoal dark:text-tertiary-fixed hover:text-oak-warm transition-colors font-label-caps text-label-caps hover:opacity-80 duration-300" href="#">Categories</a>
+<a class="text-ash-charcoal dark:text-tertiary-fixed hover:text-oak-warm transition-colors font-label-caps text-label-caps hover:opacity-80 duration-300" href="#">Offers</a>
+<a class="text-ash-charcoal dark:text-tertiary-fixed hover:text-oak-warm transition-colors font-label-caps text-label-caps hover:opacity-80 duration-300" href="#">About</a>
+<a class="text-ash-charcoal dark:text-tertiary-fixed hover:text-oak-warm transition-colors font-label-caps text-label-caps hover:opacity-80 duration-300" href="#">Contact</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button aria-label="Search" class="text-ash-charcoal dark:text-marble-white hover:text-oak-warm transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<button aria-label="Favorites" class="text-ash-charcoal dark:text-marble-white hover:text-oak-warm transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<button aria-label="Cart" class="text-ash-charcoal dark:text-marble-white hover:text-oak-warm transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+</button>
+<button aria-label="Profile" class="hidden md:block text-ash-charcoal dark:text-marble-white hover:text-oak-warm transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+<button aria-label="Menu" class="md:hidden text-ash-charcoal dark:text-marble-white hover:text-oak-warm transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[100px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Page Header & Global Search/Sort -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+<div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-ash-charcoal mb-2">المتجر</h1>
+<p class="text-stone-gray font-body-md text-body-md">استكشف مجموعتنا الفاخرة من الأرضيات والبدائل.</p>
+</div>
+<div class="w-full md:w-auto flex flex-col sm:flex-row gap-4">
+<!-- Search Bar -->
+<div class="relative w-full sm:w-64">
+<input class="w-full bg-transparent border-b-2 border-outline-variant focus:border-oak-warm py-2 pl-4 pr-10 outline-none transition-colors font-body-md text-ash-charcoal placeholder-on-primary-container" placeholder="ابحث عن منتج..." type="text"/>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-primary-container" style="font-variation-settings: 'FILL' 0;">search</span>
+</div>
+<!-- Sort Dropdown (Styled as minimal text) -->
+<div class="relative group w-full sm:w-auto cursor-pointer">
+<div class="flex items-center gap-2 border-b-2 border-outline-variant py-2 group-hover:border-oak-warm transition-colors">
+<span class="font-label-caps text-label-caps text-ash-charcoal">ترتيب حسب: الأحدث</span>
+<span class="material-symbols-outlined text-ash-charcoal text-sm" style="font-variation-settings: 'FILL' 0;">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Layout Grid: Sidebar Filters + Product Grid -->
+<div class="flex flex-col lg:flex-row gap-gutter items-start">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-1/4 flex-shrink-0 lg:sticky lg:top-[120px] glass-panel rounded-xl p-6 hidden md:block">
+<h2 class="font-section-title text-section-title text-ash-charcoal mb-6 border-b border-outline-variant/30 pb-4">تصفية النتائج</h2>
+<!-- Categories -->
+<div class="mb-8">
+<h3 class="font-label-caps text-label-caps text-stone-gray mb-4">الفئات</h3>
+<ul class="space-y-3">
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox h-4 w-4 text-ash-charcoal rounded border-outline-variant focus:ring-ash-charcoal transition-colors" type="checkbox"/>
+<span class="font-body-md text-ash-charcoal group-hover:text-oak-warm transition-colors">باركيه SPC</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="form-checkbox h-4 w-4 text-ash-charcoal rounded border-outline-variant focus:ring-ash-charcoal transition-colors" type="checkbox"/>
+<span class="font-body-md text-ash-charcoal group-hover:text-oak-warm transition-colors">بديل الحجر</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox h-4 w-4 text-ash-charcoal rounded border-outline-variant focus:ring-ash-charcoal transition-colors" type="checkbox"/>
+<span class="font-body-md text-ash-charcoal group-hover:text-oak-warm transition-colors">الحجر المرن</span>
+</label>
+</li>
+</ul>
+</div>
+<!-- Price Range (Simplified) -->
+<div class="mb-8">
+<h3 class="font-label-caps text-label-caps text-stone-gray mb-4">السعر (₪)</h3>
+<div class="flex items-center gap-4">
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-oak-warm py-1 outline-none font-body-md text-ash-charcoal text-center" placeholder="من" type="number"/>
+<span class="text-stone-gray">-</span>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-oak-warm py-1 outline-none font-body-md text-ash-charcoal text-center" placeholder="إلى" type="number"/>
+</div>
+</div>
+<!-- Colors -->
+<div class="mb-8">
+<h3 class="font-label-caps text-label-caps text-stone-gray mb-4">اللون</h3>
+<div class="flex flex-wrap gap-3">
+<button aria-label="Beige" class="w-8 h-8 rounded-full bg-[#E5E0D8] border border-outline-variant/30 ring-2 ring-transparent hover:ring-oak-warm transition-all"></button>
+<button aria-label="Brown" class="w-8 h-8 rounded-full bg-[#8A7B6B] border border-outline-variant/30 ring-2 ring-transparent hover:ring-oak-warm transition-all"></button>
+<button aria-label="Dark Grey" class="w-8 h-8 rounded-full bg-[#4A4A4A] border border-outline-variant/30 ring-2 ring-transparent hover:ring-oak-warm transition-all"></button>
+<button aria-label="White" class="w-8 h-8 rounded-full bg-[#FDFDFD] border border-outline-variant/30 ring-2 ring-transparent hover:ring-oak-warm transition-all ring-offset-1"></button>
+</div>
+</div>
+<button class="w-full bg-ash-charcoal text-marble-white font-label-caps text-label-caps py-3 rounded-lg hover:bg-black transition-colors">
+                    تطبيق الفلاتر
+                </button>
+</aside>
+<!-- Mobile Filter Toggle -->
+<div class="w-full lg:hidden mb-6 flex justify-end">
+<button class="flex items-center gap-2 border border-outline-variant rounded-lg px-4 py-2 text-ash-charcoal font-label-caps hover:border-oak-warm transition-colors">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">tune</span>
+                    الفلاتر
+                </button>
+</div>
+<!-- Product Grid -->
+<div class="w-full lg:w-3/4">
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="product-card group bg-marble-white border border-[#E8E4DE] rounded-xl overflow-hidden flex flex-col relative">
+<!-- Badges -->
+<div class="absolute top-4 right-4 z-10 flex flex-col gap-2">
+<span class="bg-oak-warm text-marble-white font-label-caps text-[10px] px-2 py-1 rounded">جديد</span>
+</div>
+<!-- Image Container (4:5 Aspect Ratio) -->
+<div class="relative w-full pb-[125%] bg-linen-beige overflow-hidden">
+<img alt="باركيه SPC لون بلوط فاتح" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A high-quality, professional photograph of a sample piece of luxury light oak wood flooring, shot straight-on against a neutral background. The lighting is bright and even, highlighting the natural wood grain and subtle texture of the SPC plank. The aesthetic is clean, modern, and architectural, emphasizing material integrity." src="https://lh3.googleusercontent.com/aida/AEtjO1Xk7ouMt-q3db33FpiWFpj2sXZ3F9q60SYWFHmRxw7vUywMQfhHbEsj2lJQ5x7atieHPjrMn0MlDdAEoVT-40xeBVdmVcIXGrSC6T19ycpgaNQ0K5T8kHEtRYHNrY0_zzgsCJTtn8V2Vb71YTtS0G9nAHDMTd6HItcNYoty-Oqt2Kh6nNkd_WED3wm16HdbUXSwRrjpCg6vKzpb6jEE5zC6btFFQI1S5heveiYNI2fwX9c1tkxBtUdH_GY"/>
+<!-- Quick View Overlay -->
+<div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-marble-white/90 text-ash-charcoal font-label-caps text-label-caps px-6 py-3 rounded-full hover:bg-marble-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300">نظرة سريعة</button>
+</div>
+</div>
+<!-- Content -->
+<div class="p-5 flex flex-col flex-grow">
+<div class="font-label-caps text-label-caps text-stone-gray mb-1">1220×180mm | SPC</div>
+<h3 class="font-body-lg text-body-lg text-ash-charcoal font-semibold mb-2 line-clamp-1">باركيه SPC بلوط طبيعي</h3>
+<!-- Rating -->
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 0.5;">star_half</span>
+<span class="text-xs text-stone-gray font-body-md ml-1">(24)</span>
+</div>
+<div class="mt-auto flex items-end justify-between">
+<div>
+<span class="font-price-display text-price-display text-ash-charcoal block">₪ 85.00</span>
+<span class="text-xs text-stone-gray block">للمتر المربع</span>
+</div>
+<button aria-label="Add to cart" class="w-10 h-10 rounded-full border border-ash-charcoal flex items-center justify-center text-ash-charcoal hover:bg-ash-charcoal hover:text-marble-white transition-colors group/btn">
+<span class="material-symbols-outlined text-sm group-hover/btn:scale-110 transition-transform" style="font-variation-settings: 'FILL' 0;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-card group bg-marble-white border border-[#E8E4DE] rounded-xl overflow-hidden flex flex-col relative">
+<!-- Badges -->
+<div class="absolute top-4 right-4 z-10 flex flex-col gap-2">
+<span class="bg-ash-charcoal text-marble-white font-label-caps text-[10px] px-2 py-1 rounded">الأكثر مبيعاً</span>
+<span class="bg-error/90 text-marble-white font-label-caps text-[10px] px-2 py-1 rounded">-15%</span>
+</div>
+<!-- Image Container -->
+<div class="relative w-full pb-[125%] bg-linen-beige overflow-hidden">
+<img alt="باركيه SPC جوز داكن" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A premium product shot of dark walnut SPC flooring planks arranged to show the interlocking system. The image uses sophisticated lighting with subtle shadows to emphasize the deep, rich tones and realistic wood grain texture. The setting is minimal, reflecting high-end interior design materials." src="https://lh3.googleusercontent.com/aida/AEtjO1V24sLnkwKVMybVJoeUjzBglzkLe531PUUSFWx8dcs28tRiWu78TiuvU-Q6IjjfPktpx3Aaqi2HfIcYuyzx7uW52IFUZxNOVvvG7z7IxTONxXYdI-n2P8IN0J_8xT3gI1ZWqQWsnXGRlMmZdN8wOkf-ufm7OxPxkKuOPfsY_dFFyRUAlp0HYqEJYZejhE9mRkFhN1iWcjYAWpjmCxhzyHJlcsSN7sGYuqyK72QBgTvXv6kmpsV7uuHWgg"/>
+<div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-marble-white/90 text-ash-charcoal font-label-caps text-label-caps px-6 py-3 rounded-full hover:bg-marble-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300">نظرة سريعة</button>
+</div>
+</div>
+<!-- Content -->
+<div class="p-5 flex flex-col flex-grow">
+<div class="font-label-caps text-label-caps text-stone-gray mb-1">1220×180mm | SPC</div>
+<h3 class="font-body-lg text-body-lg text-ash-charcoal font-semibold mb-2 line-clamp-1">باركيه SPC جوز كلاسيكي</h3>
+<!-- Rating -->
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-stone-gray font-body-md ml-1">(42)</span>
+</div>
+<div class="mt-auto flex items-end justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-price-display text-price-display text-ash-charcoal">₪ 95.00</span>
+<span class="text-sm text-stone-gray line-through decoration-1">₪ 112.00</span>
+</div>
+<span class="text-xs text-stone-gray block">للمتر المربع</span>
+</div>
+<button aria-label="Add to cart" class="w-10 h-10 rounded-full border border-ash-charcoal flex items-center justify-center text-ash-charcoal hover:bg-ash-charcoal hover:text-marble-white transition-colors group/btn">
+<span class="material-symbols-outlined text-sm group-hover/btn:scale-110 transition-transform" style="font-variation-settings: 'FILL' 0;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="product-card group bg-marble-white border border-[#E8E4DE] rounded-xl overflow-hidden flex flex-col relative">
+<!-- Image Container -->
+<div class="relative w-full pb-[125%] bg-linen-beige overflow-hidden">
+<img alt="حجر مرن بتأثير صخري" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A close-up architectural photograph of a soft stone wall covering tile, featuring a deeply textured, rugged surface in a warm beige tone. The side-lighting casts elegant micro-shadows across the undulations of the material, highlighting its organic, natural feel. Shot against a pristine, light studio background to convey luxury." src="https://lh3.googleusercontent.com/aida/AEtjO1Vh8cGmCSkPCwo9D79t70FC3pNJ1axUTOCdcU1_BVJrE4MbpjdH293MvGc3DWxJ8qCtW5-HNgDURLMwaRe942OHe-NnyhnsN6UxSr3K3VVGSjcthg3cekelgFa6MXNygKDmj_mklzageRkC8N8TvoRQ9vythhDynAT_JWN3VzBsie-EFoUzM9KXQ-8gvcErGVw0E8j73kkZ1d0gJ-dcdqRBfBuUe-sclcldAGlbGkDDO6vIolYYbo7yMYE"/>
+<div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-marble-white/90 text-ash-charcoal font-label-caps text-label-caps px-6 py-3 rounded-full hover:bg-marble-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300">نظرة سريعة</button>
+</div>
+</div>
+<!-- Content -->
+<div class="p-5 flex flex-col flex-grow">
+<div class="font-label-caps text-label-caps text-stone-gray mb-1">60×120cm | حجر مرن</div>
+<h3 class="font-body-lg text-body-lg text-ash-charcoal font-semibold mb-2 line-clamp-1">تكسية حجر مرن - صخري</h3>
+<!-- Rating -->
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-outline-variant text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="text-xs text-stone-gray font-body-md ml-1">(12)</span>
+</div>
+<div class="mt-auto flex items-end justify-between">
+<div>
+<span class="font-price-display text-price-display text-ash-charcoal block">₪ 120.00</span>
+<span class="text-xs text-stone-gray block">للقطعة</span>
+</div>
+<button aria-label="Add to cart" class="w-10 h-10 rounded-full border border-ash-charcoal flex items-center justify-center text-ash-charcoal hover:bg-ash-charcoal hover:text-marble-white transition-colors group/btn">
+<span class="material-symbols-outlined text-sm group-hover/btn:scale-110 transition-transform" style="font-variation-settings: 'FILL' 0;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="product-card group bg-marble-white border border-[#E8E4DE] rounded-xl overflow-hidden flex flex-col relative">
+<!-- Image Container -->
+<div class="relative w-full pb-[125%] bg-linen-beige overflow-hidden">
+<img alt="حجر مرن أملس" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A refined product image of a smooth, large-format soft stone tile in a light grey/white shade. The surface has a subtle, matte finish with very delicate veining, evoking modern minimalist architecture. The lighting is soft and diffused, creating a serene and premium presentation." src="https://lh3.googleusercontent.com/aida/AEtjO1VFvgbDLGwIcZ_0ZnJNhAXFDVJfahftH4r_vPXncdyXr6PYMxuLKiGPuz_-sO3iUpwFMy_qEGjxH-85lpe9u1j_3FLrHiL_ngM8kRFor1jf07T-shAuYtSnbPSOdtjxpLnid99jR_5_eH5G4mmPa0rJKOB8q0Ef6GgiH1XBPD7NQwDh08BtBBhl_rOR4uPEdzovllhudOuq_cvzBEfYzSGm3BQXGxaa0peRPkTQCLE9oIcMJk2G7m2bGTg"/>
+<div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-marble-white/90 text-ash-charcoal font-label-caps text-label-caps px-6 py-3 rounded-full hover:bg-marble-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300">نظرة سريعة</button>
+</div>
+</div>
+<!-- Content -->
+<div class="p-5 flex flex-col flex-grow">
+<div class="font-label-caps text-label-caps text-stone-gray mb-1">120×280cm | حجر مرن</div>
+<h3 class="font-body-lg text-body-lg text-ash-charcoal font-semibold mb-2 line-clamp-1">ألواح حجر مرن - سموث</h3>
+<!-- Rating -->
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-stone-gray font-body-md ml-1">(38)</span>
+</div>
+<div class="mt-auto flex items-end justify-between">
+<div>
+<span class="font-price-display text-price-display text-ash-charcoal block">₪ 350.00</span>
+<span class="text-xs text-stone-gray block">للوح</span>
+</div>
+<button aria-label="Add to cart" class="w-10 h-10 rounded-full border border-ash-charcoal flex items-center justify-center text-ash-charcoal hover:bg-ash-charcoal hover:text-marble-white transition-colors group/btn">
+<span class="material-symbols-outlined text-sm group-hover/btn:scale-110 transition-transform" style="font-variation-settings: 'FILL' 0;">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex justify-center items-center gap-2">
+<button class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-ash-charcoal hover:border-oak-warm transition-colors" disabled="">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</button>
+<button class="w-10 h-10 rounded bg-ash-charcoal text-marble-white font-label-caps flex items-center justify-center">1</button>
+<button class="w-10 h-10 rounded border border-outline-variant text-ash-charcoal font-label-caps hover:border-oak-warm transition-colors flex items-center justify-center">2</button>
+<button class="w-10 h-10 rounded border border-outline-variant text-ash-charcoal font-label-caps hover:border-oak-warm transition-colors flex items-center justify-center">3</button>
+<span class="text-stone-gray">...</span>
+<button class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-ash-charcoal hover:border-oak-warm transition-colors">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">chevron_left</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-ash-charcoal dark:bg-black flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<!-- Brand & Copyright -->
+<div class="col-span-1 md:col-span-2 flex flex-col justify-between">
+<div>
+<h2 class="font-display-xl text-display-xl-mobile md:text-display-xl font-bold text-marble-white mb-4">Yaqeen Store</h2>
+<p class="text-tertiary-fixed-dim font-body-md text-body-md max-w-sm mb-6">
+                        Architectural Luxury &amp; Material Integrity. نوفر أرقى حلول الأرضيات والتكسيات لبيئات تعكس الفخامة والأصالة.
+                    </p>
+</div>
+<p class="text-tertiary-fixed-dim font-body-md text-sm">
+                    © 2024 Yaqeen Store. All rights reserved. Architectural Luxury &amp; Material Integrity.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="col-span-1">
+<h3 class="font-label-caps text-label-caps text-marble-white mb-6 uppercase tracking-widest">المنتجات</h3>
+<ul class="space-y-4">
+<li><a class="text-tertiary-fixed-dim hover:text-marble-white transition-colors hover:translate-x-1 duration-200 inline-block font-body-md" href="#">SPC Parquet</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-marble-white transition-colors hover:translate-x-1 duration-200 inline-block font-body-md" href="#">Stone Alternative</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-marble-white transition-colors hover:translate-x-1 duration-200 inline-block font-body-md" href="#">Soft Stone</a></li>
+</ul>
+</div>
+<!-- Links Column 2 -->
+<div class="col-span-1">
+<h3 class="font-label-caps text-label-caps text-marble-white mb-6 uppercase tracking-widest">المعلومات</h3>
+<ul class="space-y-4">
+<li><a class="text-tertiary-fixed-dim hover:text-marble-white transition-colors hover:translate-x-1 duration-200 inline-block font-body-md" href="#">Shipping Policy</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-marble-white transition-colors hover:translate-x-1 duration-200 inline-block font-body-md" href="#">Terms of Service</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-marble-white transition-colors hover:translate-x-1 duration-200 inline-block font-body-md" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+        // Simple header scroll effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.replace('bg-marble-white/90', 'bg-marble-white/95');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.replace('bg-marble-white/95', 'bg-marble-white/90');
+            }
+        });
+    </script>
+</body></html>
