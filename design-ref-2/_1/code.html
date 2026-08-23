@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yaqeen Store - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&amp;family=Inter:wght@400&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;family=IBM+Plex+Sans:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#d3c4b9",
+                      "secondary-fixed": "#ffdea5",
+                      "inverse-surface": "#e4e2e1",
+                      "surface-container-highest": "#353535",
+                      "secondary-container": "#604403",
+                      "on-primary-container": "#fffbfa",
+                      "surface-variant": "#353535",
+                      "surface-container": "#1f2020",
+                      "on-error-container": "#ffdad6",
+                      "primary": "#e5bf9f",
+                      "error": "#ffb4ab",
+                      "on-tertiary": "#33302d",
+                      "champagne-glimmer": "#D9BD89",
+                      "surface-container-lowest": "#0e0e0e",
+                      "tertiary-container": "#787370",
+                      "surface-tint": "#e5bf9f",
+                      "surface-dim": "#131313",
+                      "on-tertiary-container": "#fffbfa",
+                      "surface-container-low": "#1b1c1c",
+                      "tertiary-fixed": "#e9e1dd",
+                      "surface-container-high": "#2a2a2a",
+                      "charcoal-depth": "#0D0B0A",
+                      "on-secondary-container": "#dab36a",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "inverse-primary": "#75593e",
+                      "primary-fixed-dim": "#e5bf9f",
+                      "surface-bright": "#393939",
+                      "surface": "#131313",
+                      "on-primary": "#432b14",
+                      "on-tertiary-fixed-variant": "#4a4643",
+                      "on-surface": "#e4e2e1",
+                      "sand-light": "#FDF8F7",
+                      "primary-fixed": "#ffdcbf",
+                      "on-tertiary-fixed": "#1e1b19",
+                      "background": "#131313",
+                      "on-primary-fixed": "#2b1703",
+                      "tertiary": "#ccc5c1",
+                      "on-secondary": "#412d00",
+                      "secondary-fixed-dim": "#e9c176",
+                      "inverse-on-surface": "#303030",
+                      "outline": "#9b8e85",
+                      "secondary": "#e9c176",
+                      "on-error": "#690005",
+                      "on-secondary-fixed": "#261900",
+                      "primary-container": "#8d6e52",
+                      "error-container": "#93000a",
+                      "tertiary-fixed-dim": "#ccc5c1",
+                      "outline-variant": "#4f453d",
+                      "on-background": "#e4e2e1",
+                      "on-primary-fixed-variant": "#5c4129"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-tablet": "40px",
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "container-max": "1440px",
+                      "gutter": "32px",
+                      "margin-desktop": "80px",
+                      "layer-gap": "120px"
+              },
+              "fontFamily": {
+                      "arabic-headline": [
+                              "IBM Plex Sans Arabic"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-xl": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "arabic-body": [
+                              "IBM Plex Sans Arabic"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-caps": [
+                              "IBM Plex Sans"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-xl-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "arabic-headline": [
+                              "48px",
+                              {
+                                      "lineHeight": "64px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "arabic-body": [
+                              "18px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "26px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl-mobile": [
+                              "44px",
+                              {
+                                      "lineHeight": "52px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Ambient Glow Shadows */
+        .ambient-glow {
+            box-shadow: 0 0 50px rgba(141, 110, 82, 0.1);
+        }
+        .ambient-glow-strong {
+            box-shadow: 0 0 60px rgba(141, 110, 82, 0.2);
+        }
+
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(23, 20, 18, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(229, 191, 159, 0.1);
+        }
+
+        .glass-nav {
+            background: rgba(13, 11, 10, 0.8);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-bottom: 1px solid rgba(229, 191, 159, 0.1);
+        }
+
+        /* Image Overlays for Text Readability */
+        .hero-overlay {
+            background: linear-gradient(to top, #0D0B0A 0%, transparent 70%);
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-charcoal-depth text-on-surface font-arabic-body antialiased overflow-x-hidden selection:bg-primary-container selection:text-sand-light relative">
+<!-- Top Navigation (Mobile Adapted) -->
+<header class="fixed top-0 w-full z-50 glass-nav transition-all duration-300" id="main-nav">
+<div class="flex justify-between items-center px-margin-mobile py-4">
+<!-- Hamburger Menu -->
+<button aria-label="Open menu" class="text-on-surface-variant hover:text-primary transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-[28px]" data-icon="menu">menu</span>
+</button>
+<!-- Brand -->
+<div class="font-arabic-headline text-headline-md text-primary tracking-tighter">
+                يقين للتصميم
+            </div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button aria-label="Cart" class="text-on-surface-variant hover:text-primary transition-colors relative group focus:outline-none">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-105 transition-transform duration-300" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary-fixed text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[751px] w-full flex items-end justify-center mb-layer-gap pt-[72px]">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Luxury Interior Space" class="w-full h-full object-cover object-center" data-alt="A cinematic, high-end interior design shot focusing on luxurious soft stone flooring and rich dark wood wall panels. Soft, warm natural light spills across the room, highlighting the textures. The mood is serene, architectural, and sophisticated. The color palette features deep charcoals, warm beiges, and soft gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhdVIwtSLFbpvihNWJMAPvef8h726lKccvPCnKDHIagvzKzwPm7Ekss3y1QqsGpg1NLMI883QB6fJQo5hs8SgA0d6YgEFGtwF5NJcO6_6wBHDk6ToHNOMzF5KBVYjTx0sKXiMH1TX2LqqZM7LuXy3yPwGsMdM1JRMKpQ9Ytrei7f8CmYHPUFd_OjiGqSQeLvPkY4AboReGPEuJ2F_mI4H_VJPemndEaC-cPxrHplroxNlUOPi8HXQt"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<!-- Content -->
+<div class="relative z-10 w-full px-margin-mobile pb-12 flex flex-col items-start gap-4">
+<h1 class="font-arabic-headline text-[56px] leading-[1.1] font-bold text-sand-light drop-shadow-lg max-w-[90%]">
+                    مساحتك<br/>
+<span class="text-primary italic">تستحق الأفضل</span>
+</h1>
+<p class="font-arabic-body text-body-lg text-on-surface-variant max-w-[85%] mt-2 mb-4">
+                    اكتشف تشكيلتنا الحصرية من الأرضيات وتكسيات الجدران التي تحاكي جمال الطبيعة بدقة متناهية.
+                </p>
+<button class="bg-primary text-sand-light px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(229,191,159,0.2)] transition-all duration-300">
+<span>تصفح المجموعات</span>
+<span class="material-symbols-outlined rtl:rotate-180" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Categories Section (Vertical Stack) -->
+<section class="px-margin-mobile mb-layer-gap flex flex-col gap-12">
+<!-- Category 1: Floors -->
+<div class="relative w-full h-[450px] rounded-2xl overflow-hidden group">
+<img alt="Flooring Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, highly textured shot of premium SPC flooring with a realistic oak wood grain pattern. The lighting is dramatic, grazing across the surface to emphasize the tactile depth and matte finish. Warm, inviting tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADVs7ctfi-B3l4VFxTzyOTsxeWXibTdvZX8jvSiqyK0-Ru-9JrIIxeH7HYYSQ4lBIJIb5e8kajd7jf9uBeSQz3yN6WFrRN6n3LsX_o06gTUY2Ix5XaUT1nHJZ-zbBiwemcBxb7VxKCVEDNH8aSvWQGYi_3DFLEMtKYsKwjPsGYMnUz92JtJwtUZ6SxWR5aqBLgSCgx1dwr2f-433Z1YCTq-sWA2VK17moE1nycJTJy4M_lxrqMP2mE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-depth via-charcoal-depth/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col items-start glass-panel m-4 rounded-xl">
+<h2 class="font-arabic-headline text-display-xl-mobile text-primary mb-2">الأرضيات</h2>
+<p class="font-arabic-body text-body-md text-on-surface-variant mb-4">متانة تدوم وتصاميم تخطف الأنظار.</p>
+<button class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all duration-300">
+<span>اكتشف المزيد</span>
+<span class="material-symbols-outlined rtl:rotate-180 text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Category 2: Walls -->
+<div class="relative w-full h-[450px] rounded-2xl overflow-hidden group mt-8">
+<img alt="Wall Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A stunning view of an interior wall clad in luxurious fluted wood panels and large-format soft stone tiles. Architectural lighting highlights the vertical lines and the subtle variations in the stone texture. Elegant, modern, and moody." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKqL6z1e7fWeo2RowqsEztWTNPnLJvomiy7dAOYANIz2YTYyMTZzo1uhJIyQxBZfti4qPaKZ0emGu-p0-EeSetYN_2Q6MuRwGfR2X4y2Ja4CKfnSfeOnWox08wzBOzuhpwmqc_q3FtyYV-cYJjKze677ezU-qsjFlT9IO6ccBE1XM7-nUWqkStuwVOZdP3qM24Ny521Sd53HOz_S7qkG9umgIdmsacygTlWba7FSe6kXCEzZfZ-njh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-depth via-charcoal-depth/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col items-start glass-panel m-4 rounded-xl">
+<h2 class="font-arabic-headline text-display-xl-mobile text-champagne-glimmer mb-2">الجدران</h2>
+<p class="font-arabic-body text-body-md text-on-surface-variant mb-4">أضف عمقاً وشخصية لمساحاتك.</p>
+<button class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all duration-300">
+<span>اكتشف المزيد</span>
+<span class="material-symbols-outlined rtl:rotate-180 text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Featured Products (Horizontal Scroll) -->
+<section class="mb-layer-gap pl-margin-mobile">
+<div class="flex justify-between items-end pr-margin-mobile mb-6">
+<div>
+<h3 class="font-arabic-headline text-headline-md text-sand-light">وصل حديثاً</h3>
+<p class="text-on-surface-variant text-sm mt-1">تجسيد للفخامة العصرية</p>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-4 pb-8 snap-x snap-mandatory hide-scrollbar">
+<!-- Product Card 1 -->
+<div class="min-w-[280px] snap-center flex flex-col gap-3">
+<div class="relative h-[380px] rounded-xl overflow-hidden group bg-surface-container">
+<img alt="Product" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" data-alt="A clean, isolated product shot of a premium vinyl floor plank with a rich walnut finish, presented against a deep charcoal background with a soft, warm underglow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9J0xf5sc3FIh-AjpuldN994MHBbmHvtZqT8Yqa04Tmj57L0d4oDXPrpiocwlskDDu4bDJnwBi0wQP6YyfWtK8zUoRRHfLoth70MuexG3kO5B08fFrYkdfNGIAJuo6mTMUf0qNUsXMn9Hx37n8oWM-ZemsHebFmSTiv_uKMFd8w-4AmELOwUAfIduM1jHlV295OnL49U8FZSU43Izf1aMacBAGOjm1OEBWa4EGeXQM_o3hmN4zjI0F"/>
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-error transition-colors p-2 glass-panel rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-arabic-body font-bold text-lg text-sand-light">أرضيات SPC جوز أمريكي</h4>
+<span class="text-primary font-bold">145 ر.س / م²</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="min-w-[280px] snap-center flex flex-col gap-3">
+<div class="relative h-[380px] rounded-xl overflow-hidden group bg-surface-container">
+<img alt="Product" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" data-alt="A detailed product shot of a large format soft stone wall tile in a creamy travertine color, shown against a dark, minimalist background to highlight its subtle veining." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs0YN6rCAd_D3US_klayh6gAtm_w7V_-eCJp5GP76vt2reaAUzIsFkoFGb11GuS0M5aPSXJDTc-v1rMmA62Rw48PVPRG04mANT0gGyDmUpNh_xI-pAaJGKuVU-JU1rloV9ayjXDA8MJTHSE0nvSE26FPBSN3XW0Uk_7NmPiVfQBKmyByVKWyPLYm2DuMlcPnpmM8ainZgCHT6lDiThNKzN5OKf-sv0eWyaAtQy7VjI-TzaVobcszWx"/>
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-error transition-colors p-2 glass-panel rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-arabic-body font-bold text-lg text-sand-light">حجر مرن ترافنتينو</h4>
+<span class="text-primary font-bold">89 ر.س / م²</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating AI Assistant Button -->
+<button class="fixed bottom-24 left-6 z-50 bg-secondary-container/80 backdrop-blur-xl border border-secondary/30 w-14 h-14 rounded-full flex items-center justify-center text-secondary ambient-glow hover:scale-110 transition-transform duration-300 shadow-[0_0_30px_rgba(233,193,118,0.3)]">
+<span class="material-symbols-outlined text-[28px]" data-icon="smart_toy">smart_toy</span>
+</button>
+<!-- Footer -->
+<footer class="w-full mt-layer-gap bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="max-w-[1440px] mx-auto px-margin-desktop py-20 flex flex-col items-center text-center">
+<h2 class="font-arabic-headline text-headline-md text-secondary mb-8">يقين للتصميم</h2>
+<nav class="flex flex-col gap-4 mb-12">
+<a class="font-arabic-body text-body-md text-on-surface-variant hover:text-primary transition-all duration-300 hover:underline decoration-secondary-fixed underline-offset-8" href="#">سياسة الخصوصية</a>
+<a class="font-arabic-body text-body-md text-on-surface-variant hover:text-primary transition-all duration-300 hover:underline decoration-secondary-fixed underline-offset-8" href="#">الشروط والأحكام</a>
+<a class="font-arabic-body text-body-md text-on-surface-variant hover:text-primary transition-all duration-300 hover:underline decoration-secondary-fixed underline-offset-8" href="#">الشحن والتوصيل</a>
+<a class="font-arabic-body text-body-md text-on-surface-variant hover:text-primary transition-all duration-300 hover:underline decoration-secondary-fixed underline-offset-8" href="#">تواصل معنا</a>
+</nav>
+<p class="font-arabic-body text-body-md text-on-surface-variant">© ٢٠٢٤ يقين للتصميم الداخلي. جميع الحقوق محفوظة.</p>
+</div>
+</footer>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="fixed bottom-0 w-full z-50 glass-nav md:hidden pb-safe">
+<div class="flex justify-around items-center px-4 py-3">
+<a class="flex flex-col items-center gap-1 text-primary font-bold" href="#">
+<span class="material-symbols-outlined fill-icon text-[24px]" data-icon="home">home</span>
+<span class="text-[10px] font-arabic-body">الرئيسية</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="grid_view">grid_view</span>
+<span class="text-[10px] font-arabic-body">الأقسام</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="search">search</span>
+<span class="text-[10px] font-arabic-body">البحث</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors relative" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+<span class="text-[10px] font-arabic-body">حسابي</span>
+</a>
+</div>
+</nav>
+<style>
+        /* Hide scrollbar for horizontal scrolling area but allow scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Safe area padding for newer mobile devices */
+        @supports (padding-bottom: env(safe-area-inset-bottom)) {
+            .pb-safe {
+                padding-bottom: calc(env(safe-area-inset-bottom) + 0.75rem);
+            }
+        }
+    </style>
+<script>
+        // Simple script to add background to nav on scroll
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.style.background = 'rgba(13, 11, 10, 0.95)';
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.style.background = 'rgba(13, 11, 10, 0.8)';
+            }
+        });
+    </script>
+</body></html>

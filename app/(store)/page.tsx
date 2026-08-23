@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { categories } from "@/lib/data/categories";
-import { HomePageDesignRef } from "@/components/home/homepage-design-ref";
+import { products } from "@/lib/data";
+import { CinematicHomePage } from "@/components/home/cinematic-home-page";
 
 export const metadata: Metadata = {
   title: "يقين ستور | Yaqeen Store - أرضيات SPC وبدائل الحجر وسوفت ستون",
@@ -9,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <HomePageDesignRef categories={categories} />;
+  return <CinematicHomePage categories={categories} products={products} />;
 }

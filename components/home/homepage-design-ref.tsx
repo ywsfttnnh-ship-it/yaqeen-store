@@ -2,17 +2,22 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-import type { Category } from "@/types";
+import Image from "next/image";
+import { ArrowLeft, Heart, ShoppingCart, Star } from "lucide-react";
+import type { Category, Product } from "@/types";
+import { config } from "@/lib/config";
 
 interface HomePageDesignRefProps {
   categories: Category[];
+  products: Product[];
 }
 
-export const HomePageDesignRef: React.FC<HomePageDesignRefProps> = ({ categories }) => {
+export const HomePageDesignRef: React.FC<HomePageDesignRefProps> = ({ categories, products }) => {
   const spcCat = categories.find((c) => c.id === "cat-spc") || categories[0];
   const stoneCat = categories.find((c) => c.id === "cat-stone-alt") || categories[1];
   const softCat = categories.find((c) => c.id === "cat-soft-stone") || categories[2];
+
+  const featuredList = products.slice(0, 4);
 
   return (
     <div className="bg-[#fdf8f7] text-[#1c1b1b] font-sans antialiased overflow-x-hidden min-h-screen" dir="rtl">
@@ -113,20 +118,94 @@ export const HomePageDesignRef: React.FC<HomePageDesignRefProps> = ({ categories
         </div>
       </section>
 
+      {/* Featured Products Section */}
+      <section className="py-[120px] bg-[#f7f3f1]">
+        <div className="max-w-[1280px] mx-auto px-8">
+          <div className="flex justify-between items-end mb-16">
+            <div>
+              <h2 className="text-[24px] font-bold text-[#2D2D2D] mb-2">منتجات مختارة بعناية</h2>
+              <div className="w-16 h-1 bg-[#8D6E52] rounded-full" />
+            </div>
+            <Link href="/store" className="text-xs font-semibold text-[#8D6E52] hover:text-[#2D2D2D] transition-colors flex items-center gap-1">
+              عرض الكل
+              <ArrowLeft className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredList.map((product) => {
+              const primaryImg = product.images.find(i => i.isPrimary) || product.images[0];
+              return (
+                <div key={product.id} className="group bg-white rounded border border-[#E8E4DE] overflow-hidden transition-all duration-300 hover:border-[#8D6E52] hover:-translate-y-1 hover:shadow-lg relative">
+                  {product.newArrival && (
+                    <div className="absolute top-4 right-4 z-10">
+                      <span className="bg-[#2D2D2D] text-white text-[10px] font-semibold px-2 py-1 rounded">جديد</span>
+                    </div>
+                  )}
+                  {product.bestSeller && (
+                    <div className="absolute top-4 right-4 z-10">
+                      <span className="bg-[#8D6E52] text-white text-[10px] font-semibold px-2 py-1 rounded">الأكثر مبيعاً</span>
+                    </div>
+                  )}
+                  <div className="absolute top-4 left-4 z-10">
+                    <Link href="/wishlist" className="w-8 h-8 rounded-full bg-white/80 backdrop-blur flex items-center justify-center text-[#2D2D2D] hover:text-[#8D6E52] transition-all shadow-sm">
+                      <Heart className="h-4 w-4" />
+                    </Link>
+                  </div>
+                  <Link href={`/product/${product.slug}`} className="block aspect-[4/5] bg-[#ece7e6] overflow-hidden relative">
+                    <Image
+                      src={primaryImg?.url || "/placeholder.png"}
+                      alt={primaryImg?.altAr || product.nameAr}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                  </Link>
+                  <div className="p-6">
+                    <div className="text-[11px] font-semibold text-[#786F66] mb-2 uppercase">
+                      {product.categoryId === "cat-spc" ? "باركيه SPC" : product.categoryId === "cat-stone-alt" ? "بديل حجر" : "سوفت ستون"}
+                    </div>
+                    <Link href={`/product/${product.slug}`} className="block">
+                      <h3 className="text-sm font-semibold text-[#2D2D2D] mb-2 line-clamp-1 hover:text-[#8D6E52] transition-colors">
+                        {product.nameAr}
+                      </h3>
+                    </Link>
+                    <div className="flex items-center gap-1 mb-4">
+                      <div className="flex items-center text-amber-500">
+                        <Star className="h-3 w-3 fill-current" />
+                      </div>
+                      <span className="text-xs text-[#786F66] mr-1">({product.rating})</span>
+                    </div>
+                    <div className="flex justify-between items-center mt-4 pt-3 border-t border-[#E8E4DE]">
+                      {!config.app.hidePrices && (
+                        <span className="text-lg font-bold text-[#2D2D2D]">{product.price} ₪</span>
+                      )}
+                      <Link href={`/product/${product.slug}`} className="text-[#2D2D2D] hover:text-[#8D6E52] transition-colors p-1">
+                        <ShoppingCart className="h-4 w-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Info / Store Details Section */}
       <section className="py-[100px] bg-[#f7f3f1] border-t border-b border-[#d0c4be]/30">
         <div className="max-w-[1280px] mx-auto px-8 text-center">
           <h2 className="text-2xl font-bold text-[#2D2D2D] mb-4">التوصيل لجميع مناطق الضفة الغربية</h2>
           <p className="text-[#786F66] max-w-xl mx-auto mb-6 text-sm">
-            المعرض الرئيسي في الخليل، فلسطين. ضمان حتى 25 سنة على أرضيات SPC. تواصل معنا للاستفسار والطلب الفوري.
+            المعرض الرئيسي في الخليل، فلسطين. ضمان حتى 25 سنة على أرضيات SPC وبدائل الحجر. تواصل معنا للاستفسار والطلب الفوري.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href="tel:+972597426988"
             className="inline-flex items-center gap-2 bg-[#8D6E52] text-white px-8 py-3.5 rounded text-xs font-semibold tracking-wider hover:bg-[#6e4b28] transition-colors"
           >
-            تواصل معنا الآن
+            تواصل معنا الآن (+972 59-742-6988)
             <ArrowLeft className="h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </div>

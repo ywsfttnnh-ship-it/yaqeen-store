@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>مساعد يقين للتصميم</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#d3c4b9",
+                        "secondary-fixed": "#ffdea5",
+                        "inverse-surface": "#e4e2e1",
+                        "surface-container-highest": "#353535",
+                        "secondary-container": "#604403",
+                        "on-primary-container": "#fffbfa",
+                        "surface-variant": "#353535",
+                        "surface-container": "#1f2020",
+                        "on-error-container": "#ffdad6",
+                        "primary": "#e5bf9f",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#33302d",
+                        "champagne-glimmer": "#D9BD89",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-container": "#787370",
+                        "surface-tint": "#e5bf9f",
+                        "surface-dim": "#131313",
+                        "on-tertiary-container": "#fffbfa",
+                        "surface-container-low": "#1b1c1c",
+                        "tertiary-fixed": "#e9e1dd",
+                        "surface-container-high": "#2a2a2a",
+                        "charcoal-depth": "#0D0B0A",
+                        "on-secondary-container": "#dab36a",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "inverse-primary": "#75593e",
+                        "primary-fixed-dim": "#e5bf9f",
+                        "surface-bright": "#393939",
+                        "surface": "#131313",
+                        "on-primary": "#432b14",
+                        "on-tertiary-fixed-variant": "#4a4643",
+                        "on-surface": "#e4e2e1",
+                        "sand-light": "#FDF8F7",
+                        "primary-fixed": "#ffdcbf",
+                        "on-tertiary-fixed": "#1e1b19",
+                        "background": "#131313",
+                        "on-primary-fixed": "#2b1703",
+                        "tertiary": "#ccc5c1",
+                        "on-secondary": "#412d00",
+                        "secondary-fixed-dim": "#e9c176",
+                        "inverse-on-surface": "#303030",
+                        "outline": "#9b8e85",
+                        "secondary": "#e9c176",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#261900",
+                        "primary-container": "#8d6e52",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ccc5c1",
+                        "outline-variant": "#4f453d",
+                        "on-background": "#e4e2e1",
+                        "on-primary-fixed-variant": "#5c4129"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-tablet": "40px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "container-max": "1440px",
+                        "gutter": "32px",
+                        "margin-desktop": "80px",
+                        "layer-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "arabic-headline": ["IBM Plex Sans Arabic"],
+                        "body-lg": ["Inter"],
+                        "display-xl": ["Plus Jakarta Sans"],
+                        "arabic-body": ["IBM Plex Sans Arabic"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-caps": ["IBM Plex Sans"],
+                        "body-md": ["Inter"],
+                        "display-xl-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "arabic-headline": ["48px", { "lineHeight": "64px", "fontWeight": "700" }],
+                        "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "display-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "arabic-body": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "display-xl-mobile": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(23, 20, 18, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(229, 191, 159, 0.1);
+        }
+        .ambient-glow {
+            box-shadow: 0 0 60px rgba(141, 110, 82, 0.08);
+        }
+        .ambient-glow-hover:hover {
+            box-shadow: 0 0 80px rgba(141, 110, 82, 0.15);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-arabic-body text-arabic-body min-h-screen flex flex-col items-center justify-center relative overflow-hidden" data-alt="A luxurious, high-end interior space bathed in soft, moody, cinematic lighting. The room features dark charcoal stone flooring, warm wood accents, and minimalist designer furniture. The atmosphere is sophisticated and serene, with subtle light leaks emphasizing architectural textures." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAamyiyUfNpPLfjsS0iqarStOxBXJAXeJlJ2cWvgd1on4h5dxvKSa72zE-nrbSXMN1tg6VkvB3y1uauVoIIvzvqyLrmjMNQk74JkjttxLUe9dDXTTBajbMRzYVluMuQcGm-vo78GwSyIiK4aEw3doD5EoyziwTQseZKXG9ucqSIilk_XMbCnfHOw3RMnwR5dlkwOsVPPQ9FenYhMfMELT6T_ReJteq4mPB72Xlr3fUjO8ire1umcCPt');">
+<!-- AI Overlay Container (Simulated Full Screen) -->
+<div class="fixed inset-0 z-50 flex flex-col justify-end md:justify-center items-center p-4 md:p-margin-desktop bg-charcoal-depth/40 backdrop-blur-sm">
+<!-- Assistant Interface -->
+<main class="w-full max-w-4xl glass-panel rounded-xl ambient-glow overflow-hidden flex flex-col md:flex-row shadow-[0_0_50px_rgba(141,110,82,0.1)]">
+<!-- Left Side / Top - Conversation Area -->
+<section class="flex-1 p-8 md:p-12 flex flex-col relative">
+<!-- Close Button (Simulated) -->
+<button class="absolute top-6 left-6 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<!-- Header -->
+<header class="mb-12">
+<h1 class="font-arabic-headline text-headline-md text-primary mb-2">مساعد يقين</h1>
+<p class="font-arabic-body text-body-lg text-on-surface-variant">محتار أي خامة تناسب مساحتك؟</p>
+</header>
+<!-- Space Selection Pills -->
+<div class="space-y-4 mb-auto">
+<p class="font-label-caps text-label-caps text-secondary-fixed mb-4">حدد نوع المساحة</p>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-3 rounded-full border border-primary/30 text-on-surface hover:bg-primary hover:text-on-primary transition-all duration-300">غرفة معيشة</button>
+<button class="px-6 py-3 rounded-full border border-primary/30 text-on-surface hover:bg-primary hover:text-on-primary transition-all duration-300">غرفة نوم</button>
+<button class="px-6 py-3 rounded-full bg-primary text-on-primary font-medium transition-all duration-300 ambient-glow">مجلس</button>
+<button class="px-6 py-3 rounded-full border border-primary/30 text-on-surface hover:bg-primary hover:text-on-primary transition-all duration-300">مطبخ</button>
+<button class="px-6 py-3 rounded-full border border-primary/30 text-on-surface hover:bg-primary hover:text-on-primary transition-all duration-300">مكتب</button>
+</div>
+</div>
+<!-- Suggested Action / Input Area -->
+<div class="mt-12 relative border-b border-sand-light/20 focus-within:border-secondary transition-colors pb-2 flex items-center">
+<input class="w-full bg-transparent border-none text-on-surface placeholder-on-surface-variant/50 focus:ring-0 font-arabic-body text-body-md pl-10 focus:outline-none" placeholder="صف مساحتك أو أسلوبك المفضل..." type="text"/>
+<button class="absolute right-0 text-primary p-2 hover:bg-surface-container/50 rounded-full transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</section>
+<!-- Right Side / Bottom - Product Suggestions (Bento Grid Style) -->
+<aside class="flex-1 bg-surface-container-high/40 p-8 md:p-12 border-t md:border-t-0 md:border-r border-outline-variant/20">
+<h2 class="font-arabic-headline text-body-lg text-primary mb-6">اقتراحات للمجلس</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Suggestion Card 1 -->
+<article class="relative group rounded-lg overflow-hidden h-64 ambient-glow-hover transition-all duration-500 cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up shot of premium dark SPC flooring with a subtle wood grain texture, illuminated by warm, directional spot lighting. The material looks highly durable, sophisticated, and perfect for a modern luxury living space. Cinematic, high contrast aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSUK9Vd0h_OJs1c8SbfQT0Pz08NOuUmWQQgiYxA0XmBZJ1LvK0JS8V-VCnrZn4xKjR4gq5mB5v6X2oHlUAPteSHo5-IZZ0KsZIUg2WMBYvyTXkN8r1wfmQl3Do0oTo5a3DLbvVxUCNI7wD3x9aff6jn5acMmpKTqOxmvkeOo10XlXpI8aJZJHaxcDtq4zshehz2wDi3iy80LiSoYZ_LTL66a-PicgswFaMwSV38otT2SMbMAgLc-f4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-depth via-charcoal-depth/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-4 glass-panel m-2 rounded">
+<h3 class="font-arabic-headline text-body-md text-on-surface mb-1">أرضيات SPC داكنة</h3>
+<p class="font-arabic-body text-label-caps text-on-surface-variant line-clamp-1">متانة عالية، مظهر خشبي فاخر</p>
+</div>
+</article>
+<!-- Suggestion Card 2 -->
+<article class="relative group rounded-lg overflow-hidden h-64 ambient-glow-hover transition-all duration-500 cursor-pointer md:mt-8">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A textured wall panel in a soft stone finish, bathed in dramatic, soft light. The surface shows a subtle, organic wave pattern, creating a feeling of architectural depth and minimalist luxury. High-end interior design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Ns4t0b1Ce4gWN3ErxFcWzvTigHkqglY0v1cSSrrlaC2EyF-clNiB9YBP6CbQsFv1AAj_P89dqVZKu0b8n32kiqLOAoNVh9UTS_aGRJYeBQfcaShzOvLQ48-YJ71GL4b9-CGd8UlitO4IDWydaNF2duc_7wbjXl-nL2dxHe0vly7B10mempaGltkyFiq_obezBL_LfdK_hMC5ubPVudTdiQfhI1N2J16EYsihE7V3imGzSsxHhidz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-depth via-charcoal-depth/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-4 glass-panel m-2 rounded">
+<h3 class="font-arabic-headline text-body-md text-on-surface mb-1">تكسيات جدارية حجرية</h3>
+<p class="font-arabic-body text-label-caps text-on-surface-variant line-clamp-1">عمق بصري ولمسة عصرية</p>
+</div>
+</article>
+</div>
+<div class="mt-8 flex justify-center">
+<button class="text-secondary-fixed hover:text-primary transition-colors flex items-center gap-2 font-arabic-body text-body-md">
+                        عرض المزيد من الخيارات
+                        <span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+</div>
+</aside>
+</main>
+</div>
+</body></html>

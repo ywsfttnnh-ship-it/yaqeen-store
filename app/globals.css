@@ -4,30 +4,26 @@
 
 @layer base {
   :root {
-    --background: 20 20% 98%;
-    --foreground: 18 8% 11%;
-    --card: 0 0% 100%;
-    --card-foreground: 18 8% 11%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 18 8% 11%;
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 35 63% 28%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 20 10% 92%;
-    --muted-foreground: 20 6% 45%;
-    --accent: 35 34% 44%;
-    --accent-foreground: 0 0% 100%;
+    --background: 24 16% 8%;
+    --foreground: 20 6% 89%;
+    --card: 24 14% 12%;
+    --card-foreground: 20 6% 89%;
+    --popover: 24 14% 12%;
+    --popover-foreground: 20 6% 89%;
+    --primary: 32 32% 62%;
+    --primary-foreground: 26 29% 17%;
+    --secondary: 42 75% 70%;
+    --secondary-foreground: 25 100% 13%;
+    --muted: 24 12% 16%;
+    --muted-foreground: 22 10% 65%;
+    --accent: 42 75% 70%;
+    --accent-foreground: 25 100% 13%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 24 10% 88%;
-    --input: 24 10% 88%;
-    --ring: 35 34% 44%;
+    --border: 24 12% 20%;
+    --input: 24 12% 20%;
+    --ring: 32 32% 62%;
     --radius: 0.5rem;
-
-    --font-sans: "Be Vietnam Pro", "Inter", system-ui, sans-serif;
-    --font-display: "Plus Jakarta Sans", Georgia, serif;
-    --font-label: "IBM Plex Sans", sans-serif;
   }
 
   html[dir="rtl"] {
@@ -39,12 +35,12 @@
   }
 
   body {
-    @apply bg-[#fdf8f7] text-[#1c1b1b] antialiased;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    @apply bg-[#131313] text-[#e4e2e1] antialiased selection:bg-[#8d6e52] selection:text-[#fffbfa];
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', 'IBM Plex Sans Arabic', sans-serif;
   }
 }
 
@@ -55,5 +51,20 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+  .glass-nav {
+    background: rgba(13, 11, 10, 0.85);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-bottom: 1px solid rgba(229, 191, 159, 0.1);
+  }
+  .glass-panel {
+    background: rgba(23, 20, 18, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(229, 191, 159, 0.1);
+  }
+  .ambient-glow {
+    box-shadow: 0 0 50px rgba(141, 110, 82, 0.12);
   }
 }
