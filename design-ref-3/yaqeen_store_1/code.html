@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yaqeen Store - Cinematic Mobile Homepage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;600&amp;family=IBM+Plex+Sans:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#4f453d",
+                        "inverse-primary": "#75593e",
+                        "on-primary-container": "#fffbfa",
+                        "inverse-surface": "#e9e1dd",
+                        "on-primary": "#432b14",
+                        "on-tertiary-fixed-variant": "#334a57",
+                        "surface-bright": "#3c3836",
+                        "on-tertiary-container": "#fafcff",
+                        "secondary": "#cac6c5",
+                        "surface-container": "#221f1d",
+                        "surface-tint": "#e5bf9f",
+                        "surface-container-high": "#2d2927",
+                        "secondary-fixed-dim": "#cac6c5",
+                        "surface-container-lowest": "#100e0c",
+                        "surface-variant": "#383432",
+                        "surface": "#161311",
+                        "primary-container": "#8d6e52",
+                        "background": "#161311",
+                        "charcoal-surface": "#2D2D2D",
+                        "tertiary-fixed": "#cee6f7",
+                        "surface-container-low": "#1e1b19",
+                        "secondary-fixed": "#e6e1e0",
+                        "tertiary": "#b2cadb",
+                        "inverse-on-surface": "#33302d",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "sand-muted": "#E5D9D1",
+                        "tertiary-fixed-dim": "#b2cadb",
+                        "on-background": "#e9e1dd",
+                        "on-surface-variant": "#d3c4b9",
+                        "primary-fixed": "#ffdcbf",
+                        "primary": "#e5bf9f",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#607786",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#484646",
+                        "outline": "#9b8e85",
+                        "primary-fixed-dim": "#e5bf9f",
+                        "on-tertiary-fixed": "#051e2a",
+                        "surface-container-highest": "#383432",
+                        "on-surface": "#e9e1dd",
+                        "on-error": "#690005",
+                        "on-tertiary": "#1c3340",
+                        "on-primary-fixed-variant": "#5c4129",
+                        "on-secondary": "#313030",
+                        "on-secondary-container": "#b8b4b3",
+                        "on-primary-fixed": "#2b1703",
+                        "gold-leaf": "#C5A059",
+                        "surface-dim": "#161311",
+                        "secondary-container": "#484646",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter": "32px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-xl": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-sm": ["IBM Plex Sans"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["56px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-xl": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); overflow-x: hidden; }
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.4) 0%, rgba(45, 45, 45, 0.1) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .ambient-shadow {
+            box-shadow: 0 40px 60px rgba(0,0,0,0.6);
+        }
+        /* Hide scrollbar for cleaner look on mobile */
+        ::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased selection:bg-gold-leaf selection:text-on-primary min-h-screen flex flex-col relative">
+<!-- Ambient Background Lighting Effect -->
+<div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+<div class="absolute top-[-10%] right-[-20%] w-[70vw] h-[70vw] rounded-full bg-gold-leaf/10 blur-[100px]"></div>
+<div class="absolute bottom-[-10%] left-[-20%] w-[80vw] h-[80vw] rounded-full bg-surface-variant/30 blur-[120px]"></div>
+</div>
+<!-- Mobile Top Header (Simplified for Mobile) -->
+<header class="fixed top-0 w-full z-50 px-margin-mobile py-4 flex justify-between items-center glass-panel border-b-0 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+<div class="font-display-lg text-headline-lg-mobile text-gold-leaf uppercase tracking-tighter">Yaqeen Store</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface">search</span>
+<span class="material-symbols-outlined text-on-surface">shopping_bag</span>
+</div>
+</header>
+<!-- Main Content Canvas (Mobile Vertical Feed) -->
+<main class="flex-grow pt-24 pb-32 px-margin-mobile flex flex-col gap-12">
+<!-- Hero Section - Parquet -->
+<section class="relative h-[707px] flex flex-col justify-end pb-12 rounded-[2rem] overflow-hidden group">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover scale-105 transition-transform duration-1000 group-hover:scale-110" data-alt="A macro shot of luxurious, dark walnut SPC parquet flooring. The wood grain is deeply textured and catches a soft, warm directional light from the side, highlighting the realistic embossing. The background fades into a deep, atmospheric charcoal shadow, emphasizing the premium, heavy quality of the material in a cinematic 3D minimal style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb5mF4vG4n_oyo9j9v2H0Of4yFWNGFMCdVjW9J0lCmDSsMoOQUcc4l6UxtFo-dwBqELnWXgBKWRhgFiDE_HOo8KQT-OJdOmFPYNmG9xgHgLHckl26yiqShK8ZedPyV_X9d4b2Su2ZJOyU6b_9kYySEl2-7YzSwARqMtxCQBsYsaGv41OyXeFHEAbV81lpJLNaz7I-x5_dce5kUOJTHBMhCdv20cf95HnaUhf3s2HJ3m5yMgN-slKarhg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/50 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-4 px-6">
+<span class="inline-block px-4 py-2 rounded-full glass-panel text-gold-leaf font-label-sm text-label-sm border border-gold-leaf/30">جديد</span>
+<h1 class="font-display-xl text-display-lg text-on-surface leading-tight">تميز <br/><span class="text-on-surface-variant">بلا تكلف</span></h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                    ليس مجرد غطاء للأرضيات. إنه أساس الأناقة في مساحتك. مصمم ليرتقي بأبسط التصاميم، هذا الباركيه يغمرك بالدفء والفخامة.
+                </p>
+<div class="pt-4 flex items-center justify-between">
+<button class="bg-gold-leaf text-on-primary px-8 py-4 rounded-full font-label-sm text-label-sm hover:bg-primary transition-colors flex items-center gap-2">
+                        استكشف المجموعة
+                        <span class="material-symbols-outlined text-sm">arrow_left_alt</span>
+</button>
+<div class="text-right">
+<div class="font-display-lg text-headline-lg text-on-surface">149 ﷼</div>
+<div class="font-body-md text-body-md text-on-surface-variant line-through decoration-error/50">199 ﷼</div>
+</div>
+</div>
+</div>
+<!-- Floating Element for Depth -->
+<div class="absolute top-1/4 left-8 z-20 floating-element ambient-shadow">
+<img class="w-32 h-32 object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)]" data-alt="A single, perfectly cut plank of dark oak SPC flooring floating in mid-air against a pure black background. The plank is angled slightly to show its layered construction and click-lock edge. Subtle, dramatic lighting casts a soft glow on the wood's surface, creating a sense of weightlessness and high-end materiality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbnYjci8k3-lSFrvTA72onKpF7oi1TAVMuw3TYCGfBWui37YkVNFyDs0HyVtKmG1DPNf2ZDsGY5weA1exppO-60Ko-RsOHRVtdPHhRojlmmQP6Vo_CvHWQnhPw9v9NyR1lUvDg3pkjIT8MkfUAuJmsntdbCjsqcKNIGC7GMa-ZarRZwHjThYPjN1y7fizEs9kq1ChCWvNqfL9tfgsPN3VnEZp86nfgOvI06VqhbJqaRWZkcCf5ocTEUQ"/>
+</div>
+</section>
+<!-- Category Showcase - Stone -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<h2 class="font-display-lg text-headline-lg-mobile text-on-surface">تشطيبات حجرية</h2>
+<a class="font-label-sm text-label-sm text-gold-leaf flex items-center gap-1" href="#">الكل <span class="material-symbols-outlined text-sm">arrow_left</span></a>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<!-- Stone Card 1 -->
+<div class="relative h-64 rounded-3xl overflow-hidden glass-panel group">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-80" data-alt="A close-up abstract view of premium Calacatta marble with dramatic, thick grey and gold veining on a pristine white background. The image is rendered with deep cinematic shadows around the edges, making the center glow faintly. The texture feels cold, heavy, and architecturally significant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR6J2KsbcmIO9A6_qHOt-9nyEKTTHdhbxIbcBR5JJN8FKfnmcbqzipCOMyCwk2QfS0cWmDf73zq69JgdXuAGGtxcWt31bc4sFTyroWA_rdacLEZygvuhG4L2XUNpGOq_9UDYpKpB6SJHUTfLxz2rz4OmZVLxlG7Nevh_yLtSElOLwIjl6Kucvc2Z1Ga-Y8PlammaghDu_kSMv1nEVEcneEJRG3x4FkRMry7de2Ij4oZ4F4g5xoAc8Ozw"/>
+</div>
+<div class="relative z-10 h-full p-6 flex flex-col justify-end">
+<h3 class="font-display-lg text-headline-lg-mobile text-on-surface mb-1">رخام كلكتا</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">فخامة إيطالية</p>
+</div>
+<!-- Floating preview -->
+<div class="absolute top-4 left-4 w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 ambient-shadow transform -translate-y-2 group-hover:-translate-y-4 transition-transform duration-500">
+<img class="w-full h-full object-cover" data-alt="A seamless square sample of grey concrete-look stone finish. Smooth, matte texture with subtle variations in tone. Lit with a soft spotlight from above, emphasizing its modern, brutalist aesthetic against a dark void." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw0fS6xIkkB54MT6nCWw9dRz1pMzqtzTzqpbuq_-4ZfceFwsec2InD05vYHzTxi0V6Oyiwio8GaRWA5hDaw9tjRTAX3ZwICVNbqS1BfgZ6wBPNqMk_7RdTE5CkNEV_7i_iGBxSFSeowhDFkG19YaMw0NvJdlxUIABhBowH7fRBWWi128VcsS-xu_krWsBzYGz2hogYTXgmyNk5sbfAhjOWOkshg4RR4njjJBV9Bj-knPeFz9EV4PUe8A"/>
+</div>
+</div>
+<!-- Stone Card 2 -->
+<div class="relative h-64 rounded-3xl overflow-hidden glass-panel group">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-80" data-alt="A textured surface of dark slate stone, almost black, with rough, uneven natural clefts. The lighting skims across the surface, catching the high points and casting deep micro-shadows, creating a rugged yet sophisticated atmosphere typical of luxury modern exteriors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeC9XxpvNiAB47xy6L_CH1GF4Q-t2CqNsv6ueJFmtjXJOU7LbZsk3ymWElq1OwXvD5sicOo2jz6ZCco0hP3uJxnpCka13-Eof4AUDNPtn6zkU0Ss07lZNV6xSP6hRRWSQWRAtKO3LvyqhC4Tjg04fvMX8PmiDd2Rqe4-J42AZKyCRcZbyk01py442KWBJvs3a8Ssw97G5gfP6pP6iNBjq8pMyw7Ml_BwaaVRbJFFTqphRhCzBFtbVAHg"/>
+</div>
+<div class="relative z-10 h-full p-6 flex flex-col justify-end">
+<h3 class="font-display-lg text-headline-lg-mobile text-on-surface mb-1">حجر الأردواز الأسود</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">قوة الطبيعة</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Color/Texture Selector -->
+<section class="glass-panel p-6 rounded-3xl space-y-6">
+<h3 class="font-body-md text-body-md text-on-surface text-center">اختر الدرجة اللونية:</h3>
+<div class="flex justify-center gap-4">
+<button class="w-12 h-12 rounded-full bg-[#3d332d] border-2 border-gold-leaf ambient-shadow hover:scale-110 transition-transform"></button>
+<button class="w-12 h-12 rounded-full bg-[#8c7b6d] border border-white/10 hover:border-gold-leaf/50 hover:scale-110 transition-transform"></button>
+<button class="w-12 h-12 rounded-full bg-[#1c1a19] border border-white/10 hover:border-gold-leaf/50 hover:scale-110 transition-transform"></button>
+</div>
+</section>
+</main>
+<!-- Mobile Bottom Navigation (Floating Shell) -->
+<nav class="fixed bottom-6 left-4 right-4 z-50 glass-panel rounded-full px-6 py-4 flex justify-around items-center shadow-[0_20px_40px_rgba(0,0,0,0.8)] border border-white/5">
+<a class="flex flex-col items-center gap-1 text-gold-leaf" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm text-[10px]">الرئيسية</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+<span class="font-label-sm text-label-sm text-[10px]">المجموعات</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+<span class="font-label-sm text-label-sm text-[10px]">الكتالوج</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="font-label-sm text-label-sm text-[10px]">حسابي</span>
+</a>
+</nav>
+</body></html>

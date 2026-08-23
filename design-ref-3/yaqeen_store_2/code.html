@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yaqeen Store - Store Listing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Be+Vietnam+Pro:wght@400&amp;family=IBM+Plex+Sans:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#4f453d",
+                        "inverse-primary": "#75593e",
+                        "on-primary-container": "#fffbfa",
+                        "inverse-surface": "#e9e1dd",
+                        "on-primary": "#432b14",
+                        "on-tertiary-fixed-variant": "#334a57",
+                        "surface-bright": "#3c3836",
+                        "on-tertiary-container": "#fafcff",
+                        "secondary": "#cac6c5",
+                        "surface-container": "#221f1d",
+                        "surface-tint": "#e5bf9f",
+                        "surface-container-high": "#2d2927",
+                        "secondary-fixed-dim": "#cac6c5",
+                        "surface-container-lowest": "#100e0c",
+                        "surface-variant": "#383432",
+                        "surface": "#161311",
+                        "primary-container": "#8d6e52",
+                        "background": "#161311",
+                        "charcoal-surface": "#2D2D2D",
+                        "tertiary-fixed": "#cee6f7",
+                        "surface-container-low": "#1e1b19",
+                        "secondary-fixed": "#e6e1e0",
+                        "tertiary": "#b2cadb",
+                        "inverse-on-surface": "#33302d",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "sand-muted": "#E5D9D1",
+                        "tertiary-fixed-dim": "#b2cadb",
+                        "on-background": "#e9e1dd",
+                        "on-surface-variant": "#d3c4b9",
+                        "primary-fixed": "#ffdcbf",
+                        "primary": "#e5bf9f",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#607786",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#484646",
+                        "outline": "#9b8e85",
+                        "primary-fixed-dim": "#e5bf9f",
+                        "on-tertiary-fixed": "#051e2a",
+                        "surface-container-highest": "#383432",
+                        "on-surface": "#e9e1dd",
+                        "on-error": "#690005",
+                        "on-tertiary": "#1c3340",
+                        "on-primary-fixed-variant": "#5c4129",
+                        "on-secondary": "#313030",
+                        "on-secondary-container": "#b8b4b3",
+                        "on-primary-fixed": "#2b1703",
+                        "gold-leaf": "#C5A059",
+                        "surface-dim": "#161311",
+                        "secondary-container": "#484646",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter": "32px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-xl": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-sm": ["IBM Plex Sans"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["56px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-xl": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(45,45,45,0.4) 0%, rgba(22,19,17,0.8) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .float-shadow {
+            box-shadow: 0 40px 60px rgba(0,0,0,0.6);
+        }
+        .product-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 50px 80px rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopAppBar (Web) -->
+<header class="hidden md:flex flex-row-reverse justify-between items-center px-8 py-4 z-[100] fixed top-4 left-1/2 -translate-x-1/2 w-[95%] rounded-full bg-surface/60 dark:bg-surface-container/60 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-200 ease-out">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-105 transition-transform duration-300">shopping_bag</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-105 transition-transform duration-300">person</span>
+</div>
+<nav class="flex items-center gap-8 flex-row-reverse">
+<a class="text-primary border-b-2 border-gold-leaf pb-1 font-label-sm text-label-sm hover:scale-105 transition-transform duration-300" href="#">Parquet</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm hover:scale-105 transition-transform duration-300" href="#">Stone</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm hover:scale-105 transition-transform duration-300" href="#">Gallery</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm hover:scale-105 transition-transform duration-300" href="#">Projects</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm hover:scale-105 transition-transform duration-300" href="#">About</a>
+</nav>
+<div class="font-display-xl text-headline-lg-mobile text-gold-leaf uppercase tracking-tighter cursor-pointer">Yaqeen Store</div>
+</header>
+<!-- SideNavBar (Mobile) -->
+<nav class="md:hidden fixed right-0 top-0 h-full w-20 hover:w-64 transition-all duration-500 z-50 bg-surface-container-highest/80 dark:bg-surface-container-highest/80 backdrop-blur-2xl border-l border-white/5 shadow-[10px_0_60px_rgba(0,0,0,0.8)] flex flex-col items-end py-8 gap-8 overflow-hidden group">
+<div class="flex items-center justify-end w-full px-6 mb-8">
+<span class="font-display-lg text-headline-lg text-primary opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap mr-4">Yaqeen Store</span>
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-gold-leaf">widgets</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 w-full px-4">
+<a class="flex items-center justify-end gap-4 p-3 rounded-xl hover:bg-white/5 transition-all duration-500 ease-in-out text-on-surface-variant group-hover:justify-start group-hover:flex-row-reverse" href="#">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Home</span>
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="flex items-center justify-end gap-4 p-3 rounded-xl bg-primary-container/20 text-primary transition-all duration-500 ease-in-out group-hover:justify-start group-hover:flex-row-reverse" href="#">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Collections</span>
+<span class="material-symbols-outlined">grid_view</span>
+</a>
+<a class="flex items-center justify-end gap-4 p-3 rounded-xl hover:bg-white/5 transition-all duration-500 ease-in-out text-on-surface-variant group-hover:justify-start group-hover:flex-row-reverse" href="#">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Calculators</span>
+<span class="material-symbols-outlined">calculate</span>
+</a>
+<a class="flex items-center justify-end gap-4 p-3 rounded-xl hover:bg-white/5 transition-all duration-500 ease-in-out text-on-surface-variant group-hover:justify-start group-hover:flex-row-reverse" href="#">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Catalog</span>
+<span class="material-symbols-outlined">menu_book</span>
+</a>
+<a class="flex items-center justify-end gap-4 p-3 rounded-xl hover:bg-white/5 transition-all duration-500 ease-in-out text-on-surface-variant group-hover:justify-start group-hover:flex-row-reverse" href="#">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Contact</span>
+<span class="material-symbols-outlined">support_agent</span>
+</a>
+</div>
+</nav>
+<main class="flex-grow pt-[120px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative">
+<!-- Hero Section -->
+<section class="mb-section-gap flex flex-col md:flex-row-reverse items-center justify-between gap-gutter">
+<div class="flex-1 text-right">
+<h1 class="font-display-xl text-display-xl text-on-surface mb-6 leading-tight">
+                    أرضيات<br/>
+<span class="text-gold-leaf">فاخرة</span>
+</h1>
+<p class="font-body-xl text-body-xl text-on-surface-variant max-w-xl ml-auto mb-8">
+                    اكتشف مجموعتنا الحصرية من أرضيات الباركيه والحجر الطبيعي. مصممة لتدوم وتضفي لمسة من الفخامة على مساحتك.
+                </p>
+<button class="bg-gold-leaf text-on-primary px-8 py-4 rounded-full font-label-sm text-label-sm tracking-widest uppercase hover:scale-105 transition-transform float-shadow">
+                    تصفح التشكيلة
+                </button>
+</div>
+<div class="flex-1 relative h-[400px] md:h-[600px] w-full">
+<div class="absolute inset-0 glass-panel rounded-[2rem] overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-60" data-alt="A high-end 3D render of a luxurious living room with dark charcoal walls, illuminated by dramatic cinematic lighting. The floor features exquisite herringbone pattern oak parquet. A single shaft of golden sunlight highlights the wood grain. The aesthetic is modern, minimalist, and extremely premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhwnR7-UUAYwfcb8--nxxtW6324oeEatgikjGmgPE6iNXg0Kc1dEEuTPbvGK5uMYjiraBRQbFZBA1PwL5rtcmsfqj9KvdpPhF9KNy6IJAKWYQvetP6wanZjT9AhJpasoOuqKozD7lhYL129TEPfj0N47E3lSHbAAyR42h3Q_8dYfD4nt6XDJbxbhpyNPXbytCWgPVsn7chKb4l4vFvwk0oTljzuwpjZvzK-hLRyL9F43Y0IsFClzKZqg"/>
+</div>
+<img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/3 object-contain drop-shadow-[0_40px_40px_rgba(0,0,0,0.8)] animate-pulse" data-alt="A detailed, floating 3D render of a single rectangular piece of rich, dark walnut SPC flooring. It casts a deep, soft ambient shadow beneath it as if hovering in a curated gallery space against a dark charcoal background. The lighting catches the subtle texture of the wood grain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKnF_ETIsSDQA76CHjupWRhrolVkzwvnD5n5_20VgS1RiPfN4KwsC7Fg2-RMk_fOOY2AsxCuGTkj2bOjHEhnG2GrweYCKgKHXxn0KeJcFKNwPutmoBip5Pect3UPOyknVAA_mC2JshiaL64wT9PvWG5vpigis_2YuShNJlUCKktRb4YVACHXWSxMdjqdXSc3U2klWG166dHSSQuSW3m9Lpf4k_AKr7357cuFYco6_E3V_8riaySZbD0Q"/>
+</div>
+</section>
+<!-- Main Content Area: Masonry Grid & Filters -->
+<div class="flex flex-col lg:flex-row-reverse gap-gutter items-start">
+<!-- Filters Sidebar -->
+<aside class="w-full lg:w-64 shrink-0 lg:sticky lg:top-32 space-y-8 glass-panel p-6 rounded-2xl z-10">
+<div class="text-right border-b border-white/10 pb-4">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">تصفية</h3>
+<p class="text-on-surface-variant font-label-sm text-label-sm">تحسين النتائج</p>
+</div>
+<div class="space-y-4 text-right">
+<h4 class="font-body-md text-body-md text-on-surface font-semibold">الفئة</h4>
+<div class="flex flex-wrap gap-2 justify-end">
+<button class="px-4 py-2 rounded-full bg-primary/20 border border-primary text-primary font-label-sm text-label-sm shadow-[0_0_15px_rgba(229,191,159,0.2)]">الكل</button>
+<button class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-variant border border-white/5 text-on-surface-variant font-label-sm text-label-sm transition-colors">باركيه</button>
+<button class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-variant border border-white/5 text-on-surface-variant font-label-sm text-label-sm transition-colors">حجر SPC</button>
+</div>
+</div>
+<div class="space-y-4 text-right">
+<h4 class="font-body-md text-body-md text-on-surface font-semibold">اللون</h4>
+<div class="flex flex-wrap gap-2 justify-end">
+<div class="w-8 h-8 rounded-full bg-[#3e2723] border-2 border-white/20 cursor-pointer shadow-lg"></div>
+<div class="w-8 h-8 rounded-full bg-[#8d6e63] border-2 border-transparent hover:border-white/20 cursor-pointer transition-all"></div>
+<div class="w-8 h-8 rounded-full bg-[#d7ccc8] border-2 border-transparent hover:border-white/20 cursor-pointer transition-all"></div>
+<div class="w-8 h-8 rounded-full bg-[#212121] border-2 border-transparent hover:border-white/20 cursor-pointer transition-all"></div>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 w-full">
+<!-- Product 1 -->
+<div class="product-card group relative flex flex-col items-center p-6 rounded-[2rem] glass-panel transition-all duration-500 cursor-pointer md:mt-12">
+<div class="absolute top-4 right-4 z-10 flex gap-2">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-gold-leaf transition-colors">favorite</span>
+</div>
+<div class="w-full h-64 relative mb-8 flex items-center justify-center">
+<img class="max-w-[80%] max-h-full object-contain drop-shadow-[0_30px_30px_rgba(0,0,0,0.7)] group-hover:scale-110 group-hover:-translate-y-4 transition-all duration-700 ease-out" data-alt="A highly detailed 3D floating render of a chevron pattern oak parquet sample. The wood has a warm, honey tone with realistic grain textures. It floats in mid-air casting a deep, soft shadow underneath against the dark glassmorphic card background. Studio lighting emphasizes its premium finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyh3i2ggVIIlFz4v4P0NIhd1itqPuzdoVIFncQtEQKqFKqpx3yF-YOxQkNunVPWmwxem__0kSFCeX48mOo0qxqKwB0juP3i1dHcb_QZ5tTEwxG8ZuCAfeXpM31JUjvy4frwodw9eGVjlq6-rlwMxcAjzAVG0o48AzyUWJVjkqU82DCnNyWL_7owCYcUdedC5-YpnBNc8AQmu3Mt975uAtMlpT_Qdu_vxEokhR5N-_GaF-bQCXTSQuCrQ"/>
+</div>
+<div class="w-full text-right z-10">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">أوك شيفيرون</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">باركيه هندسي</p>
+<div class="flex justify-between items-center flex-row-reverse">
+<span class="font-body-xl text-body-xl text-gold-leaf font-bold">₪ 149 <span class="text-sm font-normal text-on-surface-variant line-through ml-2">₪ 199</span></span>
+<button class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold-leaf hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="product-card group relative flex flex-col items-center p-6 rounded-[2rem] glass-panel transition-all duration-500 cursor-pointer">
+<div class="absolute top-4 right-4 z-10 flex gap-2">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-gold-leaf transition-colors">favorite</span>
+</div>
+<div class="w-full h-64 relative mb-8 flex items-center justify-center">
+<img class="max-w-[80%] max-h-full object-contain drop-shadow-[0_30px_30px_rgba(0,0,0,0.7)] group-hover:scale-110 group-hover:-translate-y-4 transition-all duration-700 ease-out" data-alt="A 3D floating sample of dark grey slate stone SPC flooring. The surface shows a subtle, rugged natural stone texture. It hovers dramatically, casting a wide, blurry ambient shadow. The lighting is cinematic, highlighting the ridges and valleys of the faux stone finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-e8iIXHJoKP27hxWqnWqtJddh4lw4fKcwbTd9P-qmxuQt8zLNhw33S920DnTcDi5LuXUN0fKSDcGOIbpbYHIyXa5NcyDQsag_V7AeVlvzoqyq7u81k_8N_T1n0HQV-AFAAo93AtJcNl-NwAHbJFr2AZh2FNUMVgoyjZr3aJYpXWV0Bowq5hx0a5EK83ZCu6r8XeB99uzLHitYCNYI9lKuDSt4JPdUwF0oxaKCX4NnTCZ8BM8CWHFjdA"/>
+</div>
+<div class="w-full text-right z-10">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">سليت رمادي</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">حجر SPC</p>
+<div class="flex justify-between items-center flex-row-reverse">
+<span class="font-body-xl text-body-xl text-gold-leaf font-bold">₪ 120</span>
+<button class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold-leaf hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="product-card group relative flex flex-col items-center p-6 rounded-[2rem] glass-panel transition-all duration-500 cursor-pointer md:mt-24">
+<div class="absolute top-4 right-4 z-10 flex gap-2">
+<span class="material-symbols-outlined text-gold-leaf transition-colors" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="w-full h-64 relative mb-8 flex items-center justify-center">
+<img class="max-w-[80%] max-h-full object-contain drop-shadow-[0_30px_30px_rgba(0,0,0,0.7)] group-hover:scale-110 group-hover:-translate-y-4 transition-all duration-700 ease-out" data-alt="A floating 3D render of a light maple straight-plank SPC flooring sample. The minimalist design highlights a very smooth, pale wood texture. Deep shadows beneath it emphasize depth in the dark cinematic gallery setting. Soft, diffuse lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBzhCOV_pByGPjLep-S7i5FuB5iVSUe8o42FgJ2HMAUKPkYhhFOLm7-5d4cPRL3M3rMF9Y8H3L4eyKqV2nbkU9gOkBAmMwhjnphuEl8-AVzeb5kIkx5l-GmRbfEN7-c1xlZ3ppBGpWl4eCl0csQ6zM1KZrXITcMffaUbllJ0dKxXe2MIwETMrMHv85Vsw379gCE5l-S6baI8fHbqxng39irmT0JuZPQpu1hwAmoG7hG7O9MH8CcVU6rw"/>
+</div>
+<div class="w-full text-right z-10">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">ميبل فاتح</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">باركيه SPC</p>
+<div class="flex justify-between items-center flex-row-reverse">
+<span class="font-body-xl text-body-xl text-gold-leaf font-bold">₪ 135</span>
+<button class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold-leaf hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="product-card group relative flex flex-col items-center p-6 rounded-[2rem] glass-panel transition-all duration-500 cursor-pointer">
+<div class="absolute top-4 right-4 z-10 flex gap-2">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-gold-leaf transition-colors">favorite</span>
+</div>
+<div class="w-full h-64 relative mb-8 flex items-center justify-center">
+<img class="max-w-[80%] max-h-full object-contain drop-shadow-[0_30px_30px_rgba(0,0,0,0.7)] group-hover:scale-110 group-hover:-translate-y-4 transition-all duration-700 ease-out" data-alt="A dramatic 3D floating sample of Nero Marquina marble style flooring. Black background with striking white veins. It hovers over a deep void, casting a heavy shadow. The reflections on the surface are sharp, indicating a polished, high-end finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZhZrNnxcYs6d_7SmJ01Nkb6jGOljd_9zrx_t-FzNxWejdosq2nEPVQ45Hnr8X0ywqB1sB-LFRHg3ASbD57421EXtOg2ZGXFohMHSqY_Se5EbEJCnsI-6IGmtuNk89rJ6_Dw6uHZKk9yYe5v_NVlpJMLQEirGo86B2LbvUCvK2hgo6_9a3jcVxZUHQM1883RvMiX_mFfKQHWXcqIa3sVHqbxf3EvmqwV2JNCnaq88veZtWIFfbMt7kTQ"/>
+</div>
+<div class="w-full text-right z-10">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">نيرو ماركينا</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">حجر فاخر</p>
+<div class="flex justify-between items-center flex-row-reverse">
+<span class="font-body-xl text-body-xl text-gold-leaf font-bold">₪ 210</span>
+<button class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold-leaf hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="relative w-full mt-section-gap pb-12 bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/30 no-shadow grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto text-right pt-16">
+<div class="col-span-1 md:col-span-4 mb-8">
+<div class="font-display-lg text-headline-lg text-gold-leaf mb-2">Yaqeen Store</div>
+<p class="text-sand-muted font-body-md text-body-md max-w-md ml-auto">© 2024 Yaqeen Store. Architectural Excellence in SPC &amp; Stone.</p>
+</div>
+<div class="flex flex-col gap-4 items-end">
+<h4 class="text-on-surface font-semibold mb-2">روابط سريعة</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4 items-end">
+<h4 class="text-on-surface font-semibold mb-2">الشركة</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Showroom Locator</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Technical Specs</a>
+</div>
+<div class="flex flex-col gap-4 items-end md:col-span-2">
+<h4 class="text-on-surface font-semibold mb-2">النشرة البريدية</h4>
+<div class="flex w-full max-w-sm flex-row-reverse border-b-2 border-white/10 focus-within:border-gold-leaf transition-colors pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-right w-full text-on-surface placeholder:text-on-surface-variant/50 outline-none" placeholder="البريد الإلكتروني" type="email"/>
+<button class="text-gold-leaf hover:text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; transform: scaleX(-1);">send</span>
+</button>
+</div>
+</div>
+</footer>
+</body></html>

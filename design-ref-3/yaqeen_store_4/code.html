@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yaqeen Store - Cart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#4f453d",
+                        "inverse-primary": "#75593e",
+                        "on-primary-container": "#fffbfa",
+                        "inverse-surface": "#e9e1dd",
+                        "on-primary": "#432b14",
+                        "on-tertiary-fixed-variant": "#334a57",
+                        "surface-bright": "#3c3836",
+                        "on-tertiary-container": "#fafcff",
+                        "secondary": "#cac6c5",
+                        "surface-container": "#221f1d",
+                        "surface-tint": "#e5bf9f",
+                        "surface-container-high": "#2d2927",
+                        "secondary-fixed-dim": "#cac6c5",
+                        "surface-container-lowest": "#100e0c",
+                        "surface-variant": "#383432",
+                        "surface": "#161311",
+                        "primary-container": "#8d6e52",
+                        "background": "#161311",
+                        "charcoal-surface": "#2D2D2D",
+                        "tertiary-fixed": "#cee6f7",
+                        "surface-container-low": "#1e1b19",
+                        "secondary-fixed": "#e6e1e0",
+                        "tertiary": "#b2cadb",
+                        "inverse-on-surface": "#33302d",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "sand-muted": "#E5D9D1",
+                        "tertiary-fixed-dim": "#b2cadb",
+                        "on-background": "#e9e1dd",
+                        "on-surface-variant": "#d3c4b9",
+                        "primary-fixed": "#ffdcbf",
+                        "primary": "#e5bf9f",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#607786",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#484646",
+                        "outline": "#9b8e85",
+                        "primary-fixed-dim": "#e5bf9f",
+                        "on-tertiary-fixed": "#051e2a",
+                        "surface-container-highest": "#383432",
+                        "on-surface": "#e9e1dd",
+                        "on-error": "#690005",
+                        "on-tertiary": "#1c3340",
+                        "on-primary-fixed-variant": "#5c4129",
+                        "on-secondary": "#313030",
+                        "on-secondary-container": "#b8b4b3",
+                        "on-primary-fixed": "#2b1703",
+                        "gold-leaf": "#C5A059",
+                        "surface-dim": "#161311",
+                        "secondary-container": "#484646",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter": "32px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-xl": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-sm": ["IBM Plex Sans"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["56px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-xl": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.8) 0%, rgba(30, 27, 25, 0.6) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .floating-shadow {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen overflow-hidden flex font-body-md">
+<!-- Background Canvas -->
+<main class="flex-1 relative transition-all duration-500 ease-in-out pr-0" id="main-content">
+<!-- Content behind overlay to show glassmorphism -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30" data-alt="A luxurious, minimalist architectural space with a dark charcoal background. Floating in the center is a beautifully textured piece of premium SPC parquet flooring, warmly lit from above, casting a soft, deep ambient shadow on the floor below. The lighting is cinematic, highlighting the wood grain against the moody, elegant background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMoQwtDxv_VjnITHAhfNpGVPLlUZv0iGr3UYLz7UM_MRcttH7tUc1UH9yC9cdAG5grbLDbQhsb8M5_ez0XexSVb6kH10LZkLad3v8_1YiLN9xLITFnkmMLWyoea22J43fLxVnoPwZAvEw1tPYANHJlb7nCdZvSjILWMzAZ4W570ZZua4H1xO4fJnBLOcI-ggVsFlI2BlkKgWx1kZ8P5oETGDyW4WAb5ycT5F3lEZFEuDNkmz5L9k2tnw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background"></div>
+</div>
+<div class="relative z-10 flex items-center justify-center h-full">
+<h1 class="font-display-xl text-display-xl text-outline-variant opacity-20">Yaqeen Gallery</h1>
+</div>
+</main>
+<!-- Overlay Backdrop -->
+<div class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity duration-300" id="overlay-backdrop"></div>
+<!-- Cart/Wishlist Drawer (Sidebar) -->
+<aside class="fixed right-0 top-0 h-full w-full md:w-[480px] glass-panel z-50 floating-shadow flex flex-col transform transition-transform duration-500 ease-out border-l border-white/5" id="cart-drawer">
+<!-- Header -->
+<header class="flex items-center justify-between px-8 py-6 border-b border-white/5">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-gold-leaf">سلة المشتريات</h2>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-white/5" onclick="closeCart()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</header>
+<!-- Tabs -->
+<div class="flex px-8 pt-4 border-b border-white/5">
+<button class="flex-1 pb-4 text-center font-label-sm text-label-sm text-primary border-b-2 border-gold-leaf">السلة (3)</button>
+<button class="flex-1 pb-4 text-center font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors">المفضلة</button>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto px-8 py-6 space-y-6">
+<!-- Cart Item 1 -->
+<div class="flex gap-6 items-center group">
+<div class="w-24 h-24 rounded-xl bg-surface-container-high relative flex-shrink-0 overflow-hidden hover-lift border border-white/5">
+<img class="w-full h-full object-cover" data-alt="A close-up of a premium, dark walnut SPC parquet plank sample. The texture is highly detailed, showing natural wood grain. It is softly lit to emphasize the luxurious finish, set against a completely dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQScAOTapI6kNhU5Xaqih7nXQq5ou5fEAIJ_axIFxI6QHcGjT0WxESJkKW4OATHq_NqVEPAyHwkBO3g5V4Mdx7qvDUQXkoKRwEyFkljLOpgapc8VH-t9aOby2lTC3uW8ux3uveyOSylnKfJIpNfy_xeNH6SQ2DUbcQiWNGQXO2ZLTU6PGBaFoVafH-zq1ooAItKkLMVwT8_0FfRsOVbJ05XgES_5P_Q8gzwSYi7qbMBc6oa_bIl_WoGQ"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-body-xl text-body-xl text-on-surface mb-1">خشب باركيه فاخر</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">لون الجوز الداكن</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<div class="flex justify-between items-center mt-4">
+<div class="flex items-center gap-3 bg-surface-container px-3 py-1 rounded-full border border-white/5">
+<button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px]">remove</span></button>
+<span class="font-label-sm text-label-sm w-4 text-center">12</span>
+<button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px]">add</span></button>
+</div>
+<span class="font-headline-lg-mobile text-[24px] font-semibold text-primary">₪ 145</span>
+</div>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="flex gap-6 items-center group">
+<div class="w-24 h-24 rounded-xl bg-surface-container-high relative flex-shrink-0 overflow-hidden hover-lift border border-white/5">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a sophisticated light grey marble slab sample. Fine white veins run organically through the stone. The lighting brings out a subtle sheen on the polished surface, presenting an elegant and modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZQejyydJmuYY5OWmn0z2RSAMBfqXK0z2zQhmQrqaGAfxOjnCPZwY89T-0Jv-XNVQtKoNiCY_wXQFH5J6Dk4kSmWeUvDeH9cDSKrV_FHY1YBuN6RyLGehltlLNmnuP1SpYtHCLA6i3KlrP0MEV4mXqyoW7Hx0MjhI4VMqwbXsS1cd-Zgf_kbN2bGhAcYy83GfaEN2AGwZ_Wr8c6XCvtSqtuKJt6IPCGDBEY5zWl4Eui-Wd8G0UHPmnrw"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-body-xl text-body-xl text-on-surface mb-1">رخام كالاكاتا</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">رمادي فاتح</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<div class="flex justify-between items-center mt-4">
+<div class="flex items-center gap-3 bg-surface-container px-3 py-1 rounded-full border border-white/5">
+<button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px]">remove</span></button>
+<span class="font-label-sm text-label-sm w-4 text-center">5</span>
+<button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px]">add</span></button>
+</div>
+<span class="font-headline-lg-mobile text-[24px] font-semibold text-primary">₪ 280</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer / Checkout -->
+<div class="px-8 py-6 border-t border-white/5 bg-surface-container-lowest/50">
+<div class="flex justify-between items-center mb-6">
+<span class="font-body-xl text-body-xl text-on-surface-variant">الإجمالي المبدئي</span>
+<span class="font-display-lg text-[40px] text-gold-leaf">₪ 3,140</span>
+</div>
+<button class="w-full bg-gold-leaf text-on-primary py-4 rounded-xl font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary-fixed transition-all duration-300 shadow-[0_0_20px_rgba(197,160,89,0.3)] hover:shadow-[0_0_30px_rgba(197,160,89,0.5)] flex justify-center items-center gap-2">
+                إتمام الطلب
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<p class="text-center font-label-sm text-[12px] text-on-surface-variant mt-4 opacity-70">الأسعار لا تشمل الضريبة المضافة والتوصيل</p>
+</div>
+</aside>
+<script>
+        function closeCart() {
+            document.getElementById('cart-drawer').style.transform = 'translateX(100%)';
+            document.getElementById('overlay-backdrop').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('overlay-backdrop').style.display = 'none';
+            }, 300);
+        }
+    </script>
+</body></html>
