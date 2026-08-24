@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { categories } from "@/lib/data/categories";
 import { products } from "@/lib/data";
-import { CinematicMobileHome } from "@/components/home/cinematic-mobile-home";
+import { OryzoCinematicHome } from "@/components/home/oryzo-cinematic-home";
 
 export const metadata: Metadata = {
   title: "يقين ستور | Yaqeen Store - أرضيات SPC وبدائل الحجر وسوفت ستون",
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <CinematicMobileHome categories={categories} products={products} />;
+  return <OryzoCinematicHome categories={categories} products={products} />;
 }
